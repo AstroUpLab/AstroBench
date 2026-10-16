@@ -8,7 +8,7 @@
 
 [🌐 Website](https://astroup.com/astrobench/) · [📖 Specification](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/Brickkkkkk/AstroBench/issues)
 
-**English** | [简体中文](README.zh-CN.md)
+**English** | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
 [![Protocol tests](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml/badge.svg)](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
@@ -35,7 +35,7 @@ This repository contains the **portable evaluation protocol**: deterministic epi
 - **Reproducible plans:** bind object identity, geometry groups, motion conditions and protocol settings to episode hashes.
 - **Explicit coverage:** keep task failures, runtime errors and missing episodes distinct; withhold a full macro score for incomplete plans.
 - **Two-view recordings:** explore 40 selected examples across 20 object types, with external and cabin views.
-- **Bilingual documentation:** English and Chinese guides cover task definitions, interfaces, scoring and development evidence.
+- **Multilingual README:** English, Chinese, Japanese, Korean, Spanish, French and German guides; the full technical specification is available in English and Chinese.
 
 ## 🧭 Contents
 
@@ -180,7 +180,7 @@ AstroBench/
 ├── tests/               # Protocol and statistics tests
 ├── .github/workflows/   # CI
 ├── README.md            # English
-└── README.zh-CN.md       # 简体中文
+└── README.*.md          # Translations: zh-CN, ja, ko, es, fr, de
 ```
 
 <a id="roadmap"></a>

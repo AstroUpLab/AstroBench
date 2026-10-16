@@ -8,7 +8,7 @@
 
 [🌐 发布页](https://astroup.com/astrobench/zh.html) · [📖 技术说明](https://astroup.com/astrobench/docs/current/zh.html) · [🎬 任务录像](https://astroup.com/astrobench/zh.html#videos) · [🐛 问题反馈](https://github.com/Brickkkkkk/AstroBench/issues)
 
-[English](README.md) | **简体中文**
+[English](README.md) | **简体中文** | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
 [![协议测试](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml/badge.svg)](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
@@ -35,7 +35,7 @@ AstroBench 研究**固定基座机械臂对零重力舱内自由漂浮物体的�
 - **可复核回合清单：**将物体身份、几何分组、运动条件及协议配置绑定到回合哈希。
 - **完整统计：**分别保留任务失败、运行错误和缺失回合；计划未完成时不输出完整宏平均。
 - **双视角录像：**20 类物体、40 个精选样例，可切换外部与舱内视角。
-- **中英文技术文档：**覆盖任务定义、接口、评分方法与开发实验。
+- **七种语言 README：**提供英语、中文、日语、韩语、西班牙语、法语和德语版本；完整技术说明提供中英文版。
 
 ## 🧭 目录
 
@@ -180,7 +180,7 @@ AstroBench/
 ├── tests/               # 协议与统计测试
 ├── .github/workflows/   # 持续集成
 ├── README.md            # English
-└── README.zh-CN.md       # 简体中文
+└── README.*.md          # 中文、日语、韩语、西班牙语、法语、德语
 ```
 
 <a id="roadmap"></a>
