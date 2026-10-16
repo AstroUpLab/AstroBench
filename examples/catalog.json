@@ -1,0 +1,8 @@
+[
+  {
+    "object_id": "synthetic_fixture",
+    "asset_sha256": "997d739392fab812ca84111bdb4a17c0cec4301e2e5eb2ff47af62fb9bf89ba4",
+    "split": "test",
+    "geometry_group": "synthetic_fixture"
+  }
+]
