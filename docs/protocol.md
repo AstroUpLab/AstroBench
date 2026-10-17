@@ -15,7 +15,7 @@ python -m venv .venv
 . .venv/bin/activate
 python -m pip install .
 python -m unittest discover -s tests -v
-astrobench plan examples/catalog.json --seed 42 --output plan.json
+astrobench plan examples/catalog.json --object-set custom --seed 42 --output plan.json
 python -c 'import json; print(json.load(open("plan.json"))["episodes"][0]["episode_id"])'
 ```
 
