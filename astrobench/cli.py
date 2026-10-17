@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from .protocol import make_plan, validate_plan, score_trace
 from .metrics import aggregate_results, IDENTITY_FIELDS
+from .inventory import object_inventory, scene_catalog, select_catalog
 
 
 def read(path):
@@ -17,14 +18,20 @@ def read(path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='AstroBench CPU protocol tools; no simulator')
+    parser = argparse.ArgumentParser(description='AstroBench object catalogs, episode plans and scoring')
     sub = parser.add_subparsers(dest='command', required=True)
     plan = sub.add_parser('plan'); plan.add_argument('catalog'); plan.add_argument('--seed',type=int,default=0)
+    plan.add_argument('--object-set', choices=('core20','objaverse8414','custom'), default='core20')
+    objects = sub.add_parser('objects', help='Export an object inventory')
+    objects.add_argument('--object-set', choices=('core20','objaverse8414'), default='core20')
+    scenes = sub.add_parser('scenes', help='Export cabin scene configuration')
     score = sub.add_parser('score'); score.add_argument('plan'); score.add_argument('episode_id'); score.add_argument('trace')
     report = sub.add_parser('report'); report.add_argument('plan'); report.add_argument('results')
-    for command in (plan,score,report): command.add_argument('--output', required=True)
+    for command in (plan,score,report,objects,scenes): command.add_argument('--output', required=True)
     args = parser.parse_args()
-    if args.command == 'plan': result = make_plan(read(args.catalog), args.seed)
+    if args.command == 'objects': result = object_inventory(args.object_set)
+    elif args.command == 'scenes': result = scene_catalog()
+    elif args.command == 'plan': result = make_plan(select_catalog(read(args.catalog), args.object_set), args.seed)
     else:
         frozen = validate_plan(read(args.plan))
         if args.command == 'report': result = aggregate_results(frozen, read(args.results))
