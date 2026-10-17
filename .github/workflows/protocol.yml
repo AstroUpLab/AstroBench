@@ -15,4 +15,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m pip install .
       - run: python -m unittest discover -s tests -v
-      - run: astrobench plan examples/catalog.json --seed 42 --output /tmp/astrobench-plan.json
+      - run: astrobench plan examples/catalog.json --object-set custom --seed 42 --output /tmp/astrobench-plan.json
+      - run: astrobench objects --output /tmp/core20.json
+      - run: astrobench objects --object-set objaverse8414 --output /tmp/objaverse8414.json
+      - run: astrobench scenes --output /tmp/scenes.json
