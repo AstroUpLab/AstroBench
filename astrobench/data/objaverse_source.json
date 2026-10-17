@@ -1,0 +1,26 @@
+{
+  "schema": "astrobench.object_pool/v1",
+  "primary_expansion_source": "Objaverse 1.0",
+  "source_revision": "556637099bf4fa79ea7b239d0d9c328b8a2e9ac8",
+  "rules": "astrobench/data/objaverse_rules.json",
+  "rules_sha256": "d0c6e85058e8f98e4f64cec03e715cf9fec01c979cd760181336572ec39ad345",
+  "selection": "astrobench/data/objaverse8414.jsonl.gz",
+  "selection_sha256": "9d230430f601997159e0ad0d7e2774b5a65ec28d77b0ae7f13ec8334c84e3fc8",
+  "objects_scanned": 798759,
+  "candidate_instances": 8414,
+  "represented_lvis_categories": 51,
+  "status": "registered_extension_pending_assets",
+  "enabled_for_evaluation": false,
+  "default_core_object_classes": 20,
+  "required_next_gates": [
+    "mesh and texture review",
+    "physical scale and gripper fit",
+    "geometry deduplication",
+    "collision and inertial properties",
+    "initial camera visibility",
+    "static and dynamic grasp validation"
+  ],
+  "selection_format": "astrobench.object_inventory/jsonl",
+  "object_set_id": "objaverse8414",
+  "selection_sha256_encoding": "decompressed UTF-8 JSONL"
+}

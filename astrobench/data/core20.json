@@ -1,0 +1,134 @@
+[
+  {
+    "object_id": "candidate_standard_cube",
+    "name": "魔方/立方块",
+    "group": "standard_geometry",
+    "asset_ids": [
+      "cube"
+    ]
+  },
+  {
+    "object_id": "candidate_rectangular_block",
+    "name": "长方块",
+    "group": "standard_geometry",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_cylindrical_part",
+    "name": "圆柱件",
+    "group": "standard_geometry",
+    "asset_ids": [
+      "can"
+    ]
+  },
+  {
+    "object_id": "candidate_spherical_part",
+    "name": "球形件",
+    "group": "standard_geometry",
+    "asset_ids": [
+      "lemon"
+    ]
+  },
+  {
+    "object_id": "candidate_sample_tube",
+    "name": "样品管",
+    "group": "containers",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_sealed_bottle",
+    "name": "密封瓶",
+    "group": "containers",
+    "asset_ids": [
+      "bottle"
+    ]
+  },
+  {
+    "object_id": "candidate_round_can",
+    "name": "圆罐",
+    "group": "containers",
+    "asset_ids": [
+      "can"
+    ]
+  },
+  {
+    "object_id": "candidate_lidded_box",
+    "name": "带盖小盒",
+    "group": "containers",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_screwdriver",
+    "name": "螺丝刀",
+    "group": "tools",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_wrench",
+    "name": "扳手",
+    "group": "tools",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_pliers",
+    "name": "钳子",
+    "group": "tools",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_small_hammer",
+    "name": "小锤",
+    "group": "tools",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_flashlight",
+    "name": "手电筒",
+    "group": "handheld_devices",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_battery_pack",
+    "name": "电池包",
+    "group": "handheld_devices",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_handheld_terminal",
+    "name": "手持终端",
+    "group": "handheld_devices",
+    "asset_ids": [
+      "terminal"
+    ]
+  },
+  {
+    "object_id": "candidate_small_camera",
+    "name": "小型相机",
+    "group": "handheld_devices",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_ring_part",
+    "name": "环形件",
+    "group": "structural_parts",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_spool",
+    "name": "线轴",
+    "group": "structural_parts",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_l_bracket",
+    "name": "L形支架",
+    "group": "structural_parts",
+    "asset_ids": []
+  },
+  {
+    "object_id": "candidate_t_fitting",
+    "name": "T形接头",
+    "group": "structural_parts",
+    "asset_ids": []
+  }
+]

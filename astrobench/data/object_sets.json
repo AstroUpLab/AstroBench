@@ -1,0 +1,24 @@
+{
+  "schema": "astrobench.object_sets/v1",
+  "default": "core20",
+  "sets": {
+    "core20": {
+      "label": "Core / 默认20类",
+      "manifest": "core20.json",
+      "format": "json",
+      "object_count": 20,
+      "sha256": "17ccc7542a781bed98fc2938b6b6372a57192f053cbef7f3f2d00b033e9287cb",
+      "status": "existing_core_protocol"
+    },
+    "objaverse8414": {
+      "label": "Objaverse 扩展 / 8414个物体",
+      "manifest": "objaverse8414.jsonl.gz",
+      "format": "jsonl.gz",
+      "object_count": 8414,
+      "represented_lvis_categories": 51,
+      "sha256": "9d230430f601997159e0ad0d7e2774b5a65ec28d77b0ae7f13ec8334c84e3fc8",
+      "status": "registered_pending_asset_adaptation",
+      "enabled_for_evaluation": false
+    }
+  }
+}

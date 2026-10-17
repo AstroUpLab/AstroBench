@@ -1,0 +1,41 @@
+{
+  "schema": "astrobench.scene_catalog/v1",
+  "default": "iss_jpm",
+  "interior_tasks": "all_object_tracks_and_all_operation_directions",
+  "scenes": [
+    {
+      "id": "iss_jpm",
+      "kind": "interior",
+      "asset": "jpm",
+      "name": "Kibo / JPM"
+    },
+    {
+      "id": "iss_us_lab",
+      "kind": "interior",
+      "asset": "us_lab",
+      "name": "US Laboratory"
+    },
+    {
+      "id": "iss_eu_lab",
+      "kind": "interior",
+      "asset": "eu_lab",
+      "name": "European Laboratory"
+    },
+    {
+      "id": "iss_node2",
+      "kind": "interior",
+      "asset": "node_2",
+      "name": "Node 2"
+    },
+    {
+      "id": "iss_cupola",
+      "kind": "interior",
+      "asset": "cupola",
+      "name": "Cupola observation worksite",
+      "placement": "Node 3 interior workcell near nadir Cupola; full task workspace stays in connecting module",
+      "supporting_asset": "node_3"
+    }
+  ],
+  "asset_source": "https://github.com/nasa/astrobee_media/tree/master/astrobee_iss",
+  "physics": "fixed robot base; reuse original task bodies and initial states; background meshes visual only"
+}
