@@ -4,11 +4,11 @@
 
 ### 자유 부유 물체 조작 벤치마크
 
-[🌐 Website](https://astroup.com/astrobench/) · [📖 Docs](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/Brickkkkkk/AstroBench/issues)
+[🌐 Website](https://astroup.com/astrobench/) · [📖 Docs](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/AstroUpLab/AstroBench/issues)
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
-[![Tests](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml/badge.svg)](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml)
+[![Tests](https://github.com/AstroUpLab/AstroBench/actions/workflows/protocol.yml/badge.svg)](https://github.com/AstroUpLab/AstroBench/actions/workflows/protocol.yml)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![Objects](https://img.shields.io/badge/Default-20_classes-227799)](docs/objects.md)
 [![Objaverse](https://img.shields.io/badge/Objaverse-8414_objects-448844)](docs/objects.md)
@@ -24,7 +24,7 @@ AstroBench는 자유 부유 물체의 포획과 유지, 선내 조작 작업을 
 물체 선택, 재현 가능한 에피소드 계획, 궤적 평가 및 결과 집계를 제공합니다. Python 3.11+와 표준 라이브러리를 사용합니다.
 
 ```bash
-git clone https://github.com/Brickkkkkk/AstroBench.git
+git clone https://github.com/AstroUpLab/AstroBench.git
 cd AstroBench
 python3 -m venv .venv
 . .venv/bin/activate

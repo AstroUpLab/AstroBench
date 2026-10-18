@@ -4,11 +4,11 @@
 
 ### Benchmark de manipulación de objetos en flotación libre
 
-[🌐 Website](https://astroup.com/astrobench/) · [📖 Docs](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/Brickkkkkk/AstroBench/issues)
+[🌐 Website](https://astroup.com/astrobench/) · [📖 Docs](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/AstroUpLab/AstroBench/issues)
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
-[![Tests](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml/badge.svg)](https://github.com/Brickkkkkk/AstroBench/actions/workflows/protocol.yml)
+[![Tests](https://github.com/AstroUpLab/AstroBench/actions/workflows/protocol.yml/badge.svg)](https://github.com/AstroUpLab/AstroBench/actions/workflows/protocol.yml)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![Objects](https://img.shields.io/badge/Default-20_classes-227799)](docs/objects.md)
 [![Objaverse](https://img.shields.io/badge/Objaverse-8414_objects-448844)](docs/objects.md)
@@ -24,7 +24,7 @@ AstroBench estudia la captura y retención de objetos en flotación libre y las 
 El paquete permite seleccionar objetos, generar planes reproducibles, puntuar trayectorias y agregar resultados. Requiere Python 3.11+ y su biblioteca estándar.
 
 ```bash
-git clone https://github.com/Brickkkkkk/AstroBench.git
+git clone https://github.com/AstroUpLab/AstroBench.git
 cd AstroBench
 python3 -m venv .venv
 . .venv/bin/activate
