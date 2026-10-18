@@ -86,4 +86,18 @@ astrobench report plan.json results.json --output report.json
 
 [Objaverse](https://objaverse.allenai.org/) · [NASA Astrobee ISS assets](https://github.com/nasa/astrobee_media/tree/master/astrobee_iss) · [Space Robotics Bench](https://arxiv.org/abs/2509.23328)
 
+## 📚 Citation
+
+Si vous utilisez AstroBench dans vos recherches, veuillez citer le projet avec le BibTeX suivant :
+
+```bibtex
+@misc{astrouplab2026astrobench,
+  author       = {{AstroUpLab}},
+  title        = {{AstroBench}: Free-floating Manipulation Benchmark},
+  year         = {2026},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/AstroUpLab/AstroBench}
+}
+```
+
 Pour citer cette version, indiquez l’URL du dépôt et l’identifiant du commit.
