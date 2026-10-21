@@ -1,0 +1,706 @@
+{
+  "units": "mm",
+  "coordinate_convention": "Front view as NASA H-31; origin is centre of bottom flat, +X to drawing right, +Z up; +Y along box/tray depth. X is intentionally asymmetric about the bottom centre.",
+  "source": {
+    "pdf": "https://ntrs.nasa.gov/api/citations/20190001390/downloads/20190001390.pdf",
+    "pdf_page_1based": 328,
+    "printed_page": "H-31",
+    "embedded_image_object": "927 0",
+    "native_image_size_px": [
+      2920,
+      1972
+    ],
+    "native_image_sha256": "201edbef3de73e5b0fda1f18cd8fdbd5f644b8717f12be802159d760ffc7b025"
+  },
+  "calibration": {
+    "x_min_px": 205,
+    "x_max_px": 1518,
+    "a_width_mm": 220,
+    "bottom_center_px": [
+      819,
+      878
+    ],
+    "top_y_px": 28,
+    "c_height_mm": 143,
+    "mm_per_pixel_x": 0.16755521706016754,
+    "mm_per_pixel_z": 0.16823529411764707,
+    "bottom_width_raw_traced_mm": 76.74,
+    "bottom_width_snapped_to_table_mm": 75,
+    "uncertainty_mm": 1.5,
+    "note": "Raster digitization, not original CAD. Table a/b/c is authoritative. Raster bottom span differs by about 1.7mm before snapping; native drawing itself says 144.0 while table says143."
+  },
+  "official_dimensions": {
+    "a_max_body_width": 220,
+    "b_bottom_width": 75,
+    "c_max_height": 143,
+    "d_height_annotation": 105,
+    "e_half_depth": 270,
+    "f_lid_projected_width": 185,
+    "g_half_lid_length": 260,
+    "quarter_depth": 130,
+    "quarter_lid_length": 119,
+    "wall_approx": 1
+  },
+  "section_xz_mm": [
+    [
+      -37.5,
+      0
+    ],
+    [
+      37.5,
+      0
+    ],
+    [
+      117.121,
+      83.949
+    ],
+    [
+      111.592,
+      90.342
+    ],
+    [
+      110.586,
+      93.875
+    ],
+    [
+      110.586,
+      100.773
+    ],
+    [
+      109.916,
+      104.642
+    ],
+    [
+      109.078,
+      106.493
+    ],
+    [
+      107.403,
+      109.016
+    ],
+    [
+      104.89,
+      111.204
+    ],
+    [
+      101.538,
+      113.559
+    ],
+    [
+      93.161,
+      118.606
+    ],
+    [
+      84.783,
+      122.98
+    ],
+    [
+      76.405,
+      127.018
+    ],
+    [
+      68.027,
+      130.382
+    ],
+    [
+      59.65,
+      133.242
+    ],
+    [
+      51.272,
+      135.766
+    ],
+    [
+      42.894,
+      137.785
+    ],
+    [
+      34.516,
+      139.635
+    ],
+    [
+      26.139,
+      141.149
+    ],
+    [
+      17.761,
+      142.159
+    ],
+    [
+      9.383,
+      142.832
+    ],
+    [
+      1.005,
+      143.0
+    ],
+    [
+      -7.372,
+      143.0
+    ],
+    [
+      -15.75,
+      142.495
+    ],
+    [
+      -24.128,
+      141.654
+    ],
+    [
+      -32.506,
+      140.476
+    ],
+    [
+      -40.883,
+      138.962
+    ],
+    [
+      -49.261,
+      136.944
+    ],
+    [
+      -57.639,
+      134.588
+    ],
+    [
+      -66.017,
+      131.56
+    ],
+    [
+      -71.881,
+      129.373
+    ],
+    [
+      -73.557,
+      128.027
+    ],
+    [
+      -73.892,
+      125.672
+    ],
+    [
+      -73.892,
+      115.746
+    ],
+    [
+      -102.879,
+      98.081
+    ],
+    [
+      -102.879,
+      65.275
+    ]
+  ],
+  "crown_outer_xz_mm": [
+    [
+      -73.557,
+      128.027
+    ],
+    [
+      -71.881,
+      129.373
+    ],
+    [
+      -66.017,
+      131.56
+    ],
+    [
+      -57.639,
+      134.588
+    ],
+    [
+      -49.261,
+      136.944
+    ],
+    [
+      -40.883,
+      138.962
+    ],
+    [
+      -32.506,
+      140.476
+    ],
+    [
+      -24.128,
+      141.654
+    ],
+    [
+      -15.75,
+      142.495
+    ],
+    [
+      -7.372,
+      143.0
+    ],
+    [
+      1.005,
+      143.0
+    ],
+    [
+      9.383,
+      142.832
+    ],
+    [
+      17.761,
+      142.159
+    ],
+    [
+      26.139,
+      141.149
+    ],
+    [
+      34.516,
+      139.635
+    ],
+    [
+      42.894,
+      137.785
+    ],
+    [
+      51.272,
+      135.766
+    ],
+    [
+      59.65,
+      133.242
+    ],
+    [
+      68.027,
+      130.382
+    ],
+    [
+      76.405,
+      127.018
+    ],
+    [
+      84.783,
+      122.98
+    ],
+    [
+      93.161,
+      118.606
+    ],
+    [
+      101.538,
+      113.559
+    ],
+    [
+      104.89,
+      111.204
+    ],
+    [
+      107.403,
+      109.016
+    ],
+    [
+      109.078,
+      106.493
+    ],
+    [
+      109.916,
+      104.642
+    ],
+    [
+      110.586,
+      102.455
+    ]
+  ],
+  "crown_outer_native_px": [
+    [
+      380,
+      117
+    ],
+    [
+      390,
+      109
+    ],
+    [
+      425,
+      96
+    ],
+    [
+      475,
+      78
+    ],
+    [
+      525,
+      64
+    ],
+    [
+      575,
+      52
+    ],
+    [
+      625,
+      43
+    ],
+    [
+      675,
+      36
+    ],
+    [
+      725,
+      31
+    ],
+    [
+      775,
+      28
+    ],
+    [
+      825,
+      28
+    ],
+    [
+      875,
+      29
+    ],
+    [
+      925,
+      33
+    ],
+    [
+      975,
+      39
+    ],
+    [
+      1025,
+      48
+    ],
+    [
+      1075,
+      59
+    ],
+    [
+      1125,
+      71
+    ],
+    [
+      1175,
+      86
+    ],
+    [
+      1225,
+      103
+    ],
+    [
+      1275,
+      123
+    ],
+    [
+      1325,
+      147
+    ],
+    [
+      1375,
+      173
+    ],
+    [
+      1425,
+      203
+    ],
+    [
+      1445,
+      217
+    ],
+    [
+      1460,
+      230
+    ],
+    [
+      1470,
+      245
+    ],
+    [
+      1475,
+      256
+    ],
+    [
+      1479,
+      269
+    ]
+  ],
+  "key_points": {
+    "left_body_min_x": [
+      -102.879,
+      98.081
+    ],
+    "left_lower_corner": [
+      -102.879,
+      65.275
+    ],
+    "left_latch_shoulder_top": [
+      -73.892,
+      115.746
+    ],
+    "left_cap_step": [
+      -73.892,
+      125.672
+    ],
+    "right_body_max_x": [
+      117.121,
+      83.949
+    ],
+    "right_cap_lip_bottom": [
+      110.586,
+      93.875
+    ],
+    "right_crown_at_d": [
+      109.916,
+      104.642
+    ],
+    "hinge_axis_candidate": [
+      106.9,
+      98.249
+    ]
+  },
+  "d_interpretation": {
+    "value_mm": 105,
+    "applies_to": "Height of horizontal annotation aligned approximately with the right curved cap transition, not the point of maximum body width.",
+    "near_xz_mm": [
+      109.916,
+      104.642
+    ],
+    "max_width_tip_height_mm": 83.949,
+    "confidence": "High for distinction; the approximate overlaid annotation does not dimension a unique fillet tangency."
+  },
+  "lid": {
+    "free_edge_side": "-X",
+    "hinge_side": "+X",
+    "free_edge_x_mm": -73.892,
+    "projected_width_mm": 185,
+    "opposite_projected_edge_x_mm": 111.108,
+    "projected_center_x_mm": 18.608,
+    "length_mm": 260,
+    "hinge_axis_xz_candidate_mm": [
+      106.9,
+      98.249
+    ],
+    "hinge_axis_direction": "+Y",
+    "hinge_axis_status": "Visible circular feature in front view, consistent with rear photo hinge; exact pivot construction is not dimensioned.",
+    "open_direction": "+X outward",
+    "notes": "H-31 top-view f span begins at the stepped free-edge margin, not at the leftmost body wall. Original photograph shows a continuous long hinge at opposite edge from external latch."
+  },
+  "locks": {
+    "side": "-X",
+    "lid_latch": {
+      "type": "External lever/bail-like latch visible on sloping shoulder; linkage internals unmeasured.",
+      "front_profile_bbox_xz_mm": [
+        [
+          -115.446,
+          121.634
+        ],
+        [
+          -77.746,
+          100.605
+        ]
+      ]
+    },
+    "tray_lock": {
+      "type": "Separate lower tab/clip visible at -X.",
+      "front_profile_pivot_candidate_xz_mm": [
+        -108.911,
+        93.034
+      ],
+      "projection_extent_x_mm": -121.31
+    },
+    "y_locations": "H-31 top-view depicts quarter box. Do not double latch width or length when extending the box depth from130 to270; exact half-box Y positions require photo matching."
+  },
+  "perforations": {
+    "front_pattern": "Two asymmetric hex/staggered clusters with an unperforated central label area.",
+    "front_hole_centers_xz_mm": [
+      [
+        -59.147,
+        115.746
+      ],
+      [
+        -47.418,
+        115.746
+      ],
+      [
+        -65.179,
+        105.315
+      ],
+      [
+        -53.45,
+        105.315
+      ],
+      [
+        -71.043,
+        94.885
+      ],
+      [
+        -59.147,
+        94.885
+      ],
+      [
+        -47.418,
+        94.885
+      ],
+      [
+        -88.804,
+        84.454
+      ],
+      [
+        -77.075,
+        84.454
+      ],
+      [
+        -65.179,
+        84.454
+      ],
+      [
+        -53.45,
+        84.454
+      ],
+      [
+        -82.94,
+        74.024
+      ],
+      [
+        -71.043,
+        74.024
+      ],
+      [
+        -59.147,
+        74.024
+      ],
+      [
+        -47.418,
+        74.024
+      ],
+      [
+        -77.075,
+        63.929
+      ],
+      [
+        -65.179,
+        63.929
+      ],
+      [
+        -53.45,
+        63.929
+      ],
+      [
+        -71.043,
+        53.835
+      ],
+      [
+        -59.147,
+        53.835
+      ],
+      [
+        -47.418,
+        53.835
+      ],
+      [
+        -65.179,
+        43.405
+      ],
+      [
+        -53.45,
+        43.405
+      ],
+      [
+        -47.418,
+        32.974
+      ],
+      [
+        58.812,
+        115.578
+      ],
+      [
+        70.541,
+        115.578
+      ],
+      [
+        64.676,
+        105.315
+      ],
+      [
+        76.573,
+        105.315
+      ],
+      [
+        88.469,
+        105.315
+      ],
+      [
+        58.812,
+        94.885
+      ],
+      [
+        70.541,
+        94.885
+      ],
+      [
+        82.605,
+        94.885
+      ],
+      [
+        94.334,
+        94.885
+      ],
+      [
+        64.676,
+        84.454
+      ],
+      [
+        76.573,
+        84.454
+      ],
+      [
+        88.469,
+        84.454
+      ],
+      [
+        58.812,
+        74.024
+      ],
+      [
+        70.541,
+        74.024
+      ],
+      [
+        82.605,
+        74.024
+      ],
+      [
+        64.676,
+        63.929
+      ],
+      [
+        76.573,
+        63.929
+      ],
+      [
+        58.812,
+        53.835
+      ],
+      [
+        70.541,
+        53.835
+      ],
+      [
+        64.676,
+        43.405
+      ]
+    ],
+    "front_hole_diameter_est_mm": 10,
+    "front_pitch_est_mm": [
+      12,
+      10.4
+    ],
+    "front_left_count": 24,
+    "front_right_count": 20,
+    "lid_pattern": "Square grid in H31 top view; projected circles vary with lid curvature.",
+    "lid_pitch_est_mm": 11,
+    "lid_hole_diameter_est_mm": 8,
+    "source_status": "Measured/estimated from raster, not dimensioned specification."
+  },
+  "elastic_band": {
+    "direction": "Across X from hinge side to latch side, near box Y centre",
+    "reason": "ESA Fig7 top of image is hinge edge and bottom is latch edge; white band follows screen vertical, therefore the cross-sectional X direction.",
+    "anchor_status": "Only edge attachment regions visible; exact hooks/slots and tension are not dimensioned.",
+    "card_orientation_inference": "Quarter box Y depth130 can accommodate card100mm alongY; cards appear queued alongX. Keep distinction between visible layout inference and mechanical specification."
+  }
+}
