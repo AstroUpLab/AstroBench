@@ -32,6 +32,17 @@ python -m pip install .
 python -m unittest discover -s tests -v
 ```
 
+## 🛠️ 宇宙作業セル
+
+**MELFI V6** の試料カードの移動・挿入・取り出しと蓋の開閉、**RRM TB1** の FDV1 / SMA キャップの取り外し・保管と脱落防止ねじの締緩を収録しています。モデル、工具、タスク定義、軌跡の採点手順を公開しています。
+
+[📖 作業セルガイド・タスク一覧](docs/workcells.md) · [🧊 MELFI モデル](assets/workcells/melfi_v6/) · [🛰️ RRM モデル](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 ねじ](docs/media/captive.mp4)
+
+```bash
+astrobench workcells --output workcells.json
+astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
+```
+
 ## 🧰 物体セット
 
 既定は **20 クラス**。拡張セットとして **Objaverse の 8,414 物体**を選択できます。工具、容器、携帯電子機器、機械部品、船内用品を含み、51 の LVIS ラベルと未分類物体から構成されます。
@@ -55,7 +66,7 @@ astrobench objects --object-set objaverse8414 --output objaverse8414.json
 | `iss_node2` | Node 2 |
 | `iss_cupola` | Node 3 workcell near Cupola |
 
-各船内シーンの設定は静的・動的把持と 10 系統の操作タスクを共有します。
+各船内背景は静的・動的把持に利用できます。MELFI と RRM は専用の[作業セルタスク](docs/workcells.md)から選択し、タスクの配置に従って機材を設置します。
 
 ```bash
 astrobench scenes --output scenes.json

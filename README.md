@@ -32,6 +32,37 @@ python -m pip install .
 python -m unittest discover -s tests -v
 ```
 
+## 🛠️ Space workcells
+
+Two workcells connect space hardware to specific manipulation goals: **MELFI V6** for sample storage and **RRM TB1** for servicing caps and captive screws. Each includes editable Blender models, portable GLB assets, named parts, task definitions and measurement-based scoring.
+
+| MELFI V6 — sample storage | RRM TB1 — servicing panel |
+| :---: | :---: |
+| <img src="docs/media/melfi.png" alt="MELFI V6: two narrow boxes and one wide box mounted along the wall" width="420"> | <img src="docs/media/rrm.png" alt="RRM TB1 servicing panel with caps, captive screws and tools" width="420"> |
+| [GLB](assets/workcells/melfi_v6/melfi_v6.glb) · [Blender](assets/workcells/melfi_v6/melfi_v6.blend) · [Parts](assets/workcells/melfi_v6/parts.json) | [GLB](assets/workcells/rrm_tb1/rrm_tb1.glb) · [Blender](assets/workcells/rrm_tb1/rrm_tb1.blend) · [Parts](assets/workcells/rrm_tb1/parts.json) |
+
+| Workcell | Task | Completion goal |
+| --- | --- | --- |
+| MELFI V6 | Transfer sample card | Hold the card at the selected box opening. |
+| MELFI V6 | Insert sample card | Seat and retain the card in the selected box, then release it. |
+| MELFI V6 | Extract sample card | Clear the selected box opening while retaining the card. |
+| MELFI V6 | Open lid | Open the selected lid to its target angle. |
+| MELFI V6 | Close lid | Close and latch the selected lid. |
+| RRM TB1 | Remove and stow FDV1 cap | Unscrew, withdraw and secure the cap in its receiver. |
+| RRM TB1 | Remove and stow selected SMA cap | Select the requested cap, unscrew it and secure it in its receiver. |
+| RRM TB1 | Loosen captive screw | Reach the loosened position while the screw remains captive. |
+| RRM TB1 | Tighten captive screw | Seat the screw and withdraw the tool. |
+
+```bash
+astrobench workcells --output workcells.json
+astrobench workcell-check-assets assets/workcells --output asset-check.json
+astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
+```
+
+[📖 Tasks, setup and scoring](docs/workcells.md) · [📖 中文指南](docs/workcells.zh-CN.md) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 Captive screw](docs/media/captive.mp4)
+
+The hardware follows NASA / ESA references, with source links and modeling notes in the [workcell guide](docs/workcells.md).
+
 ## 🧰 Object collections
 
 Default: **20 classes**. Choose **Objaverse: 8,414 objects** for the expanded inventory. The expansion contains tools, containers, portable electronics, mechanical parts and cabin supplies. It represents 51 LVIS category labels plus unlabeled objects.
@@ -55,7 +86,7 @@ astrobench objects --object-set objaverse8414 --output objaverse8414.json
 | `iss_node2` | Node 2 |
 | `iss_cupola` | Node 3 workcell near Cupola |
 
-Each cabin configuration reuses the static/dynamic grasping tracks and ten operation task families.
+Each cabin background can be used with the static and dynamic grasping tracks. Select MELFI and RRM through the separate [workcell task interface](docs/workcells.md), and install their hardware according to the task layout.
 
 ```bash
 astrobench scenes --output scenes.json
