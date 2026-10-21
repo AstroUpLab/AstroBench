@@ -1,0 +1,1559 @@
+{
+  "schema": "astrobench.workcell.asset.v1",
+  "asset_id": "rrm_tb1",
+  "units": "m",
+  "up_axis": "Z",
+  "license": "Apache-2.0",
+  "source_files": [
+    {
+      "path": "geometry_supports.py",
+      "sha256": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a"
+    },
+    {
+      "path": "load_asset.py",
+      "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e"
+    },
+    {
+      "path": "melfi_v6/source/melfi.py",
+      "sha256": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93"
+    },
+    {
+      "path": "melfi_v6/source/reference_profile.json",
+      "sha256": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487"
+    },
+    {
+      "path": "melfi_v6/source/supports.py",
+      "sha256": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b"
+    },
+    {
+      "path": "publicbuild.py",
+      "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0"
+    },
+    {
+      "path": "rrm_tb1/source/export_collision.py",
+      "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68"
+    },
+    {
+      "path": "rrm_tb1/source/panel.py",
+      "sha256": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3"
+    },
+    {
+      "path": "rrm_tb1/source/supports.py",
+      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092"
+    },
+    {
+      "path": "rrm_tb1/source/task_panel.py",
+      "sha256": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb"
+    },
+    {
+      "path": "rrm_tb1/source/tools.py",
+      "sha256": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f"
+    },
+    {
+      "path": "unpack_collision.py",
+      "sha256": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
+    }
+  ],
+  "builder_sha256": {
+    "geometry_supports.py": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a",
+    "load_asset.py": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e",
+    "publicbuild.py": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0",
+    "unpack_collision.py": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
+  },
+  "canonical_source_sha256": "9e390dd6831b2e04a6535200c80bcc14f52e242632685a66f5c4cd660596226a",
+  "build_args": {
+    "sma_row": 2,
+    "sma_col": 2,
+    "captive_index": 1
+  },
+  "files": [
+    {
+      "path": "collision.json",
+      "sha256": "421b5713500bd9ef377f16eb58db1abd19271ba01157449a08c9655d21eef0af",
+      "bytes": 1730253,
+      "role": "collision"
+    },
+    {
+      "path": "collision_meshes.zip",
+      "sha256": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
+      "bytes": 3813137,
+      "role": "collision"
+    },
+    {
+      "path": "parts.json",
+      "sha256": "f4459ba6e7b63ad32cb5bd07a142044048440fd65ba0287af44500ba0f642c89",
+      "bytes": 627584,
+      "role": "semantics"
+    },
+    {
+      "path": "rrm_tb1.blend",
+      "sha256": "c62960ff541b9f882cad482791df30006ec44be2d268518d598cba63235dd2c4",
+      "bytes": 573411,
+      "role": "editable_model"
+    },
+    {
+      "path": "rrm_tb1.glb",
+      "sha256": "0d1794a8889bf0d71c3d54d729fa8628af711f8bcb566270a08012da4bcf88c4",
+      "bytes": 12957504,
+      "role": "neutral_model"
+    },
+    {
+      "path": "source/export_collision.py",
+      "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68",
+      "bytes": 24206,
+      "role": "source"
+    },
+    {
+      "path": "source/panel.py",
+      "sha256": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3",
+      "bytes": 24643,
+      "role": "source"
+    },
+    {
+      "path": "source/supports.py",
+      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092",
+      "bytes": 3363,
+      "role": "source"
+    },
+    {
+      "path": "source/task_panel.py",
+      "sha256": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb",
+      "bytes": 21082,
+      "role": "source"
+    },
+    {
+      "path": "source/tools.py",
+      "sha256": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f",
+      "bytes": 13601,
+      "role": "source"
+    }
+  ],
+  "files_sha256": {
+    "collision.json": "421b5713500bd9ef377f16eb58db1abd19271ba01157449a08c9655d21eef0af",
+    "collision_meshes.zip": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
+    "parts.json": "f4459ba6e7b63ad32cb5bd07a142044048440fd65ba0287af44500ba0f642c89",
+    "rrm_tb1.blend": "c62960ff541b9f882cad482791df30006ec44be2d268518d598cba63235dd2c4",
+    "rrm_tb1.glb": "0d1794a8889bf0d71c3d54d729fa8628af711f8bcb566270a08012da4bcf88c4",
+    "source/export_collision.py": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68",
+    "source/panel.py": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3",
+    "source/supports.py": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092",
+    "source/task_panel.py": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb",
+    "source/tools.py": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f"
+  },
+  "semantic_targets": {
+    "FDV1": {
+      "target_id": "FDV1",
+      "kind": "fdv1",
+      "root_object": "RRM_TB1_FDV1_removable_cap",
+      "moving_object": "RRM_TB1_FDV1_removable_cap",
+      "active": true,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.154
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.02915
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.012
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.154
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.02915
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.042
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.001,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.002,
+        "withdrawal_m": 0.065
+      },
+      "tool_root_object": "RRM_TB1_TOOL_fdv1",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_fdv1_spindle",
+      "driver_object": "RRM_TB1_TOOL_fdv1",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.029999999329447746
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 2,
+        "sma_col": 2,
+        "captive_index": 1
+      },
+      "seat_position_parent": [
+        0,
+        0,
+        0.012
+      ]
+    },
+    "SMA_1_1": {
+      "target_id": "SMA_1_1",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_1_1",
+      "moving_object": "RRM_TB1_SMA_cap_1_1",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.034
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2234
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.034
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2234
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 1,
+        "sma_col": 1,
+        "captive_index": 1
+      }
+    },
+    "SMA_1_2": {
+      "target_id": "SMA_1_2",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_1_2",
+      "moving_object": "RRM_TB1_SMA_cap_1_2",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.012
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2234
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.012
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2234
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 1,
+        "sma_col": 2,
+        "captive_index": 1
+      }
+    },
+    "SMA_1_3": {
+      "target_id": "SMA_1_3",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_1_3",
+      "moving_object": "RRM_TB1_SMA_cap_1_3",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.009999999999999998
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2234
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.009999999999999998
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2234
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 1,
+        "sma_col": 3,
+        "captive_index": 1
+      }
+    },
+    "SMA_2_1": {
+      "target_id": "SMA_2_1",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_2_1",
+      "moving_object": "RRM_TB1_SMA_cap_2_1",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.034
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2014
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.034
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2014
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 2,
+        "sma_col": 1,
+        "captive_index": 1
+      }
+    },
+    "SMA_2_2": {
+      "target_id": "SMA_2_2",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_2_2",
+      "moving_object": "RRM_TB1_SMA_cap_2_2",
+      "active": true,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.012
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2014
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.012
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2014
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 2,
+        "sma_col": 2,
+        "captive_index": 1
+      },
+      "seat_position_parent": [
+        0.0,
+        0.0,
+        0.01
+      ]
+    },
+    "SMA_2_3": {
+      "target_id": "SMA_2_3",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_2_3",
+      "moving_object": "RRM_TB1_SMA_cap_2_3",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.009999999999999998
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2014
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.009999999999999998
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.2014
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 2,
+        "sma_col": 3,
+        "captive_index": 1
+      }
+    },
+    "SMA_3_1": {
+      "target_id": "SMA_3_1",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_3_1",
+      "moving_object": "RRM_TB1_SMA_cap_3_1",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.034
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1794
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.034
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1794
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 3,
+        "sma_col": 1,
+        "captive_index": 1
+      }
+    },
+    "SMA_3_2": {
+      "target_id": "SMA_3_2",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_3_2",
+      "moving_object": "RRM_TB1_SMA_cap_3_2",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.012
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1794
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.012
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1794
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 3,
+        "sma_col": 2,
+        "captive_index": 1
+      }
+    },
+    "SMA_3_3": {
+      "target_id": "SMA_3_3",
+      "kind": "sma",
+      "root_object": "RRM_TB1_SMA_cap_3_3",
+      "moving_object": "RRM_TB1_SMA_cap_3_3",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.009999999999999998
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1794
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.01
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.009999999999999998
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1794
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.000706,
+        "unlock_turns": 2,
+        "thread_release_travel_m": 0.001412,
+        "withdrawal_m": 0.04
+      },
+      "tool_root_object": "RRM_TB1_TOOL_sma",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+      "driver_object": "RRM_TB1_TOOL_sma",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.002500000409781933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 3,
+        "sma_col": 3,
+        "captive_index": 1
+      }
+    },
+    "captive_1": {
+      "target_id": "captive_1",
+      "kind": "captive",
+      "root_object": "RRM_TB1_TASK_captive_moving_screw",
+      "moving_object": "RRM_TB1_TASK_captive_moving_screw",
+      "active": true,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.066
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.017100000000000004
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.024
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.066
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.017100000000000004
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0321
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.0007,
+        "turns": 3,
+        "loosening_travel_m": 0.0021,
+        "max_travel_m": 0.003
+      },
+      "tool_root_object": "RRM_TB1_TOOL_captive",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_captive_spindle",
+      "driver_object": "RRM_TB1_TOOL_captive",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.008099999278783798
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 2,
+        "sma_col": 2,
+        "captive_index": 1
+      },
+      "seat_position_parent": [
+        0,
+        0,
+        0
+      ]
+    },
+    "captive_2": {
+      "target_id": "captive_2",
+      "kind": "captive",
+      "root_object": "RRM_TB1_Captive_fastener_2",
+      "moving_object": "RRM_TB1_Captive_fastener_2",
+      "active": false,
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.066
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.0179
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.024
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "tool_contact": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.066
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.0179
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0321
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "parameters": {
+        "thread_pitch_m": 0.0007,
+        "turns": 3,
+        "loosening_travel_m": 0.0021,
+        "max_travel_m": 0.003
+      },
+      "tool_root_object": "RRM_TB1_TOOL_captive",
+      "tool_tcp_local": [
+        0,
+        0,
+        0.12
+      ],
+      "adapter_object": "RRM_TB1_TOOL_captive_spindle",
+      "driver_object": "RRM_TB1_TOOL_captive",
+      "nominal_retained_cap_in_adapter": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.008099999278783798
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rebuild": {
+        "sma_row": 2,
+        "sma_col": 2,
+        "captive_index": 2
+      }
+    }
+  },
+  "initial_state": {
+    "selected_sma_index": [
+      2,
+      2
+    ],
+    "selected_captive_index": 1,
+    "fastener_angle_rad": 0.0,
+    "fastener_axial_m": 0.0,
+    "tool_parking_positions_asset": {
+      "fdv1": [
+        0.06,
+        -0.36,
+        0.12
+      ],
+      "sma": [
+        0.23,
+        -0.36,
+        0.12
+      ],
+      "captive": [
+        -0.3,
+        -0.36,
+        0.04
+      ]
+    }
+  },
+  "robot_attachment_frames": {
+    "base": {
+      "transform_asset": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          -0.4300000071525574
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.3499999940395355
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.052000001072883606
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "role": "fixed robot mounting flange"
+    },
+    "world_from_asset": [
+      [
+        1.0,
+        -0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.8299999833106995
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "robot_asset": "provided by runtime; no robot CAD is bundled"
+  },
+  "gltf_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -4.371138828673793e-08,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      -4.371138828673793e-08,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "collision": {
+    "index": "collision.json",
+    "archive": "collision_meshes.zip",
+    "extract_directory": "collision_meshes"
+  },
+  "source_builder": "../publicbuild.py",
+  "dimensions": {
+    "plate_m": [
+      0.4,
+      0.53,
+      0.006
+    ]
+  },
+  "source_references": [
+    "https://www.nasa.gov/nexis/rrm-phase-1/",
+    "https://ntrs.nasa.gov/api/citations/20110013452/downloads/20110013452.pdf"
+  ]
+}
