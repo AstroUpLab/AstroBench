@@ -1,0 +1,2782 @@
+{
+  "schema": "astrobench.workcell.collision.v1",
+  "units": "m",
+  "bodies": {
+    "card": {
+      "root_object": "MELFI_VialCard",
+      "motion_type": "dynamic_compound",
+      "initial_transform": [
+        [
+          -4.371138828673793e-08,
+          1.0,
+          0.0,
+          -0.375
+        ],
+        [
+          -1.0,
+          -4.371138828673793e-08,
+          0.0,
+          0.3499999940395355
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "primitives": [
+        {
+          "type": "box",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "half_extents": [
+            0.05,
+            0.001,
+            0.055
+          ]
+        },
+        {
+          "type": "cylinder",
+          "center": [
+            -0.03,
+            -0.008,
+            -0.012
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius": 0.0066,
+          "height": 0.056
+        },
+        {
+          "type": "cylinder",
+          "center": [
+            -0.01,
+            -0.008,
+            -0.012
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius": 0.0066,
+          "height": 0.056
+        },
+        {
+          "type": "cylinder",
+          "center": [
+            0.01,
+            -0.008,
+            -0.012
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius": 0.0066,
+          "height": 0.056
+        },
+        {
+          "type": "cylinder",
+          "center": [
+            0.03,
+            -0.008,
+            -0.012
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius": 0.0066,
+          "height": 0.056
+        }
+      ]
+    },
+    "lid/0": {
+      "root_object": "MELFI_Front_quarter_box_lid_hinge",
+      "motion_type": "kinematic_articulation",
+      "initial_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.11410800367593765
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.07000000029802322
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1082490012049675
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangle_meshes": [
+        {
+          "name": "MELFI_Front_quarter_box_curved_perforated_lid",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0000.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_knuckle.001",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0001.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_knuckle.003",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0002.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_knuckle.005",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0003.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_knuckle.007",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0004.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_knuckle.009",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0005.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_knuckle.011",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0006.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.001",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0007.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.003",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0008.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.005",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0009.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.007",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0010.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.009",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0011.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.011",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0012.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_lid_free_edge_fold",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0013.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_lid_small_label",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0015.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_moving_hinge_leaf",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0016.obj"
+        },
+        {
+          "name": "MELFI_Front_quarter_box_moving_lid_latch_keeper",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_0/0017.obj"
+        }
+      ]
+    },
+    "lid/1": {
+      "root_object": "MELFI_Middle_quarter_box_lid_hinge",
+      "motion_type": "kinematic_articulation",
+      "initial_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.11410800367593765
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.20999999344348907
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1082490012049675
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangle_meshes": [
+        {
+          "name": "MELFI_Middle_quarter_box_curved_perforated_lid",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0000.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_knuckle.001",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0001.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_knuckle.003",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0002.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_knuckle.005",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0003.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_knuckle.007",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0004.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_knuckle.009",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0005.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_knuckle.011",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0006.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.001",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0007.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.003",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0008.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.005",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0009.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.007",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0010.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.009",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0011.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.011",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0012.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_lid_free_edge_fold",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0013.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_lid_small_label",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0015.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_moving_hinge_leaf",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0016.obj"
+        },
+        {
+          "name": "MELFI_Middle_quarter_box_moving_lid_latch_keeper",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_1/0017.obj"
+        }
+      ]
+    },
+    "lid/2": {
+      "root_object": "MELFI_Rear_half_box_lid_hinge",
+      "motion_type": "kinematic_articulation",
+      "initial_transform": [
+        [
+          0.08715580403804779,
+          0.0,
+          0.9961947202682495,
+          0.11410800367593765
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.41999998688697815
+        ],
+        [
+          -0.9961947202682495,
+          0.0,
+          0.08715580403804779,
+          0.1082490012049675
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangle_meshes": [
+        {
+          "name": "MELFI_Rear_half_box_curved_perforated_lid",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0000.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.001",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0001.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.003",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0002.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.005",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0003.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.007",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0004.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.009",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0005.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.011",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0006.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.013",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0007.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.015",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0008.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.017",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0009.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.019",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0010.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.021",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0011.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.023",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0012.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.025",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0013.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.027",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0014.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_knuckle.029",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0015.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.001",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0016.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.003",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0017.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.005",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0018.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.007",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0019.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.009",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0020.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.011",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0021.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.013",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0022.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.015",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0023.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.017",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0024.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.019",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0025.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.021",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0026.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.023",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0027.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.025",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0028.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.027",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0029.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.029",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0030.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_lid_free_edge_fold",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0031.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_lid_small_label",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0033.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_moving_hinge_leaf",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0034.obj"
+        },
+        {
+          "name": "MELFI_Rear_half_box_moving_lid_latch_keeper",
+          "coordinate_frame": "body_local",
+          "obj_path": "collision_meshes/lid_2/0035.obj"
+        }
+      ]
+    },
+    "retention/Front_quarter_box": {
+      "root_object": "MELFI_Front_quarter_box",
+      "motion_type": "runtime_elastic_strip",
+      "visual_objects": [
+        "MELFI_Front_quarter_box_band_end_seam.001",
+        "MELFI_Front_quarter_box_band_free_end_fold",
+        "MELFI_Front_quarter_box_manual_card_retention_band",
+        "MELFI_Front_quarter_box_band_end_connector",
+        "MELFI_Front_quarter_box_band_end_seam"
+      ],
+      "centerlines_parent": {
+        "released": [
+          [
+            0.10100000351667404,
+            0.0,
+            0.09600000083446503
+          ],
+          [
+            0.10100000351667404,
+            0.0,
+            0.08799999952316284
+          ],
+          [
+            0.0989999994635582,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.09099999815225601,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0820000022649765,
+            0.0,
+            0.05999999865889549
+          ],
+          [
+            0.07199999690055847,
+            0.0,
+            0.04899999871850014
+          ],
+          [
+            0.06199999898672104,
+            0.0,
+            0.03799999877810478
+          ],
+          [
+            0.050999999046325684,
+            0.0,
+            0.026000000536441803
+          ],
+          [
+            0.04100000113248825,
+            0.0,
+            0.014000000432133675
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.006000000052154064
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.006000000052154064
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.008999999612569809
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.008999999612569809
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.012000000104308128
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.012000000104308128
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.014999999664723873
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.014999999664723873
+          ]
+        ],
+        "retained_around_card": [
+          [
+            0.101,
+            0,
+            0.096
+          ],
+          [
+            0.07,
+            0,
+            0.103
+          ],
+          [
+            0.02,
+            0,
+            0.1125
+          ],
+          [
+            0.0035,
+            0,
+            0.1125
+          ],
+          [
+            -0.0035,
+            0,
+            0.1125
+          ],
+          [
+            -0.025,
+            0,
+            0.1135
+          ],
+          [
+            -0.071892,
+            0,
+            0.116
+          ]
+        ]
+      },
+      "endpoint_constraints": {
+        "fixed_start_parent": [
+          0.10100000351667404,
+          0.0,
+          0.09600000083446503
+        ],
+        "retained_end_parent": [
+          -0.071892,
+          0,
+          0.116
+        ],
+        "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+      },
+      "parameters": {
+        "model": "elastic strip or a rod/contact discretization preserving strip width",
+        "rest_length_m": 0.17291027289250446,
+        "axial_stiffness_n_per_m": 100.0,
+        "axial_damping_ns_per_m": 0.5,
+        "mass_kg": 0.002,
+        "friction_coefficient": 0.6,
+        "parameter_provenance": "AstroBench engineering parameters",
+        "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+      },
+      "collision_rule": "Build strip contact from centerline, width and thickness; do not load these movable parts as static surfaces.",
+      "width_m": 0.014,
+      "thickness_m": 0.00065
+    },
+    "retention/Middle_quarter_box": {
+      "root_object": "MELFI_Middle_quarter_box",
+      "motion_type": "runtime_elastic_strip",
+      "visual_objects": [
+        "MELFI_Middle_quarter_box_band_end_connector",
+        "MELFI_Middle_quarter_box_band_end_seam",
+        "MELFI_Middle_quarter_box_band_end_seam.001",
+        "MELFI_Middle_quarter_box_manual_card_retention_band",
+        "MELFI_Middle_quarter_box_band_free_end_fold"
+      ],
+      "centerlines_parent": {
+        "released": [
+          [
+            0.10100000351667404,
+            0.0,
+            0.09600000083446503
+          ],
+          [
+            0.10100000351667404,
+            0.0,
+            0.08799999952316284
+          ],
+          [
+            0.0989999994635582,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.09099999815225601,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0820000022649765,
+            0.0,
+            0.05999999865889549
+          ],
+          [
+            0.07199999690055847,
+            0.0,
+            0.04899999871850014
+          ],
+          [
+            0.06199999898672104,
+            0.0,
+            0.03799999877810478
+          ],
+          [
+            0.050999999046325684,
+            0.0,
+            0.026000000536441803
+          ],
+          [
+            0.04100000113248825,
+            0.0,
+            0.014000000432133675
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.006000000052154064
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.006000000052154064
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.008999999612569809
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.008999999612569809
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.012000000104308128
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.012000000104308128
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.014999999664723873
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.014999999664723873
+          ]
+        ],
+        "retained_around_card": [
+          [
+            0.101,
+            0,
+            0.096
+          ],
+          [
+            0.07,
+            0,
+            0.103
+          ],
+          [
+            0.02,
+            0,
+            0.1125
+          ],
+          [
+            0.0035,
+            0,
+            0.1125
+          ],
+          [
+            -0.0035,
+            0,
+            0.1125
+          ],
+          [
+            -0.025,
+            0,
+            0.1135
+          ],
+          [
+            -0.071892,
+            0,
+            0.116
+          ]
+        ]
+      },
+      "endpoint_constraints": {
+        "fixed_start_parent": [
+          0.10100000351667404,
+          0.0,
+          0.09600000083446503
+        ],
+        "retained_end_parent": [
+          -0.071892,
+          0,
+          0.116
+        ],
+        "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+      },
+      "parameters": {
+        "model": "elastic strip or a rod/contact discretization preserving strip width",
+        "rest_length_m": 0.17291027289250446,
+        "axial_stiffness_n_per_m": 100.0,
+        "axial_damping_ns_per_m": 0.5,
+        "mass_kg": 0.002,
+        "friction_coefficient": 0.6,
+        "parameter_provenance": "AstroBench engineering parameters",
+        "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+      },
+      "collision_rule": "Build strip contact from centerline, width and thickness; do not load these movable parts as static surfaces.",
+      "width_m": 0.014,
+      "thickness_m": 0.00065
+    },
+    "retention/Rear_half_box": {
+      "root_object": "MELFI_Rear_half_box",
+      "motion_type": "runtime_elastic_strip",
+      "visual_objects": [
+        "MELFI_Rear_half_box_manual_card_retention_band",
+        "MELFI_Rear_half_box_band_free_end_fold",
+        "MELFI_Rear_half_box_band_end_connector",
+        "MELFI_Rear_half_box_band_end_seam",
+        "MELFI_Rear_half_box_band_end_seam.001"
+      ],
+      "centerlines_parent": {
+        "released": [
+          [
+            0.10100000351667404,
+            0.0,
+            0.09600000083446503
+          ],
+          [
+            0.10100000351667404,
+            0.0,
+            0.08799999952316284
+          ],
+          [
+            0.0989999994635582,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.09099999815225601,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0820000022649765,
+            0.0,
+            0.05999999865889549
+          ],
+          [
+            0.07199999690055847,
+            0.0,
+            0.04899999871850014
+          ],
+          [
+            0.06199999898672104,
+            0.0,
+            0.03799999877810478
+          ],
+          [
+            0.050999999046325684,
+            0.0,
+            0.026000000536441803
+          ],
+          [
+            0.04100000113248825,
+            0.0,
+            0.014000000432133675
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.006000000052154064
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.006000000052154064
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.008999999612569809
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.008999999612569809
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.012000000104308128
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.012000000104308128
+          ],
+          [
+            0.023000000044703484,
+            0.0,
+            0.014999999664723873
+          ],
+          [
+            0.03400000184774399,
+            0.0,
+            0.014999999664723873
+          ]
+        ],
+        "retained_around_card": [
+          [
+            0.101,
+            0,
+            0.096
+          ],
+          [
+            0.07,
+            0,
+            0.103
+          ],
+          [
+            0.02,
+            0,
+            0.1125
+          ],
+          [
+            0.0035,
+            0,
+            0.1125
+          ],
+          [
+            -0.0035,
+            0,
+            0.1125
+          ],
+          [
+            -0.025,
+            0,
+            0.1135
+          ],
+          [
+            -0.071892,
+            0,
+            0.116
+          ]
+        ]
+      },
+      "endpoint_constraints": {
+        "fixed_start_parent": [
+          0.10100000351667404,
+          0.0,
+          0.09600000083446503
+        ],
+        "retained_end_parent": [
+          -0.071892,
+          0,
+          0.116
+        ],
+        "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+      },
+      "parameters": {
+        "model": "elastic strip or a rod/contact discretization preserving strip width",
+        "rest_length_m": 0.17291027289250446,
+        "axial_stiffness_n_per_m": 100.0,
+        "axial_damping_ns_per_m": 0.5,
+        "mass_kg": 0.002,
+        "friction_coefficient": 0.6,
+        "parameter_provenance": "AstroBench engineering parameters",
+        "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+      },
+      "collision_rule": "Build strip contact from centerline, width and thickness; do not load these movable parts as static surfaces.",
+      "width_m": 0.014,
+      "thickness_m": 0.00065
+    }
+  },
+  "static_meshes": [
+    {
+      "name": "Adapter label",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0000.obj"
+    },
+    {
+      "name": "Benchmark tray adapter cross rail",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0001.obj"
+    },
+    {
+      "name": "Benchmark tray adapter cross rail.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0002.obj"
+    },
+    {
+      "name": "Benchmark tray adapter diagonal brace",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0003.obj"
+    },
+    {
+      "name": "Benchmark tray adapter diagonal brace.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0004.obj"
+    },
+    {
+      "name": "Benchmark tray adapter short bracket",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0005.obj"
+    },
+    {
+      "name": "Benchmark tray adapter short bracket.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0006.obj"
+    },
+    {
+      "name": "Benchmark tray adapter wall bolt",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0007.obj"
+    },
+    {
+      "name": "Benchmark tray adapter wall bolt.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0008.obj"
+    },
+    {
+      "name": "Benchmark tray adapter wall bolt.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0009.obj"
+    },
+    {
+      "name": "Benchmark tray adapter wall bolt.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0010.obj"
+    },
+    {
+      "name": "Benchmark tray adapter wall plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0011.obj"
+    },
+    {
+      "name": "Floor pedestal base plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0012.obj"
+    },
+    {
+      "name": "Floor pedestal cable loom",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0013.obj"
+    },
+    {
+      "name": "Floor pedestal foundation screw",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0014.obj"
+    },
+    {
+      "name": "Floor pedestal foundation screw.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0015.obj"
+    },
+    {
+      "name": "Floor pedestal foundation screw.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0016.obj"
+    },
+    {
+      "name": "Floor pedestal foundation screw.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0017.obj"
+    },
+    {
+      "name": "Floor pedestal foundation washer",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0018.obj"
+    },
+    {
+      "name": "Floor pedestal foundation washer.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0019.obj"
+    },
+    {
+      "name": "Floor pedestal foundation washer.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0020.obj"
+    },
+    {
+      "name": "Floor pedestal foundation washer.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0021.obj"
+    },
+    {
+      "name": "Floor pedestal identification",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0022.obj"
+    },
+    {
+      "name": "Floor pedestal lower collar",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0023.obj"
+    },
+    {
+      "name": "Floor pedestal recessed top screw",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0024.obj"
+    },
+    {
+      "name": "Floor pedestal recessed top screw.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0025.obj"
+    },
+    {
+      "name": "Floor pedestal recessed top screw.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0026.obj"
+    },
+    {
+      "name": "Floor pedestal recessed top screw.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0027.obj"
+    },
+    {
+      "name": "Floor pedestal support column",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0028.obj"
+    },
+    {
+      "name": "Floor pedestal upper mounting flange",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0029.obj"
+    },
+    {
+      "name": "MELFI_Front_insulation_face_skin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0032.obj"
+    },
+    {
+      "name": "MELFI_Front_insulation_foam",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0033.obj"
+    },
+    {
+      "name": "MELFI_Front_insulation_lower_seat",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0034.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_backing",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0036.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_backing.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0037.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_bridge",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0038.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_bridge.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0039.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_mount_return",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0040.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_rivet",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0041.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_rivet.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0042.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_rivet.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0043.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_band_anchor_rivet.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0044.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_bottom_return_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0051.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_bottom_return_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0052.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_identification_plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0054.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_identification_plate.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0055.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0056.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0057.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0058.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0059.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0060.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.005",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0061.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0062.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.007",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0063.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0064.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.009",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0065.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0066.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.011",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0067.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0068.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.013",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0069.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.014",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0070.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.015",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0071.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.016",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0072.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_end_plate_fastener.017",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0073.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_folded_wall_0",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0074.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_folded_wall_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0075.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_folded_wall_2",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0076.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_folded_wall_3",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0077.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_folded_wall_4",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0078.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_folded_wall_5",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0079.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_fixed_hinge_leaf",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0080.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_flat_bottom",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0081.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0082.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0084.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0086.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0088.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0090.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0092.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_knuckle.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0094.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rivet",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0095.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rivet.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0096.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rivet.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0097.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0098.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0100.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0102.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0104.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0106.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0108.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_leaf_rolled_neck.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0110.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_hinge_pin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0111.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_inside_loop_strip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0112.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_inside_loop_strip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0113.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_end_support_ledge_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0114.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_end_support_ledge_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0115.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_backplate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0118.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_bail",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0119.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_finger_return",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0120.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_lever_pin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0121.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_lift_plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0123.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0124.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_mount.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0125.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_short_link",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0126.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_short_link.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0127.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_side_cheek",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0128.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_lid_latch_side_cheek.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0129.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_outside_hook_strip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0135.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_outside_hook_strip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0136.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_perforated_end_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0137.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_perforated_end_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0138.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_short_end_cap_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0139.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_short_end_cap_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0140.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_sloping_side_left",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0141.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_sloping_side_right",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0142.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_tray_lock_finger_tab",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0144.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_tray_lock_lower_clip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0145.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_tray_lock_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0146.obj"
+    },
+    {
+      "name": "MELFI_Front_quarter_box_tray_lock_pivot",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0147.obj"
+    },
+    {
+      "name": "MELFI_Front_small_fitting_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0148.obj"
+    },
+    {
+      "name": "MELFI_Front_small_fitting_screw",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0149.obj"
+    },
+    {
+      "name": "MELFI_Front_small_fitting_screw.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0150.obj"
+    },
+    {
+      "name": "MELFI_Front_small_pull_tab",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0151.obj"
+    },
+    {
+      "name": "MELFI_Insulation_rear_joint_edge",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0152.obj"
+    },
+    {
+      "name": "MELFI_Insulation_round_plug",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0153.obj"
+    },
+    {
+      "name": "MELFI_Insulation_round_plug.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0154.obj"
+    },
+    {
+      "name": "MELFI_Insulation_round_plug_seat",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0155.obj"
+    },
+    {
+      "name": "MELFI_Insulation_round_plug_seat.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0156.obj"
+    },
+    {
+      "name": "MELFI_Insulation_skin_seam",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0157.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_backing",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0159.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_backing.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0160.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_bridge",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0161.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_bridge.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0162.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_mount_return",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0163.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_rivet",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0164.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_rivet.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0165.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_rivet.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0166.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_band_anchor_rivet.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0167.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_bottom_return_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0174.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_bottom_return_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0175.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_identification_plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0177.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_identification_plate.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0178.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0179.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0180.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0181.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0182.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0183.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.005",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0184.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0185.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.007",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0186.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0187.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.009",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0188.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0189.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.011",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0190.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0191.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.013",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0192.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.014",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0193.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.015",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0194.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.016",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0195.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_end_plate_fastener.017",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0196.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_folded_wall_0",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0197.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_folded_wall_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0198.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_folded_wall_2",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0199.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_folded_wall_3",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0200.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_folded_wall_4",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0201.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_folded_wall_5",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0202.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_fixed_hinge_leaf",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0203.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_flat_bottom",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0204.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0205.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0207.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0209.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0211.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0213.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0215.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_knuckle.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0217.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rivet",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0218.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rivet.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0219.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rivet.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0220.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0221.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0223.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0225.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0227.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0229.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0231.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_leaf_rolled_neck.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0233.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_hinge_pin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0234.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_inside_loop_strip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0235.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_inside_loop_strip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0236.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_end_support_ledge_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0237.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_end_support_ledge_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0238.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_backplate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0241.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_bail",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0242.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_finger_return",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0243.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_lever_pin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0244.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_lift_plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0246.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0247.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_mount.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0248.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_short_link",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0249.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_short_link.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0250.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_side_cheek",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0251.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_lid_latch_side_cheek.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0252.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_outside_hook_strip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0258.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_outside_hook_strip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0259.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_perforated_end_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0260.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_perforated_end_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0261.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_short_end_cap_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0262.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_short_end_cap_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0263.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_sloping_side_left",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0264.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_sloping_side_right",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0265.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_tray_lock_finger_tab",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0267.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_tray_lock_lower_clip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0268.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_tray_lock_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0269.obj"
+    },
+    {
+      "name": "MELFI_Middle_quarter_box_tray_lock_pivot",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0270.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_backing",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0272.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_backing.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0273.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_bridge",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0274.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_bridge.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0275.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_mount_return",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0276.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_rivet",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0277.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_rivet.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0278.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_rivet.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0279.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_band_anchor_rivet.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0280.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_bottom_return_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0287.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_bottom_return_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0288.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_identification_plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0290.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_identification_plate.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0291.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0292.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0293.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0294.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0295.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0296.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.005",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0297.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0298.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.007",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0299.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0300.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.009",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0301.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0302.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.011",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0303.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0304.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.013",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0305.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.014",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0306.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.015",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0307.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.016",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0308.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_end_plate_fastener.017",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0309.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_folded_wall_0",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0310.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_folded_wall_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0311.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_folded_wall_2",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0312.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_folded_wall_3",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0313.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_folded_wall_4",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0314.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_folded_wall_5",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0315.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_fixed_hinge_leaf",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0316.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_flat_bottom",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0317.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0318.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0320.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0322.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0324.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0326.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0328.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0330.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.014",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0332.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.016",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0334.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.018",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0336.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.020",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0338.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.022",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0340.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.024",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0342.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.026",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0344.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.028",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0346.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_knuckle.030",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0348.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0349.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0350.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0351.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0352.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0353.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet.005",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0354.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rivet.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0355.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0356.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0358.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0360.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0362.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.008",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0364.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.010",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0366.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.012",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0368.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.014",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0370.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.016",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0372.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.018",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0374.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.020",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0376.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.022",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0378.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.024",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0380.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.026",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0382.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.028",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0384.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_leaf_rolled_neck.030",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0386.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_hinge_pin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0387.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_inside_loop_strip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0388.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_inside_loop_strip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0389.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_end_support_ledge_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0390.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_end_support_ledge_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0391.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_backplate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0394.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_bail",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0395.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_finger_return",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0396.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_lever_pin",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0397.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_lift_plate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0399.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0400.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_mount.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0401.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_short_link",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0402.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_short_link.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0403.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_side_cheek",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0404.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_lid_latch_side_cheek.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0405.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_outside_hook_strip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0411.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_outside_hook_strip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0412.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_perforated_end_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0413.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_perforated_end_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0414.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_short_end_cap_-1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0415.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_short_end_cap_1",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0416.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_sloping_side_left",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0417.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_sloping_side_right",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0418.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_tray_lock_finger_tab",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0420.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_tray_lock_lower_clip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0421.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_tray_lock_mount",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0422.obj"
+    },
+    {
+      "name": "MELFI_Rear_half_box_tray_lock_pivot",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0423.obj"
+    },
+    {
+      "name": "MELFI_Tray_bottom",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0425.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0426.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0427.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0428.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0429.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.004",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0430.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.005",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0431.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.006",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0432.obj"
+    },
+    {
+      "name": "MELFI_Tray_cradle_strap.007",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0433.obj"
+    },
+    {
+      "name": "MELFI_Tray_folded_floor_rail",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0434.obj"
+    },
+    {
+      "name": "MELFI_Tray_folded_floor_rail.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0435.obj"
+    },
+    {
+      "name": "MELFI_Tray_left_triangular_carrier",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0437.obj"
+    },
+    {
+      "name": "MELFI_Tray_right_triangular_carrier",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0438.obj"
+    },
+    {
+      "name": "MELFI_Tray_slide_runner",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0439.obj"
+    },
+    {
+      "name": "MELFI_Tray_slide_runner.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/static/0440.obj"
+    }
+  ],
+  "joints": [
+    {
+      "id": "Front_quarter_box/lid",
+      "type": "revolute",
+      "object": "MELFI_Front_quarter_box_lid_hinge",
+      "parent": "MELFI_Front_quarter_box",
+      "axis_parent": [
+        0,
+        1,
+        0
+      ],
+      "origin_parent": [
+        0.11410800367593765,
+        0.0,
+        0.09824900329113007
+      ],
+      "limits_rad": [
+        0,
+        1.4835298641951802
+      ],
+      "initial_rad": 0.0,
+      "actuation": "runtime joint; visual latch coupling is a reset pose"
+    },
+    {
+      "id": "Middle_quarter_box/lid",
+      "type": "revolute",
+      "object": "MELFI_Middle_quarter_box_lid_hinge",
+      "parent": "MELFI_Middle_quarter_box",
+      "axis_parent": [
+        0,
+        1,
+        0
+      ],
+      "origin_parent": [
+        0.11410800367593765,
+        0.0,
+        0.09824900329113007
+      ],
+      "limits_rad": [
+        0,
+        1.4835298641951802
+      ],
+      "initial_rad": 0.0,
+      "actuation": "runtime joint; visual latch coupling is a reset pose"
+    },
+    {
+      "id": "Rear_half_box/lid",
+      "type": "revolute",
+      "object": "MELFI_Rear_half_box_lid_hinge",
+      "parent": "MELFI_Rear_half_box",
+      "axis_parent": [
+        0,
+        1,
+        0
+      ],
+      "origin_parent": [
+        0.11410800367593765,
+        0.0,
+        0.09824900329113007
+      ],
+      "limits_rad": [
+        0,
+        1.4835298641951802
+      ],
+      "initial_rad": 1.483529806137085,
+      "actuation": "runtime joint; visual latch coupling is a reset pose"
+    }
+  ],
+  "dynamic_rule": "Card uses authored compound primitives. Lid surfaces use kinematic triangle collision with the named hinge; use material-preserving convex decomposition if the backend requires dynamic rigid lids.",
+  "static_rule": "Concave triangle surfaces retain the box openings and perforations.",
+  "summary": {
+    "body_count": 7,
+    "static_mesh_count": 332
+  },
+  "mesh_archive": {
+    "path": "collision_meshes.zip",
+    "sha256": "e2e7fccf6b27f01a98d58e3bc8cda9f4ca44a9340b6a7628e109fdcb13afa62e",
+    "extract_directory": "collision_meshes"
+  }
+}

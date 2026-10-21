@@ -1,0 +1,1197 @@
+{
+  "schema": "astrobench.workcell.asset.v1",
+  "asset_id": "melfi_v6",
+  "units": "m",
+  "up_axis": "Z",
+  "license": "Apache-2.0",
+  "source_files": [
+    {
+      "path": "geometry_supports.py",
+      "sha256": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a"
+    },
+    {
+      "path": "load_asset.py",
+      "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e"
+    },
+    {
+      "path": "melfi_v6/source/melfi.py",
+      "sha256": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93"
+    },
+    {
+      "path": "melfi_v6/source/reference_profile.json",
+      "sha256": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487"
+    },
+    {
+      "path": "melfi_v6/source/supports.py",
+      "sha256": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b"
+    },
+    {
+      "path": "publicbuild.py",
+      "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0"
+    },
+    {
+      "path": "rrm_tb1/source/export_collision.py",
+      "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68"
+    },
+    {
+      "path": "rrm_tb1/source/panel.py",
+      "sha256": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3"
+    },
+    {
+      "path": "rrm_tb1/source/supports.py",
+      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092"
+    },
+    {
+      "path": "rrm_tb1/source/task_panel.py",
+      "sha256": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb"
+    },
+    {
+      "path": "rrm_tb1/source/tools.py",
+      "sha256": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f"
+    },
+    {
+      "path": "unpack_collision.py",
+      "sha256": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
+    }
+  ],
+  "builder_sha256": {
+    "geometry_supports.py": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a",
+    "load_asset.py": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e",
+    "publicbuild.py": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0",
+    "unpack_collision.py": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
+  },
+  "canonical_source_sha256": "9e390dd6831b2e04a6535200c80bcc14f52e242632685a66f5c4cd660596226a",
+  "build_args": {},
+  "files": [
+    {
+      "path": "collision.json",
+      "sha256": "6424ddafe0e7482cc491eef601b8cca3b46f955de8ccf9975dd3d05115e165c8",
+      "bytes": 83761,
+      "role": "collision"
+    },
+    {
+      "path": "collision_meshes.zip",
+      "sha256": "e2e7fccf6b27f01a98d58e3bc8cda9f4ca44a9340b6a7628e109fdcb13afa62e",
+      "bytes": 1977341,
+      "role": "collision"
+    },
+    {
+      "path": "melfi_v6.blend",
+      "sha256": "9b7a4a05b70c07fa925ed2193aac85683357d577ede7a9f008d8871c258ae7db",
+      "bytes": 1678541,
+      "role": "editable_model"
+    },
+    {
+      "path": "melfi_v6.glb",
+      "sha256": "abc921c5c65a6630ae50fa2cb693b37bba2c67917274298217813c3371a2cd51",
+      "bytes": 9785692,
+      "role": "neutral_model"
+    },
+    {
+      "path": "parts.json",
+      "sha256": "9a4a670ad6e049c1bddda97d98af25cf4df37887d976b638e71d52a3581dce58",
+      "bytes": 563872,
+      "role": "semantics"
+    },
+    {
+      "path": "source/melfi.py",
+      "sha256": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93",
+      "bytes": 44482,
+      "role": "source"
+    },
+    {
+      "path": "source/reference_profile.json",
+      "sha256": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487",
+      "bytes": 10825,
+      "role": "source"
+    },
+    {
+      "path": "source/supports.py",
+      "sha256": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b",
+      "bytes": 2822,
+      "role": "source"
+    }
+  ],
+  "files_sha256": {
+    "collision.json": "6424ddafe0e7482cc491eef601b8cca3b46f955de8ccf9975dd3d05115e165c8",
+    "collision_meshes.zip": "e2e7fccf6b27f01a98d58e3bc8cda9f4ca44a9340b6a7628e109fdcb13afa62e",
+    "melfi_v6.blend": "9b7a4a05b70c07fa925ed2193aac85683357d577ede7a9f008d8871c258ae7db",
+    "melfi_v6.glb": "abc921c5c65a6630ae50fa2cb693b37bba2c67917274298217813c3371a2cd51",
+    "parts.json": "9a4a670ad6e049c1bddda97d98af25cf4df37887d976b638e71d52a3581dce58",
+    "source/melfi.py": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93",
+    "source/reference_profile.json": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487",
+    "source/supports.py": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b"
+  },
+  "semantic_targets": {
+    "Front_quarter_box": {
+      "target_id": "Front_quarter_box",
+      "root_object": "MELFI_Front_quarter_box",
+      "lid_object": "MELFI_Front_quarter_box_lid_hinge",
+      "latch_object": "MELFI_Front_quarter_box_lid_latch_lift_paddle",
+      "card_object": "MELFI_VialCard",
+      "active": true,
+      "retention": {
+        "band_object": "MELFI_Front_quarter_box_manual_card_retention_band",
+        "end_objects": [
+          "MELFI_Front_quarter_box_band_end_connector",
+          "MELFI_Front_quarter_box_band_end_seam",
+          "MELFI_Front_quarter_box_band_end_seam.001",
+          "MELFI_Front_quarter_box_band_free_end_fold"
+        ],
+        "coordinate_frame_object": "MELFI_Front_quarter_box",
+        "width_m": 0.014,
+        "thickness_m": 0.00065,
+        "default_state": "released",
+        "centerlines_parent": {
+          "released": [
+            [
+              0.10100000351667404,
+              0.0,
+              0.09600000083446503
+            ],
+            [
+              0.10100000351667404,
+              0.0,
+              0.08799999952316284
+            ],
+            [
+              0.0989999994635582,
+              0.0,
+              0.07999999821186066
+            ],
+            [
+              0.09099999815225601,
+              0.0,
+              0.07000000029802322
+            ],
+            [
+              0.0820000022649765,
+              0.0,
+              0.05999999865889549
+            ],
+            [
+              0.07199999690055847,
+              0.0,
+              0.04899999871850014
+            ],
+            [
+              0.06199999898672104,
+              0.0,
+              0.03799999877810478
+            ],
+            [
+              0.050999999046325684,
+              0.0,
+              0.026000000536441803
+            ],
+            [
+              0.04100000113248825,
+              0.0,
+              0.014000000432133675
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.006000000052154064
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.006000000052154064
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.008999999612569809
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.008999999612569809
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.012000000104308128
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.012000000104308128
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.014999999664723873
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.014999999664723873
+            ]
+          ],
+          "retained_around_card": [
+            [
+              0.101,
+              0,
+              0.096
+            ],
+            [
+              0.07,
+              0,
+              0.103
+            ],
+            [
+              0.02,
+              0,
+              0.1125
+            ],
+            [
+              0.0035,
+              0,
+              0.1125
+            ],
+            [
+              -0.0035,
+              0,
+              0.1125
+            ],
+            [
+              -0.025,
+              0,
+              0.1135
+            ],
+            [
+              -0.071892,
+              0,
+              0.116
+            ]
+          ]
+        },
+        "endpoint_constraints": {
+          "fixed_start_parent": [
+            0.10100000351667404,
+            0.0,
+            0.09600000083446503
+          ],
+          "retained_end_parent": [
+            -0.071892,
+            0,
+            0.116
+          ],
+          "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+        },
+        "runtime_elastic_model": {
+          "model": "elastic strip or a rod/contact discretization preserving strip width",
+          "rest_length_m": 0.17291027289250446,
+          "axial_stiffness_n_per_m": 100.0,
+          "axial_damping_ns_per_m": 0.5,
+          "mass_kg": 0.002,
+          "friction_coefficient": 0.6,
+          "parameter_provenance": "AstroBench engineering parameters",
+          "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+        }
+      },
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            -0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.009999999776482582
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "opening": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inserted": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.06650000065565109
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "approach": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.23499999940395355
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inserted_card": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.07000000029802322
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.06650000065565109
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "frame_provenance": "AstroBench task frames in metres; pose frame uses card local orientation.",
+      "latch_closed_rotation_y_rad": 0.0,
+      "latch_open_rotation_y_rad": 0.4886921905584123
+    },
+    "Middle_quarter_box": {
+      "target_id": "Middle_quarter_box",
+      "root_object": "MELFI_Middle_quarter_box",
+      "lid_object": "MELFI_Middle_quarter_box_lid_hinge",
+      "latch_object": "MELFI_Middle_quarter_box_lid_latch_lift_paddle",
+      "card_object": "MELFI_VialCard",
+      "active": true,
+      "retention": {
+        "band_object": "MELFI_Middle_quarter_box_manual_card_retention_band",
+        "end_objects": [
+          "MELFI_Middle_quarter_box_band_end_connector",
+          "MELFI_Middle_quarter_box_band_end_seam",
+          "MELFI_Middle_quarter_box_band_end_seam.001",
+          "MELFI_Middle_quarter_box_band_free_end_fold"
+        ],
+        "coordinate_frame_object": "MELFI_Middle_quarter_box",
+        "width_m": 0.014,
+        "thickness_m": 0.00065,
+        "default_state": "released",
+        "centerlines_parent": {
+          "released": [
+            [
+              0.10100000351667404,
+              0.0,
+              0.09600000083446503
+            ],
+            [
+              0.10100000351667404,
+              0.0,
+              0.08799999952316284
+            ],
+            [
+              0.0989999994635582,
+              0.0,
+              0.07999999821186066
+            ],
+            [
+              0.09099999815225601,
+              0.0,
+              0.07000000029802322
+            ],
+            [
+              0.0820000022649765,
+              0.0,
+              0.05999999865889549
+            ],
+            [
+              0.07199999690055847,
+              0.0,
+              0.04899999871850014
+            ],
+            [
+              0.06199999898672104,
+              0.0,
+              0.03799999877810478
+            ],
+            [
+              0.050999999046325684,
+              0.0,
+              0.026000000536441803
+            ],
+            [
+              0.04100000113248825,
+              0.0,
+              0.014000000432133675
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.006000000052154064
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.006000000052154064
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.008999999612569809
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.008999999612569809
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.012000000104308128
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.012000000104308128
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.014999999664723873
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.014999999664723873
+            ]
+          ],
+          "retained_around_card": [
+            [
+              0.101,
+              0,
+              0.096
+            ],
+            [
+              0.07,
+              0,
+              0.103
+            ],
+            [
+              0.02,
+              0,
+              0.1125
+            ],
+            [
+              0.0035,
+              0,
+              0.1125
+            ],
+            [
+              -0.0035,
+              0,
+              0.1125
+            ],
+            [
+              -0.025,
+              0,
+              0.1135
+            ],
+            [
+              -0.071892,
+              0,
+              0.116
+            ]
+          ]
+        },
+        "endpoint_constraints": {
+          "fixed_start_parent": [
+            0.10100000351667404,
+            0.0,
+            0.09600000083446503
+          ],
+          "retained_end_parent": [
+            -0.071892,
+            0,
+            0.116
+          ],
+          "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+        },
+        "runtime_elastic_model": {
+          "model": "elastic strip or a rod/contact discretization preserving strip width",
+          "rest_length_m": 0.17291027289250446,
+          "axial_stiffness_n_per_m": 100.0,
+          "axial_damping_ns_per_m": 0.5,
+          "mass_kg": 0.002,
+          "friction_coefficient": 0.6,
+          "parameter_provenance": "AstroBench engineering parameters",
+          "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+        }
+      },
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            -0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.009999999776482582
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "opening": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inserted": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.06650000065565109
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "approach": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.23499999940395355
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inserted_card": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.06650000065565109
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "frame_provenance": "AstroBench task frames in metres; pose frame uses card local orientation.",
+      "latch_closed_rotation_y_rad": 0.0,
+      "latch_open_rotation_y_rad": 0.4886921905584123
+    },
+    "Rear_half_box": {
+      "target_id": "Rear_half_box",
+      "root_object": "MELFI_Rear_half_box",
+      "lid_object": "MELFI_Rear_half_box_lid_hinge",
+      "latch_object": "MELFI_Rear_half_box_lid_latch_lift_paddle",
+      "card_object": "MELFI_VialCard",
+      "active": true,
+      "retention": {
+        "band_object": "MELFI_Rear_half_box_manual_card_retention_band",
+        "end_objects": [
+          "MELFI_Rear_half_box_band_end_connector",
+          "MELFI_Rear_half_box_band_end_seam",
+          "MELFI_Rear_half_box_band_end_seam.001",
+          "MELFI_Rear_half_box_band_free_end_fold"
+        ],
+        "coordinate_frame_object": "MELFI_Rear_half_box",
+        "width_m": 0.014,
+        "thickness_m": 0.00065,
+        "default_state": "released",
+        "centerlines_parent": {
+          "released": [
+            [
+              0.10100000351667404,
+              0.0,
+              0.09600000083446503
+            ],
+            [
+              0.10100000351667404,
+              0.0,
+              0.08799999952316284
+            ],
+            [
+              0.0989999994635582,
+              0.0,
+              0.07999999821186066
+            ],
+            [
+              0.09099999815225601,
+              0.0,
+              0.07000000029802322
+            ],
+            [
+              0.0820000022649765,
+              0.0,
+              0.05999999865889549
+            ],
+            [
+              0.07199999690055847,
+              0.0,
+              0.04899999871850014
+            ],
+            [
+              0.06199999898672104,
+              0.0,
+              0.03799999877810478
+            ],
+            [
+              0.050999999046325684,
+              0.0,
+              0.026000000536441803
+            ],
+            [
+              0.04100000113248825,
+              0.0,
+              0.014000000432133675
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.006000000052154064
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.006000000052154064
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.008999999612569809
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.008999999612569809
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.012000000104308128
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.012000000104308128
+            ],
+            [
+              0.023000000044703484,
+              0.0,
+              0.014999999664723873
+            ],
+            [
+              0.03400000184774399,
+              0.0,
+              0.014999999664723873
+            ]
+          ],
+          "retained_around_card": [
+            [
+              0.101,
+              0,
+              0.096
+            ],
+            [
+              0.07,
+              0,
+              0.103
+            ],
+            [
+              0.02,
+              0,
+              0.1125
+            ],
+            [
+              0.0035,
+              0,
+              0.1125
+            ],
+            [
+              -0.0035,
+              0,
+              0.1125
+            ],
+            [
+              -0.025,
+              0,
+              0.1135
+            ],
+            [
+              -0.071892,
+              0,
+              0.116
+            ]
+          ]
+        },
+        "endpoint_constraints": {
+          "fixed_start_parent": [
+            0.10100000351667404,
+            0.0,
+            0.09600000083446503
+          ],
+          "retained_end_parent": [
+            -0.071892,
+            0,
+            0.116
+          ],
+          "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+        },
+        "runtime_elastic_model": {
+          "model": "elastic strip or a rod/contact discretization preserving strip width",
+          "rest_length_m": 0.17291027289250446,
+          "axial_stiffness_n_per_m": 100.0,
+          "axial_damping_ns_per_m": 0.5,
+          "mass_kg": 0.002,
+          "friction_coefficient": 0.6,
+          "parameter_provenance": "AstroBench engineering parameters",
+          "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+        }
+      },
+      "goal_frame_asset": {
+        "target": [
+          [
+            1.0,
+            -0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.41999998688697815
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.009999999776482582
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "opening": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.41999998688697815
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.20999999344348907
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inserted": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.41999998688697815
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.06650000065565109
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "approach": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.41999998688697815
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.23499999940395355
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inserted_card": [
+          [
+            -4.371138828673793e-08,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -4.371138828673793e-08,
+            0.0,
+            0.41999998688697815
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.06650000065565109
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "frame_provenance": "AstroBench task frames in metres; pose frame uses card local orientation.",
+      "latch_closed_rotation_y_rad": 0.0,
+      "latch_open_rotation_y_rad": 0.4886921905584123
+    }
+  },
+  "initial_state": {
+    "lid_angles_rad": [
+      0.0,
+      0.0,
+      1.4835298641951802
+    ],
+    "card_transform_asset": [
+      [
+        -4.371138828673793e-08,
+        1.0,
+        0.0,
+        -0.375
+      ],
+      [
+        -1.0,
+        -4.371138828673793e-08,
+        0.0,
+        0.3499999940395355
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "robot_attachment_frames": {
+    "base": {
+      "transform_asset": [
+        [
+          7.549790126404332e-08,
+          1.0,
+          0.0,
+          -0.3850000500679016
+        ],
+        [
+          -1.0,
+          7.549790126404332e-08,
+          0.0,
+          0.4999999701976776
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.16999995708465576
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "role": "fixed robot mounting flange"
+    },
+    "world_from_asset": [
+      [
+        7.549790126404332e-08,
+        -1.0,
+        0.0,
+        0.25
+      ],
+      [
+        1.0,
+        7.549790126404332e-08,
+        0.0,
+        -0.2150000035762787
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.0199999809265137
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "robot_asset": "provided by runtime; no robot CAD is bundled"
+  },
+  "gltf_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -4.371138828673793e-08,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      -4.371138828673793e-08,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "collision": {
+    "index": "collision.json",
+    "archive": "collision_meshes.zip",
+    "extract_directory": "collision_meshes"
+  },
+  "source_builder": "../publicbuild.py",
+  "dimensions": {
+    "box_length_m": 0.27,
+    "box_lengths_m": [
+      0.13,
+      0.13,
+      0.27
+    ],
+    "lid_lengths_m": [
+      0.119,
+      0.119,
+      0.26
+    ],
+    "quarter_box_length_m": 0.13,
+    "quarter_lid_length_m": 0.119,
+    "nominal_inter_box_gap_m": 0.01,
+    "tray_floor_length_m": 0.594,
+    "insulation_rear_y_m": 0.0037,
+    "insulation_depth_m": 0.0857,
+    "insulation_section_z_offset_m": 0.01,
+    "insulation_nominal_joint_clearance_m": 0.0005,
+    "box_max_width_m": 0.22,
+    "box_bottom_width_m": 0.075,
+    "box_max_height_m": 0.143,
+    "box_d_height_annotation_m": 0.105,
+    "lid_width_m": 0.185,
+    "lid_length_m": 0.26,
+    "wall_approx_m": 0.001
+  },
+  "source_references": [
+    "https://ntrs.nasa.gov/api/citations/20190001390/downloads/20190001390.pdf",
+    "https://www.esa.int/esapub/bulletin/bullet109/chapter5_bul109.pdf"
+  ]
+}
