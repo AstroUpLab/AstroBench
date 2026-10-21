@@ -32,6 +32,17 @@ python -m pip install .
 python -m unittest discover -s tests -v
 ```
 
+## 🛠️ 우주 작업 공간
+
+**MELFI V6**의 시료 카드 이동·삽입·회수와 덮개 개폐, **RRM TB1**의 FDV1 / SMA 캡 제거·보관과 이탈 방지 나사의 풀기·조이기를 제공합니다. 모델, 도구, 작업 정의와 측정 궤적의 평가 방법을 함께 제공합니다.
+
+[📖 작업 공간 가이드 및 작업 목록](docs/workcells.md) · [🧊 MELFI 모델](assets/workcells/melfi_v6/) · [🛰️ RRM 모델](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 나사](docs/media/captive.mp4)
+
+```bash
+astrobench workcells --output workcells.json
+astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
+```
+
 ## 🧰 물체 모음
 
 기본값은 **20개 클래스**이며, **Objaverse 물체 8,414개**를 확장 목록으로 선택할 수 있습니다. 도구, 용기, 휴대용 전자기기, 기계 부품, 선내 용품으로 구성되며 LVIS 라벨 51개와 미분류 물체를 포함합니다.
@@ -55,7 +66,7 @@ astrobench objects --object-set objaverse8414 --output objaverse8414.json
 | `iss_node2` | Node 2 |
 | `iss_cupola` | Node 3 workcell near Cupola |
 
-각 선내 장면 설정은 정적·동적 파지와 10개 조작 작업군을 공유합니다.
+각 선내 배경에서 정적·동적 파지 작업을 사용할 수 있습니다. MELFI와 RRM은 별도의 [작업 공간 인터페이스](docs/workcells.md)에서 선택하고 작업 배치에 맞춰 하드웨어를 설치합니다.
 
 ```bash
 astrobench scenes --output scenes.json

@@ -32,6 +32,17 @@ python -m pip install .
 python -m unittest discover -s tests -v
 ```
 
+## 🛠️ Puestos de trabajo espaciales
+
+**MELFI V6** incorpora el traslado, la inserción y la extracción de tarjetas de muestras, además de la apertura y el cierre de tapas. **RRM TB1** incorpora la retirada y el almacenamiento de tapas FDV1 / SMA y el aflojado y apriete de tornillos cautivos. Se incluyen modelos, herramientas, definiciones de tareas y evaluación de trayectorias medidas.
+
+[📖 Guía y tareas](docs/workcells.md) · [🧊 Modelos MELFI](assets/workcells/melfi_v6/) · [🛰️ Modelos RRM](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 Tornillos](docs/media/captive.mp4)
+
+```bash
+astrobench workcells --output workcells.json
+astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
+```
+
 ## 🧰 Colecciones de objetos
 
 Por defecto: **20 clases**. La extensión **Objaverse contiene 8.414 objetos**: herramientas, recipientes, dispositivos portátiles, piezas mecánicas y suministros de cabina. Incluye 51 etiquetas LVIS y objetos sin etiqueta.
@@ -55,7 +66,7 @@ astrobench objects --object-set objaverse8414 --output objaverse8414.json
 | `iss_node2` | Node 2 |
 | `iss_cupola` | Node 3 workcell near Cupola |
 
-Cada configuración de cabina comparte los agarres estáticos y dinámicos y diez familias de tareas de manipulación.
+Cada fondo de cabina puede utilizarse con las tareas de agarre estático y dinámico. MELFI y RRM se seleccionan mediante la [interfaz de puestos de trabajo](docs/workcells.md), instalando el hardware según la disposición de cada tarea.
 
 ```bash
 astrobench scenes --output scenes.json

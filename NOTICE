@@ -1,0 +1,13 @@
+AstroBench — AstroUpLab
+
+The MELFI and RRM workcell geometry, portable task specifications, and task
+scoring code in this release are authored by AstroUpLab. The workcells are
+reconstructions based on public NASA and ESA references, linked in
+docs/workcells.md and the workcell manifests. Reference hardware names identify
+the design inspiration and do not imply NASA or ESA endorsement.
+
+Original third-party object assets retain the licenses specified in their
+catalog entries. The Objaverse inventory records attribution and license
+metadata; it does not relicense the original assets. NASA and ESA reference
+photographs and documents are linked to their original publishers. Robot CAD
+is obtained separately from the original vendor/runtime distribution.

@@ -32,6 +32,37 @@ python -m pip install .
 python -m unittest discover -s tests -v
 ```
 
+## 🛠️ 太空操作工作位
+
+新增两组围绕真实航天硬件设计的操作工作位：**MELFI V6** 用于样本收纳，**RRM TB1** 用于接口帽与防脱螺钉维护。每组提供可编辑 Blender 模型、通用 GLB 资产、部件命名、任务定义与基于测量状态的评分。
+
+| MELFI V6 — 样本收纳 | RRM TB1 — 卫星维修面板 |
+| :---: | :---: |
+| <img src="docs/media/melfi.png" alt="MELFI V6：两窄一宽置物盒沿墙安装" width="420"> | <img src="docs/media/rrm.png" alt="RRM TB1：接口帽、防脱螺钉与工具" width="420"> |
+| [GLB](assets/workcells/melfi_v6/melfi_v6.glb) · [Blender](assets/workcells/melfi_v6/melfi_v6.blend) · [部件清单](assets/workcells/melfi_v6/parts.json) | [GLB](assets/workcells/rrm_tb1/rrm_tb1.glb) · [Blender](assets/workcells/rrm_tb1/rrm_tb1.blend) · [部件清单](assets/workcells/rrm_tb1/parts.json) |
+
+| 工作位 | 任务 | 完成目标 |
+| --- | --- | --- |
+| MELFI V6 | 样本卡转移到盒口 | 将卡片移至指定盒口并稳定持有。 |
+| MELFI V6 | 样本卡插入 | 将卡片放入指定盒内并固定，随后释放。 |
+| MELFI V6 | 样本卡取出 | 将卡片完全移出指定盒口并稳定持有。 |
+| MELFI V6 | 开盖 | 将指定盒盖打开至目标角度。 |
+| MELFI V6 | 关盖 | 将指定盒盖关闭并锁定。 |
+| RRM TB1 | FDV1 拆帽归存 | 旋松、退出接口帽并固定到归存座。 |
+| RRM TB1 | 指定 SMA 拆帽归存 | 选择指定接口帽，拆卸后固定到归存座。 |
+| RRM TB1 | 防脱螺钉旋松 | 达到旋松位置，同时保持螺钉防脱。 |
+| RRM TB1 | 防脱螺钉旋紧 | 将螺钉旋紧到位并退出工具。 |
+
+```bash
+astrobench workcells --output workcells.json
+astrobench workcell-check-assets assets/workcells --output asset-check.json
+astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
+```
+
+[📖 任务、场景接入与评分](docs/workcells.zh-CN.md) · [📖 English guide](docs/workcells.md) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 防脱螺钉](docs/media/captive.mp4)
+
+硬件外形与流程参考 NASA / ESA 资料，资料链接与建模说明见[工作位指南](docs/workcells.zh-CN.md)。
+
 ## 🧰 物体集合
 
 默认 **20 类**，可选 **Objaverse 扩展集：8,414 个物体**。扩展集包含工具、容器、便携电子设备、机械零件和舱内用品，覆盖 51 个 LVIS 类别标签及未标注物体。
@@ -55,7 +86,7 @@ astrobench objects --object-set objaverse8414 --output objaverse8414.json
 | `iss_node2` | Node 2 |
 | `iss_cupola` | Node 3 workcell near Cupola |
 
-每种舱内场景配置复用静态、动态抓取，以及十类操作任务。
+每种舱内背景可复用静态、动态抓取。MELFI 与 RRM 通过独立的[工作位任务入口](docs/workcells.zh-CN.md)选择，并按任务布局安装硬件。
 
 ```bash
 astrobench scenes --output scenes.json

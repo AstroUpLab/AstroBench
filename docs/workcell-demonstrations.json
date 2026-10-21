@@ -1,0 +1,35 @@
+{
+  "schema": "astrobench.workcell-demonstrations/v1",
+  "method": "Scripted mechanism trials with robot CAD pose and collision checks",
+  "cases": [
+    {
+      "task": "fdv1",
+      "target": "RRM_TB1_FDV1_removable_cap",
+      "completed": true,
+      "completion_phase": "hold_stowed",
+      "video": "media/fdv1.mp4",
+      "record_sha256": "e60026cb42499e7d6d71dfcbaa4b075ace3bdbdb07aa9d753569ed9ff19d5d24"
+    },
+    {
+      "task": "sma",
+      "target": "RRM_TB1_SMA_cap_2_2",
+      "completed": true,
+      "completion_phase": "hold_stowed",
+      "video": "media/sma.mp4",
+      "record_sha256": "5420875f431713f20cbe140e7114a11ff036e42187d88eeecf6d3c0ea2b5b783"
+    },
+    {
+      "task": "captive",
+      "target": "RRM_TB1_TASK_captive_moving_screw",
+      "completed": true,
+      "completion_phase": "free_hold",
+      "video": "media/captive.mp4",
+      "record_sha256": "7b210d1775b1ecf9d2ccde31c4dbff4edb65f93c54d60de6c39e8852408e1c64"
+    }
+  ],
+  "validation_summary": {
+    "checks_passed": 8,
+    "normal_completed": 3,
+    "negative_controls": 5
+  }
+}

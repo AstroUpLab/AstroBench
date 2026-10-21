@@ -32,6 +32,17 @@ python -m pip install .
 python -m unittest discover -s tests -v
 ```
 
+## 🛠️ Postes de travail spatiaux
+
+**MELFI V6** propose le transfert, l’insertion et le retrait de cartes d’échantillons, ainsi que l’ouverture et la fermeture des couvercles. **RRM TB1** propose le retrait et le rangement des bouchons FDV1 / SMA, ainsi que le desserrage et le serrage des vis captives. Les modèles, outils, définitions des tâches et règles d’évaluation des trajectoires mesurées sont fournis.
+
+[📖 Guide et tâches](docs/workcells.md) · [🧊 Modèles MELFI](assets/workcells/melfi_v6/) · [🛰️ Modèles RRM](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 Vis](docs/media/captive.mp4)
+
+```bash
+astrobench workcells --output workcells.json
+astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
+```
+
 ## 🧰 Collections d’objets
 
 Par défaut : **20 classes**. L’extension **Objaverse comprend 8 414 objets** : outils, récipients, appareils portables, pièces mécaniques et fournitures de cabine. Elle couvre 51 étiquettes LVIS et des objets sans étiquette.
@@ -55,7 +66,7 @@ astrobench objects --object-set objaverse8414 --output objaverse8414.json
 | `iss_node2` | Node 2 |
 | `iss_cupola` | Node 3 workcell near Cupola |
 
-Chaque configuration de cabine partage les tâches de préhension statiques et dynamiques et dix familles de manipulation.
+Chaque décor de cabine peut accueillir les tâches de préhension statiques et dynamiques. MELFI et RRM se sélectionnent dans l’[interface des postes de travail](docs/workcells.md), avec le matériel installé selon la disposition de chaque tâche.
 
 ```bash
 astrobench scenes --output scenes.json

@@ -1,0 +1,3064 @@
+{
+  "schema": "astrobench.workcells/v1",
+  "protocol": {
+    "version": "astrobench.workcell-state/1",
+    "gravity_m_s2": 0.0,
+    "robot_base": "fixed",
+    "units": "meters_radians_seconds_newtons",
+    "horizon_s": 30.0,
+    "terminal_hold_s": 1.0,
+    "max_sample_gap_s": 0.025,
+    "initial_position_tolerance_m": 0.002,
+    "initial_angle_tolerance_rad": 0.01
+  },
+  "assets": {
+    "melfi_v6": {
+      "manifest_path": "melfi_v6/manifest.json",
+      "manifest_sha256": "fd831dae61022f129a3d1cc3af4d9dd1874e6092b5c207b4b34200f68db24f72",
+      "semantic_targets": {
+        "Front_quarter_box": {
+          "target_id": "Front_quarter_box",
+          "root_object": "MELFI_Front_quarter_box",
+          "lid_object": "MELFI_Front_quarter_box_lid_hinge",
+          "latch_object": "MELFI_Front_quarter_box_lid_latch_lift_paddle",
+          "card_object": "MELFI_VialCard",
+          "active": true,
+          "retention": {
+            "band_object": "MELFI_Front_quarter_box_manual_card_retention_band",
+            "end_objects": [
+              "MELFI_Front_quarter_box_band_end_connector",
+              "MELFI_Front_quarter_box_band_end_seam",
+              "MELFI_Front_quarter_box_band_end_seam.001",
+              "MELFI_Front_quarter_box_band_free_end_fold"
+            ],
+            "coordinate_frame_object": "MELFI_Front_quarter_box",
+            "width_m": 0.014,
+            "thickness_m": 0.00065,
+            "default_state": "released",
+            "centerlines_parent": {
+              "released": [
+                [
+                  0.10100000351667404,
+                  0.0,
+                  0.09600000083446503
+                ],
+                [
+                  0.10100000351667404,
+                  0.0,
+                  0.08799999952316284
+                ],
+                [
+                  0.0989999994635582,
+                  0.0,
+                  0.07999999821186066
+                ],
+                [
+                  0.09099999815225601,
+                  0.0,
+                  0.07000000029802322
+                ],
+                [
+                  0.0820000022649765,
+                  0.0,
+                  0.05999999865889549
+                ],
+                [
+                  0.07199999690055847,
+                  0.0,
+                  0.04899999871850014
+                ],
+                [
+                  0.06199999898672104,
+                  0.0,
+                  0.03799999877810478
+                ],
+                [
+                  0.050999999046325684,
+                  0.0,
+                  0.026000000536441803
+                ],
+                [
+                  0.04100000113248825,
+                  0.0,
+                  0.014000000432133675
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.006000000052154064
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.006000000052154064
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.008999999612569809
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.008999999612569809
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.012000000104308128
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.012000000104308128
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.014999999664723873
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.014999999664723873
+                ]
+              ],
+              "retained_around_card": [
+                [
+                  0.101,
+                  0,
+                  0.096
+                ],
+                [
+                  0.07,
+                  0,
+                  0.103
+                ],
+                [
+                  0.02,
+                  0,
+                  0.1125
+                ],
+                [
+                  0.0035,
+                  0,
+                  0.1125
+                ],
+                [
+                  -0.0035,
+                  0,
+                  0.1125
+                ],
+                [
+                  -0.025,
+                  0,
+                  0.1135
+                ],
+                [
+                  -0.071892,
+                  0,
+                  0.116
+                ]
+              ]
+            },
+            "endpoint_constraints": {
+              "fixed_start_parent": [
+                0.10100000351667404,
+                0.0,
+                0.09600000083446503
+              ],
+              "retained_end_parent": [
+                -0.071892,
+                0,
+                0.116
+              ],
+              "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+            },
+            "runtime_elastic_model": {
+              "model": "elastic strip or a rod/contact discretization preserving strip width",
+              "rest_length_m": 0.17291027289250446,
+              "axial_stiffness_n_per_m": 100.0,
+              "axial_damping_ns_per_m": 0.5,
+              "mass_kg": 0.002,
+              "friction_coefficient": 0.6,
+              "parameter_provenance": "AstroBench engineering parameters",
+              "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+            }
+          },
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                -0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.07000000029802322
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.009999999776482582
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "opening": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.07000000029802322
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inserted": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.07000000029802322
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.06650000065565109
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "approach": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.07000000029802322
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.23499999940395355
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inserted_card": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.07000000029802322
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.06650000065565109
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "frame_provenance": "AstroBench task frames in metres; pose frame uses card local orientation.",
+          "latch_closed_rotation_y_rad": 0.0,
+          "latch_open_rotation_y_rad": 0.4886921905584123
+        },
+        "Middle_quarter_box": {
+          "target_id": "Middle_quarter_box",
+          "root_object": "MELFI_Middle_quarter_box",
+          "lid_object": "MELFI_Middle_quarter_box_lid_hinge",
+          "latch_object": "MELFI_Middle_quarter_box_lid_latch_lift_paddle",
+          "card_object": "MELFI_VialCard",
+          "active": true,
+          "retention": {
+            "band_object": "MELFI_Middle_quarter_box_manual_card_retention_band",
+            "end_objects": [
+              "MELFI_Middle_quarter_box_band_end_connector",
+              "MELFI_Middle_quarter_box_band_end_seam",
+              "MELFI_Middle_quarter_box_band_end_seam.001",
+              "MELFI_Middle_quarter_box_band_free_end_fold"
+            ],
+            "coordinate_frame_object": "MELFI_Middle_quarter_box",
+            "width_m": 0.014,
+            "thickness_m": 0.00065,
+            "default_state": "released",
+            "centerlines_parent": {
+              "released": [
+                [
+                  0.10100000351667404,
+                  0.0,
+                  0.09600000083446503
+                ],
+                [
+                  0.10100000351667404,
+                  0.0,
+                  0.08799999952316284
+                ],
+                [
+                  0.0989999994635582,
+                  0.0,
+                  0.07999999821186066
+                ],
+                [
+                  0.09099999815225601,
+                  0.0,
+                  0.07000000029802322
+                ],
+                [
+                  0.0820000022649765,
+                  0.0,
+                  0.05999999865889549
+                ],
+                [
+                  0.07199999690055847,
+                  0.0,
+                  0.04899999871850014
+                ],
+                [
+                  0.06199999898672104,
+                  0.0,
+                  0.03799999877810478
+                ],
+                [
+                  0.050999999046325684,
+                  0.0,
+                  0.026000000536441803
+                ],
+                [
+                  0.04100000113248825,
+                  0.0,
+                  0.014000000432133675
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.006000000052154064
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.006000000052154064
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.008999999612569809
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.008999999612569809
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.012000000104308128
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.012000000104308128
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.014999999664723873
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.014999999664723873
+                ]
+              ],
+              "retained_around_card": [
+                [
+                  0.101,
+                  0,
+                  0.096
+                ],
+                [
+                  0.07,
+                  0,
+                  0.103
+                ],
+                [
+                  0.02,
+                  0,
+                  0.1125
+                ],
+                [
+                  0.0035,
+                  0,
+                  0.1125
+                ],
+                [
+                  -0.0035,
+                  0,
+                  0.1125
+                ],
+                [
+                  -0.025,
+                  0,
+                  0.1135
+                ],
+                [
+                  -0.071892,
+                  0,
+                  0.116
+                ]
+              ]
+            },
+            "endpoint_constraints": {
+              "fixed_start_parent": [
+                0.10100000351667404,
+                0.0,
+                0.09600000083446503
+              ],
+              "retained_end_parent": [
+                -0.071892,
+                0,
+                0.116
+              ],
+              "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+            },
+            "runtime_elastic_model": {
+              "model": "elastic strip or a rod/contact discretization preserving strip width",
+              "rest_length_m": 0.17291027289250446,
+              "axial_stiffness_n_per_m": 100.0,
+              "axial_damping_ns_per_m": 0.5,
+              "mass_kg": 0.002,
+              "friction_coefficient": 0.6,
+              "parameter_provenance": "AstroBench engineering parameters",
+              "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+            }
+          },
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                -0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.009999999776482582
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "opening": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inserted": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.06650000065565109
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "approach": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.23499999940395355
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inserted_card": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.06650000065565109
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "frame_provenance": "AstroBench task frames in metres; pose frame uses card local orientation.",
+          "latch_closed_rotation_y_rad": 0.0,
+          "latch_open_rotation_y_rad": 0.4886921905584123
+        },
+        "Rear_half_box": {
+          "target_id": "Rear_half_box",
+          "root_object": "MELFI_Rear_half_box",
+          "lid_object": "MELFI_Rear_half_box_lid_hinge",
+          "latch_object": "MELFI_Rear_half_box_lid_latch_lift_paddle",
+          "card_object": "MELFI_VialCard",
+          "active": true,
+          "retention": {
+            "band_object": "MELFI_Rear_half_box_manual_card_retention_band",
+            "end_objects": [
+              "MELFI_Rear_half_box_band_end_connector",
+              "MELFI_Rear_half_box_band_end_seam",
+              "MELFI_Rear_half_box_band_end_seam.001",
+              "MELFI_Rear_half_box_band_free_end_fold"
+            ],
+            "coordinate_frame_object": "MELFI_Rear_half_box",
+            "width_m": 0.014,
+            "thickness_m": 0.00065,
+            "default_state": "released",
+            "centerlines_parent": {
+              "released": [
+                [
+                  0.10100000351667404,
+                  0.0,
+                  0.09600000083446503
+                ],
+                [
+                  0.10100000351667404,
+                  0.0,
+                  0.08799999952316284
+                ],
+                [
+                  0.0989999994635582,
+                  0.0,
+                  0.07999999821186066
+                ],
+                [
+                  0.09099999815225601,
+                  0.0,
+                  0.07000000029802322
+                ],
+                [
+                  0.0820000022649765,
+                  0.0,
+                  0.05999999865889549
+                ],
+                [
+                  0.07199999690055847,
+                  0.0,
+                  0.04899999871850014
+                ],
+                [
+                  0.06199999898672104,
+                  0.0,
+                  0.03799999877810478
+                ],
+                [
+                  0.050999999046325684,
+                  0.0,
+                  0.026000000536441803
+                ],
+                [
+                  0.04100000113248825,
+                  0.0,
+                  0.014000000432133675
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.006000000052154064
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.006000000052154064
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.008999999612569809
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.008999999612569809
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.012000000104308128
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.012000000104308128
+                ],
+                [
+                  0.023000000044703484,
+                  0.0,
+                  0.014999999664723873
+                ],
+                [
+                  0.03400000184774399,
+                  0.0,
+                  0.014999999664723873
+                ]
+              ],
+              "retained_around_card": [
+                [
+                  0.101,
+                  0,
+                  0.096
+                ],
+                [
+                  0.07,
+                  0,
+                  0.103
+                ],
+                [
+                  0.02,
+                  0,
+                  0.1125
+                ],
+                [
+                  0.0035,
+                  0,
+                  0.1125
+                ],
+                [
+                  -0.0035,
+                  0,
+                  0.1125
+                ],
+                [
+                  -0.025,
+                  0,
+                  0.1135
+                ],
+                [
+                  -0.071892,
+                  0,
+                  0.116
+                ]
+              ]
+            },
+            "endpoint_constraints": {
+              "fixed_start_parent": [
+                0.10100000351667404,
+                0.0,
+                0.09600000083446503
+              ],
+              "retained_end_parent": [
+                -0.071892,
+                0,
+                0.116
+              ],
+              "free_end_latch": "constrain only when the connector is physically engaged; release for insertion/extraction motion"
+            },
+            "runtime_elastic_model": {
+              "model": "elastic strip or a rod/contact discretization preserving strip width",
+              "rest_length_m": 0.17291027289250446,
+              "axial_stiffness_n_per_m": 100.0,
+              "axial_damping_ns_per_m": 0.5,
+              "mass_kg": 0.002,
+              "friction_coefficient": 0.6,
+              "parameter_provenance": "AstroBench engineering parameters",
+              "force_measurement": "Compute from resolved elastic/contact forces after settling; never assign a constant retention_force_n."
+            }
+          },
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                -0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.41999998688697815
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.009999999776482582
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "opening": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.41999998688697815
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.20999999344348907
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inserted": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.41999998688697815
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.06650000065565109
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "approach": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.41999998688697815
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.23499999940395355
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inserted_card": [
+              [
+                -4.371138828673793e-08,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -1.0,
+                -4.371138828673793e-08,
+                0.0,
+                0.41999998688697815
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.06650000065565109
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "frame_provenance": "AstroBench task frames in metres; pose frame uses card local orientation.",
+          "latch_closed_rotation_y_rad": 0.0,
+          "latch_open_rotation_y_rad": 0.4886921905584123
+        }
+      },
+      "units": "m",
+      "up_axis": "Z",
+      "source_files": [
+        {
+          "path": "geometry_supports.py",
+          "sha256": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a"
+        },
+        {
+          "path": "load_asset.py",
+          "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e"
+        },
+        {
+          "path": "melfi_v6/source/melfi.py",
+          "sha256": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93"
+        },
+        {
+          "path": "melfi_v6/source/reference_profile.json",
+          "sha256": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487"
+        },
+        {
+          "path": "melfi_v6/source/supports.py",
+          "sha256": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b"
+        },
+        {
+          "path": "publicbuild.py",
+          "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0"
+        },
+        {
+          "path": "rrm_tb1/source/export_collision.py",
+          "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68"
+        },
+        {
+          "path": "rrm_tb1/source/panel.py",
+          "sha256": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3"
+        },
+        {
+          "path": "rrm_tb1/source/supports.py",
+          "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092"
+        },
+        {
+          "path": "rrm_tb1/source/task_panel.py",
+          "sha256": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb"
+        },
+        {
+          "path": "rrm_tb1/source/tools.py",
+          "sha256": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f"
+        },
+        {
+          "path": "unpack_collision.py",
+          "sha256": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
+        }
+      ],
+      "canonical_source_sha256": "9e390dd6831b2e04a6535200c80bcc14f52e242632685a66f5c4cd660596226a",
+      "build_args": {},
+      "derived_from_manifest_sha256": null
+    },
+    "rrm_tb1": {
+      "manifest_path": "rrm_tb1/manifest.json",
+      "manifest_sha256": "ca3ca098c0d6cf317ace7625da212b049b108660f0bcc82cc9ff31dbd4b9370b",
+      "semantic_targets": {
+        "FDV1": {
+          "target_id": "FDV1",
+          "kind": "fdv1",
+          "root_object": "RRM_TB1_FDV1_removable_cap",
+          "moving_object": "RRM_TB1_FDV1_removable_cap",
+          "active": true,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.154
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.02915
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.012
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.154
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.02915
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.042
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.001,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.002,
+            "withdrawal_m": 0.065
+          },
+          "tool_root_object": "RRM_TB1_TOOL_fdv1",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_fdv1_spindle",
+          "driver_object": "RRM_TB1_TOOL_fdv1",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.029999999329447746
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 2,
+            "sma_col": 2,
+            "captive_index": 1
+          },
+          "seat_position_parent": [
+            0,
+            0,
+            0.012
+          ]
+        },
+        "SMA_1_1": {
+          "target_id": "SMA_1_1",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_1_1",
+          "moving_object": "RRM_TB1_SMA_cap_1_1",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.034
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2234
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.034
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2234
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 1,
+            "sma_col": 1,
+            "captive_index": 1
+          }
+        },
+        "SMA_1_2": {
+          "target_id": "SMA_1_2",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_1_2",
+          "moving_object": "RRM_TB1_SMA_cap_1_2",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.012
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2234
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.012
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2234
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 1,
+            "sma_col": 2,
+            "captive_index": 1
+          }
+        },
+        "SMA_1_3": {
+          "target_id": "SMA_1_3",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_1_3",
+          "moving_object": "RRM_TB1_SMA_cap_1_3",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.009999999999999998
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2234
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.009999999999999998
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2234
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 1,
+            "sma_col": 3,
+            "captive_index": 1
+          }
+        },
+        "SMA_2_1": {
+          "target_id": "SMA_2_1",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_2_1",
+          "moving_object": "RRM_TB1_SMA_cap_2_1",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.034
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2014
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.034
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2014
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 2,
+            "sma_col": 1,
+            "captive_index": 1
+          }
+        },
+        "SMA_2_2": {
+          "target_id": "SMA_2_2",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_2_2",
+          "moving_object": "RRM_TB1_SMA_cap_2_2",
+          "active": true,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.012
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2014
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.012
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2014
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 2,
+            "sma_col": 2,
+            "captive_index": 1
+          },
+          "seat_position_parent": [
+            0.0,
+            0.0,
+            0.01
+          ]
+        },
+        "SMA_2_3": {
+          "target_id": "SMA_2_3",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_2_3",
+          "moving_object": "RRM_TB1_SMA_cap_2_3",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.009999999999999998
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2014
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.009999999999999998
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.2014
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 2,
+            "sma_col": 3,
+            "captive_index": 1
+          }
+        },
+        "SMA_3_1": {
+          "target_id": "SMA_3_1",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_3_1",
+          "moving_object": "RRM_TB1_SMA_cap_3_1",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.034
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.1794
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.034
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.1794
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 3,
+            "sma_col": 1,
+            "captive_index": 1
+          }
+        },
+        "SMA_3_2": {
+          "target_id": "SMA_3_2",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_3_2",
+          "moving_object": "RRM_TB1_SMA_cap_3_2",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.012
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.1794
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.012
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.1794
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 3,
+            "sma_col": 2,
+            "captive_index": 1
+          }
+        },
+        "SMA_3_3": {
+          "target_id": "SMA_3_3",
+          "kind": "sma",
+          "root_object": "RRM_TB1_SMA_cap_3_3",
+          "moving_object": "RRM_TB1_SMA_cap_3_3",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.009999999999999998
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.1794
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.01
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.009999999999999998
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.1794
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.000706,
+            "unlock_turns": 2,
+            "thread_release_travel_m": 0.001412,
+            "withdrawal_m": 0.04
+          },
+          "tool_root_object": "RRM_TB1_TOOL_sma",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_sma_spindle",
+          "driver_object": "RRM_TB1_TOOL_sma",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.002500000409781933
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 3,
+            "sma_col": 3,
+            "captive_index": 1
+          }
+        },
+        "captive_1": {
+          "target_id": "captive_1",
+          "kind": "captive",
+          "root_object": "RRM_TB1_TASK_captive_moving_screw",
+          "moving_object": "RRM_TB1_TASK_captive_moving_screw",
+          "active": true,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.066
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.017100000000000004
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.024
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.066
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.017100000000000004
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0321
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.0007,
+            "turns": 3,
+            "loosening_travel_m": 0.0021,
+            "max_travel_m": 0.003
+          },
+          "tool_root_object": "RRM_TB1_TOOL_captive",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_captive_spindle",
+          "driver_object": "RRM_TB1_TOOL_captive",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.008099999278783798
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 2,
+            "sma_col": 2,
+            "captive_index": 1
+          },
+          "seat_position_parent": [
+            0,
+            0,
+            0
+          ]
+        },
+        "captive_2": {
+          "target_id": "captive_2",
+          "kind": "captive",
+          "root_object": "RRM_TB1_Captive_fastener_2",
+          "moving_object": "RRM_TB1_Captive_fastener_2",
+          "active": false,
+          "goal_frame_asset": {
+            "target": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.066
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.0179
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.024
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "tool_contact": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.066
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                -0.0179
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0321
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "parameters": {
+            "thread_pitch_m": 0.0007,
+            "turns": 3,
+            "loosening_travel_m": 0.0021,
+            "max_travel_m": 0.003
+          },
+          "tool_root_object": "RRM_TB1_TOOL_captive",
+          "tool_tcp_local": [
+            0,
+            0,
+            0.12
+          ],
+          "adapter_object": "RRM_TB1_TOOL_captive_spindle",
+          "driver_object": "RRM_TB1_TOOL_captive",
+          "nominal_retained_cap_in_adapter": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              -0.008099999278783798
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "rebuild": {
+            "sma_row": 2,
+            "sma_col": 2,
+            "captive_index": 2
+          }
+        }
+      },
+      "units": "m",
+      "up_axis": "Z",
+      "source_files": [
+        {
+          "path": "geometry_supports.py",
+          "sha256": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a"
+        },
+        {
+          "path": "load_asset.py",
+          "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e"
+        },
+        {
+          "path": "melfi_v6/source/melfi.py",
+          "sha256": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93"
+        },
+        {
+          "path": "melfi_v6/source/reference_profile.json",
+          "sha256": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487"
+        },
+        {
+          "path": "melfi_v6/source/supports.py",
+          "sha256": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b"
+        },
+        {
+          "path": "publicbuild.py",
+          "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0"
+        },
+        {
+          "path": "rrm_tb1/source/export_collision.py",
+          "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68"
+        },
+        {
+          "path": "rrm_tb1/source/panel.py",
+          "sha256": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3"
+        },
+        {
+          "path": "rrm_tb1/source/supports.py",
+          "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092"
+        },
+        {
+          "path": "rrm_tb1/source/task_panel.py",
+          "sha256": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb"
+        },
+        {
+          "path": "rrm_tb1/source/tools.py",
+          "sha256": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f"
+        },
+        {
+          "path": "unpack_collision.py",
+          "sha256": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
+        }
+      ],
+      "canonical_source_sha256": "9e390dd6831b2e04a6535200c80bcc14f52e242632685a66f5c4cd660596226a",
+      "build_args": {
+        "sma_row": 2,
+        "sma_col": 2,
+        "captive_index": 1
+      },
+      "derived_from_manifest_sha256": null
+    }
+  },
+  "tasks": {
+    "card_transfer_to_mouth": {
+      "workcell_id": "melfi_v6",
+      "target_ids": [
+        "Front_quarter_box",
+        "Middle_quarter_box",
+        "Rear_half_box"
+      ],
+      "title": "Transfer sample card to selected box opening",
+      "kind": "card",
+      "initial_state": {
+        "goal_relative_position_m": [
+          0.12,
+          0.0,
+          0.0
+        ],
+        "goal_relative_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_released": true
+      },
+      "thresholds": {
+        "position_tolerance_m": 0.005,
+        "orientation_tolerance_rad": 0.08726646259971647,
+        "max_linear_speed_m_s": 0.02,
+        "max_angular_speed_rad_s": 0.2,
+        "min_grasp_contact_force_n": 0.01,
+        "grasp_max_aperture_m": 0.03,
+        "released_min_aperture_m": 0.04,
+        "min_retention_force_n": 0.01,
+        "min_containment_margin_m": 0.0,
+        "min_extraction_clearance_m": 0.02
+      },
+      "goal_frame": "opening",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "goal_relative_position_m": [
+          0.12,
+          0.0,
+          0.0
+        ],
+        "goal_relative_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_aperture_m": 0.06,
+        "gripper_target_contact_force_n": 0.0,
+        "object_released": false,
+        "retention_force_n": 0.0,
+        "min_containment_margin_m": -0.05,
+        "opening_clearance_m": 0.1
+      },
+      "reset_frame": "opening_plus_lateral_offset",
+      "initial_validation": {
+        "ranges": {
+          "gripper_aperture_m": [
+            0.04,
+            0.09
+          ],
+          "gripper_target_contact_force_n": [
+            0.0,
+            0.001
+          ],
+          "min_containment_margin_m": [
+            -1.0,
+            -0.001
+          ],
+          "opening_clearance_m": [
+            0.0,
+            0.5
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted"
+      }
+    },
+    "card_insert": {
+      "workcell_id": "melfi_v6",
+      "target_ids": [
+        "Front_quarter_box",
+        "Middle_quarter_box",
+        "Rear_half_box"
+      ],
+      "title": "Insert and retain sample card in selected box",
+      "kind": "card",
+      "initial_state": {
+        "goal_relative_position_m": [
+          0.0,
+          0.0,
+          0.1435
+        ],
+        "goal_relative_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_released": false
+      },
+      "thresholds": {
+        "position_tolerance_m": 0.005,
+        "orientation_tolerance_rad": 0.08726646259971647,
+        "max_linear_speed_m_s": 0.02,
+        "max_angular_speed_rad_s": 0.2,
+        "min_grasp_contact_force_n": 0.01,
+        "grasp_max_aperture_m": 0.03,
+        "released_min_aperture_m": 0.04,
+        "min_retention_force_n": 0.01,
+        "min_containment_margin_m": 0.0,
+        "min_extraction_clearance_m": 0.02
+      },
+      "goal_frame": "inserted",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "goal_relative_position_m": [
+          0.12,
+          0.0,
+          0.0
+        ],
+        "goal_relative_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_aperture_m": 0.015,
+        "gripper_target_contact_force_n": 0.1,
+        "object_released": false,
+        "retention_force_n": 0.0,
+        "min_containment_margin_m": -0.05,
+        "opening_clearance_m": 0.1
+      },
+      "reset_frame": "opening",
+      "initial_validation": {
+        "ranges": {
+          "gripper_aperture_m": [
+            0.0,
+            0.03
+          ],
+          "gripper_target_contact_force_n": [
+            0.01,
+            100.0
+          ],
+          "min_containment_margin_m": [
+            -1.0,
+            -0.001
+          ],
+          "opening_clearance_m": [
+            0.0,
+            0.5
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted"
+      }
+    },
+    "card_extract": {
+      "workcell_id": "melfi_v6",
+      "target_ids": [
+        "Front_quarter_box",
+        "Middle_quarter_box",
+        "Rear_half_box"
+      ],
+      "title": "Extract and hold sample card from selected box",
+      "kind": "card",
+      "initial_state": {
+        "goal_relative_position_m": [
+          0.0,
+          0.0,
+          -0.1685
+        ],
+        "goal_relative_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_released": true
+      },
+      "thresholds": {
+        "position_tolerance_m": 0.005,
+        "orientation_tolerance_rad": 0.08726646259971647,
+        "max_linear_speed_m_s": 0.02,
+        "max_angular_speed_rad_s": 0.2,
+        "min_grasp_contact_force_n": 0.01,
+        "grasp_max_aperture_m": 0.03,
+        "released_min_aperture_m": 0.04,
+        "min_retention_force_n": 0.01,
+        "min_containment_margin_m": 0.0,
+        "min_extraction_clearance_m": 0.02
+      },
+      "goal_frame": "approach",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "goal_relative_position_m": [
+          0.12,
+          0.0,
+          0.0
+        ],
+        "goal_relative_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_aperture_m": 0.06,
+        "gripper_target_contact_force_n": 0.0,
+        "object_released": true,
+        "retention_force_n": 0.1,
+        "min_containment_margin_m": 0.001,
+        "opening_clearance_m": -0.11
+      },
+      "reset_frame": "inserted",
+      "initial_validation": {
+        "ranges": {
+          "gripper_aperture_m": [
+            0.04,
+            0.09
+          ],
+          "gripper_target_contact_force_n": [
+            0.0,
+            0.001
+          ],
+          "min_containment_margin_m": [
+            0.0,
+            0.05
+          ],
+          "opening_clearance_m": [
+            -0.3,
+            -0.02
+          ],
+          "retention_force_n": [
+            0.01,
+            100.0
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted"
+      }
+    },
+    "lid_open": {
+      "workcell_id": "melfi_v6",
+      "target_ids": [
+        "Front_quarter_box",
+        "Middle_quarter_box",
+        "Rear_half_box"
+      ],
+      "title": "Open selected sample box lid",
+      "kind": "lid",
+      "initial_state": {
+        "lid_angle_rad": 0.0,
+        "lid_latch_closed": true,
+        "lid_latch_engaged": true
+      },
+      "thresholds": {
+        "open_min_angle_rad": 1.3089969389957472,
+        "closed_max_angle_rad": 0.05235987755982989,
+        "max_linear_speed_m_s": 0.02,
+        "max_angular_speed_rad_s": 0.1,
+        "min_driver_clearance_m": 0.05
+      },
+      "goal_frame": "target",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "lid_angle_rad": 0.0,
+        "lid_latch_closed": true,
+        "lid_latch_engaged": true,
+        "driver_clearance_m": 0.1
+      },
+      "initial_validation": {
+        "ranges": {
+          "driver_clearance_m": [
+            0.05,
+            5.0
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted"
+      }
+    },
+    "lid_close": {
+      "workcell_id": "melfi_v6",
+      "target_ids": [
+        "Front_quarter_box",
+        "Middle_quarter_box",
+        "Rear_half_box"
+      ],
+      "title": "Close and latch selected sample box lid",
+      "kind": "lid",
+      "initial_state": {
+        "lid_angle_rad": 1.4835298641951802,
+        "lid_latch_closed": false,
+        "lid_latch_engaged": false
+      },
+      "thresholds": {
+        "open_min_angle_rad": 1.3089969389957472,
+        "closed_max_angle_rad": 0.05235987755982989,
+        "max_linear_speed_m_s": 0.02,
+        "max_angular_speed_rad_s": 0.1,
+        "min_driver_clearance_m": 0.05
+      },
+      "goal_frame": "target",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "lid_angle_rad": 1.4835298641951802,
+        "lid_latch_closed": false,
+        "lid_latch_engaged": false,
+        "driver_clearance_m": 0.1
+      },
+      "initial_validation": {
+        "ranges": {
+          "driver_clearance_m": [
+            0.05,
+            5.0
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted"
+      }
+    },
+    "fdv1_remove_stow": {
+      "workcell_id": "rrm_tb1",
+      "target_ids": [
+        "FDV1"
+      ],
+      "title": "Remove and stow FDV1 tertiary cap",
+      "kind": "cap",
+      "initial_state": {
+        "fastener_angle_rad": 0.0,
+        "fastener_axial_m": 0.0,
+        "thread_engaged": true,
+        "receiver_flange_captured": false,
+        "driver_attached": true
+      },
+      "thresholds": {
+        "thread_pitch_m": 0.001,
+        "release_turns": 2.0,
+        "thread_release_travel_m": 0.002,
+        "min_withdrawal_m": 0.06,
+        "cap_position_tolerance_m": 0.003,
+        "cap_orientation_tolerance_rad": 0.05235987755982989,
+        "max_cap_relative_linear_speed_m_s": 0.01,
+        "max_cap_relative_angular_speed_rad_s": 0.1,
+        "min_retention_force_n": 0.01,
+        "stow_position_tolerance_m": 0.002,
+        "stow_orientation_tolerance_rad": 0.06,
+        "latch_closed_tolerance_m": 0.0002,
+        "min_support_force_n": 0.01,
+        "min_driver_clearance_m": 0.1,
+        "max_linear_speed_m_s": 0.001,
+        "max_angular_speed_rad_s": 0.1
+      },
+      "goal_frame": "target",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "fastener_angle_rad": 0.0,
+        "fastener_axial_m": 0.0,
+        "thread_engaged": true,
+        "cap_adapter_position_m": [
+          0.0,
+          0.0,
+          -0.1
+        ],
+        "cap_adapter_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cap_adapter_linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cap_adapter_angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cap_retention_force_n": 0.0,
+        "adapter_goal_position_m": [
+          0.15,
+          0.0,
+          0.1
+        ],
+        "adapter_goal_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "receiver_support_force_n": 0.0,
+        "receiver_latch_positions_m": [
+          0.004,
+          0.004
+        ],
+        "receiver_flange_captured": false,
+        "driver_attached": true,
+        "driver_clearance_m": 0.0
+      },
+      "initial_validation": {
+        "ranges": {
+          "cap_retention_force_n": [
+            0.0,
+            0.001
+          ],
+          "receiver_support_force_n": [
+            0.0,
+            0.001
+          ],
+          "driver_clearance_m": [
+            0.0,
+            0.003
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted",
+        "driver_attached": "Measured mechanical coupling between driver and detachable spindle; assembled at reset, disengaged after receiver lock.",
+        "driver_clearance_m": "Driver withdrawal from the nominal detachable-spindle coupling interface, in metres; not tool-to-cap distance."
+      }
+    },
+    "sma_remove_stow": {
+      "workcell_id": "rrm_tb1",
+      "target_ids": [
+        "SMA_1_1",
+        "SMA_1_2",
+        "SMA_1_3",
+        "SMA_2_1",
+        "SMA_2_2",
+        "SMA_2_3",
+        "SMA_3_1",
+        "SMA_3_2",
+        "SMA_3_3"
+      ],
+      "title": "Remove and stow selected SMA cap",
+      "kind": "cap",
+      "initial_state": {
+        "fastener_angle_rad": 0.0,
+        "fastener_axial_m": 0.0,
+        "thread_engaged": true,
+        "receiver_flange_captured": false,
+        "driver_attached": true
+      },
+      "thresholds": {
+        "thread_pitch_m": 0.000706,
+        "release_turns": 2.0,
+        "thread_release_travel_m": 0.001412,
+        "min_withdrawal_m": 0.035,
+        "cap_position_tolerance_m": 0.003,
+        "cap_orientation_tolerance_rad": 0.05235987755982989,
+        "max_cap_relative_linear_speed_m_s": 0.01,
+        "max_cap_relative_angular_speed_rad_s": 0.1,
+        "min_retention_force_n": 0.01,
+        "stow_position_tolerance_m": 0.002,
+        "stow_orientation_tolerance_rad": 0.06,
+        "latch_closed_tolerance_m": 0.0002,
+        "min_support_force_n": 0.01,
+        "min_driver_clearance_m": 0.1,
+        "max_linear_speed_m_s": 0.001,
+        "max_angular_speed_rad_s": 0.1
+      },
+      "goal_frame": "target",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "fastener_angle_rad": 0.0,
+        "fastener_axial_m": 0.0,
+        "thread_engaged": true,
+        "cap_adapter_position_m": [
+          0.0,
+          0.0,
+          -0.1
+        ],
+        "cap_adapter_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cap_adapter_linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cap_adapter_angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cap_retention_force_n": 0.0,
+        "adapter_goal_position_m": [
+          0.15,
+          0.0,
+          0.1
+        ],
+        "adapter_goal_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "receiver_support_force_n": 0.0,
+        "receiver_latch_positions_m": [
+          0.004,
+          0.004
+        ],
+        "receiver_flange_captured": false,
+        "driver_attached": true,
+        "driver_clearance_m": 0.0
+      },
+      "initial_validation": {
+        "ranges": {
+          "cap_retention_force_n": [
+            0.0,
+            0.001
+          ],
+          "receiver_support_force_n": [
+            0.0,
+            0.001
+          ],
+          "driver_clearance_m": [
+            0.0,
+            0.003
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted",
+        "driver_attached": "Measured mechanical coupling between driver and detachable spindle; assembled at reset, disengaged after receiver lock.",
+        "driver_clearance_m": "Driver withdrawal from the nominal detachable-spindle coupling interface, in metres; not tool-to-cap distance."
+      }
+    },
+    "captive_loosen": {
+      "workcell_id": "rrm_tb1",
+      "target_ids": [
+        "captive_1",
+        "captive_2"
+      ],
+      "title": "Loosen selected captive fastener",
+      "kind": "captive",
+      "initial_state": {
+        "fastener_angle_rad": 0.0,
+        "fastener_axial_m": 0.0,
+        "object_released": false,
+        "driver_attached": false
+      },
+      "thresholds": {
+        "thread_pitch_m": 0.0007,
+        "loosen_min_turns": 2.8,
+        "loosen_min_travel_m": 0.0018,
+        "max_travel_m": 0.003,
+        "tight_max_angle_rad": 0.12,
+        "tight_max_travel_m": 0.00015,
+        "min_driver_clearance_m": 0.05,
+        "max_linear_speed_m_s": 0.001,
+        "max_angular_speed_rad_s": 0.1
+      },
+      "goal_frame": "target",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "fastener_angle_rad": 0.0,
+        "fastener_axial_m": 0.0,
+        "object_released": false,
+        "driver_attached": false,
+        "driver_clearance_m": 0.1
+      },
+      "initial_validation": {
+        "ranges": {
+          "driver_clearance_m": [
+            0.05,
+            5.0
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted",
+        "driver_attached": "Measured driver-bit engagement with the captive fastener; disengaged at reset.",
+        "driver_clearance_m": "Measured driver-bit clearance from the captive fastener, in metres."
+      }
+    },
+    "captive_tighten": {
+      "workcell_id": "rrm_tb1",
+      "target_ids": [
+        "captive_1",
+        "captive_2"
+      ],
+      "title": "Tighten selected captive fastener",
+      "kind": "captive",
+      "initial_state": {
+        "fastener_angle_rad": 18.84955592153876,
+        "fastener_axial_m": 0.0021,
+        "object_released": false,
+        "driver_attached": false
+      },
+      "thresholds": {
+        "thread_pitch_m": 0.0007,
+        "loosen_min_turns": 2.8,
+        "loosen_min_travel_m": 0.0018,
+        "max_travel_m": 0.003,
+        "tight_max_angle_rad": 0.12,
+        "tight_max_travel_m": 0.00015,
+        "min_driver_clearance_m": 0.05,
+        "max_linear_speed_m_s": 0.001,
+        "max_angular_speed_rad_s": 0.1
+      },
+      "goal_frame": "target",
+      "parameter_provenance": "AstroBench engineering task parameters in SI units",
+      "measurement_template": {
+        "fastener_angle_rad": 18.84955592153876,
+        "fastener_axial_m": 0.0021,
+        "object_released": false,
+        "driver_attached": false,
+        "driver_clearance_m": 0.1
+      },
+      "initial_validation": {
+        "ranges": {
+          "driver_clearance_m": [
+            0.05,
+            5.0
+          ]
+        },
+        "max_linear_speed_m_s": 0.002,
+        "max_angular_speed_rad_s": 0.01,
+        "position_tolerance_m": 0.002,
+        "angle_tolerance_rad": 0.01,
+        "fastener_axial_tolerance_m": 0.0001
+      },
+      "measurement_semantics": {
+        "position_frames": "Named task goal frame; quaternion wxyz relative to desired goal orientation",
+        "velocity_frame": "Asset frame; linear and angular vectors are measured from the manipulated object",
+        "cap_adapter_pose": "Pose residual with respect to nominal retained cap-in-adapter transform, not raw object-origin separation",
+        "min_containment_margin_m": "Minimum signed clearance of every card mesh point to the selected box interior; positive is contained",
+        "opening_clearance_m": "Minimum signed card mesh distance beyond the selected opening plane; positive is fully extracted",
+        "driver_attached": "Measured driver-bit engagement with the captive fastener; disengaged at reset.",
+        "driver_clearance_m": "Measured driver-bit clearance from the captive fastener, in metres."
+      }
+    }
+  }
+}

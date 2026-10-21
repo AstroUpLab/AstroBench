@@ -4,8 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "astrobench-protocol"
-version = "0.2.0.dev0"
-description = "Portable evaluation protocol for free-floating object manipulation"
+version = "0.3.0"
+description = "Free-floating manipulation and reference-based space workcell task protocols"
+license = {file = "LICENSE"}
 requires-python = ">=3.11"
 dependencies = []
 
