@@ -19,3 +19,5 @@ jobs:
       - run: astrobench objects --output /tmp/core20.json
       - run: astrobench objects --object-set objaverse8414 --output /tmp/objaverse8414.json
       - run: astrobench scenes --output /tmp/scenes.json
+      - run: astrobench workcell-check-assets assets/workcells --output /tmp/workcell-assets.json
+      - run: astrobench workcell-plan --workcell all --repeats 2 --seed 42 --asset-root assets/workcells --output /tmp/workcell-plan.json
