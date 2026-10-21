@@ -1,7 +1,33 @@
 {
-  "schema": "astrobench.scene_catalog/v1",
+  "schema": "astrobench.scene_catalog/v2",
   "default": "iss_jpm",
-  "interior_tasks": "all_object_tracks_and_all_operation_directions",
+  "interior_tasks": {
+    "capture": {
+      "task_id": "capture_retain",
+      "tracks": [
+        "static",
+        "drift",
+        "tumble",
+        "fast_tumble"
+      ]
+    },
+    "workcells": {
+      "melfi_v6": [
+        "card_transfer_to_mouth",
+        "card_insert",
+        "card_extract",
+        "lid_open",
+        "lid_close"
+      ],
+      "rrm_tb1": [
+        "fdv1_remove_stow",
+        "sma_remove_stow",
+        "captive_loosen",
+        "captive_tighten"
+      ]
+    },
+    "placement": "Capture backgrounds and mounted workcells use separate asset placement transforms."
+  },
   "scenes": [
     {
       "id": "iss_jpm",

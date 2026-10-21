@@ -11,7 +11,7 @@
     },
     {
       "path": "load_asset.py",
-      "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e"
+      "sha256": "77a62b0141db0d8997082051625b30b6cfdffe8fbb4f4299a2df07f099b84ab6"
     },
     {
       "path": "melfi_v6/source/melfi.py",
@@ -27,11 +27,15 @@
     },
     {
       "path": "publicbuild.py",
-      "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0"
+      "sha256": "4f00eba5a5a9788b3a6debdcd5cdc5afb0a069f2aa175624575e4c3057647595"
     },
     {
       "path": "rrm_tb1/source/export_collision.py",
       "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68"
+    },
+    {
+      "path": "rrm_tb1/source/layout_config.json",
+      "sha256": "bb64659b6fa4d3eb53202249d7a54ceca92c9ba38bcd707af609d7af88e3d961"
     },
     {
       "path": "rrm_tb1/source/panel.py",
@@ -39,7 +43,7 @@
     },
     {
       "path": "rrm_tb1/source/supports.py",
-      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092"
+      "sha256": "5a52f7260fcae103c97cc0b4e5cdaacf135c26a9150ce91846469d184816c580"
     },
     {
       "path": "rrm_tb1/source/task_panel.py",
@@ -56,11 +60,11 @@
   ],
   "builder_sha256": {
     "geometry_supports.py": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a",
-    "load_asset.py": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e",
-    "publicbuild.py": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0",
+    "load_asset.py": "77a62b0141db0d8997082051625b30b6cfdffe8fbb4f4299a2df07f099b84ab6",
+    "publicbuild.py": "4f00eba5a5a9788b3a6debdcd5cdc5afb0a069f2aa175624575e4c3057647595",
     "unpack_collision.py": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
   },
-  "canonical_source_sha256": "9e390dd6831b2e04a6535200c80bcc14f52e242632685a66f5c4cd660596226a",
+  "canonical_source_sha256": "c9de6c13d2356e8f3021832d8cb19e5c7d33e64ad20868a5a0a3b5c0849440c6",
   "build_args": {},
   "files": [
     {

@@ -29,6 +29,77 @@ def load(asset_id,asset_root=HERE):
 
 
 
+def rows(matrix):
+    return [[float(x) for x in row] for row in matrix]
+
+
+def restore(parts):
+    """Restore intrinsic asset coordinates, including after world placement."""
+    placement=bpy.data.objects.get('AstroBench_world_placement')
+    if placement:
+        for obj in list(placement.children):
+            pose=obj.matrix_world.copy();obj.parent=None;obj.matrix_world=pose
+        bpy.data.objects.remove(placement,do_unlink=True)
+    for name,record in parts['nodes'].items():
+        obj=bpy.data.objects.get(name)
+        if obj:
+            obj.matrix_local=Matrix(record['transform_parent'])
+            obj.hide_render=False;obj.hide_viewport=False
+            if obj.rigid_body:obj.rigid_body.enabled=True
+    bpy.context.view_layer.update()
+
+
+def select_tool(parts,kind):
+    """Other tool variants stay in the library but are inactive in this scene."""
+    roots={t['kind']:t['tool_root_object'] for t in parts['semantic_targets'].values()}
+    inactive=[]
+    for other,name in roots.items():
+        root=bpy.data.objects[name]
+        for obj in [root,*root.children_recursive]:
+            off=other!=kind;obj.hide_render=off;obj.hide_viewport=off
+            if obj.rigid_body:obj.rigid_body.enabled=not off
+            if off:inactive.append(obj.name)
+    return inactive
+
+
+def place(parts,placement='asset',report=None):
+    """Place the whole asset after reset. Repeated calls are idempotent."""
+    if placement not in ('asset','world'):raise ValueError('Unknown placement '+placement)
+    container=bpy.data.objects.get('AstroBench_world_placement')
+    if not container:
+        roots=[bpy.data.objects[name] for name,rec in parts['nodes'].items()
+               if rec['parent'] is None and name in bpy.data.objects]
+        container=bpy.data.objects.new('AstroBench_world_placement',None)
+        bpy.context.collection.objects.link(container)
+        for obj in roots:
+            pose=obj.matrix_world.copy();obj.parent=container
+            obj.matrix_parent_inverse=Matrix.Identity(4);obj.matrix_basis=pose
+    matrix=Matrix(parts['robot_attachment_frames']['world_from_asset']) if placement=='world' else Matrix.Identity(4)
+    container.matrix_world=matrix;bpy.context.view_layer.update()
+    report={} if report is None else report
+    report.update(placement=placement,scene_from_asset=rows(matrix))
+    report['robot_base_transform_scene']=rows(matrix @ Matrix(parts['robot_attachment_frames']['base']['transform_asset']))
+    if 'object_transforms_asset' in report:
+        report['object_transforms_scene']={name:rows(bpy.data.objects[name].matrix_world)
+                                          for name in report['object_transforms_asset']}
+    return report
+
+
+def ready(parts):
+    """Apply the centered waiting pose. The runtime supplies the robot model."""
+    if parts['asset_id']!='rrm_tb1':raise ValueError('Ready preset is defined for RRM')
+    restore(parts)
+    preset=parts['ready_pose'];kind=preset['tool_kind']
+    target=next(t for t in parts['semantic_targets'].values() if t['kind']==kind)
+    tool=bpy.data.objects[target['tool_root_object']]
+    tool.matrix_world=Matrix(preset['tool_transform_asset'])
+    inactive=select_tool(parts,kind);bpy.context.view_layer.update()
+    return {'asset_id':parts['asset_id'],'pose_kind':'centered_waiting_pose','task_outcome':False,'units':'m',
+            'robot_ready_pose':preset,'inactive_tool_objects':inactive,
+            'object_transforms_asset':{tool.name:rows(tool.matrix_world)},
+            'observations':'Set the runtime robot base, arm and gripper from robot_ready_pose; this static preset is not a task rollout.'}
+
+
 def set_retention_pose(target,state):
     """Reset visible band geometry; a runtime separately resolves elastic forces."""
     config=target['retention'];points=config['centerlines_parent'][state]
@@ -47,12 +118,7 @@ def reset(parts,task_id,target_id):
     if not target['active']:
         selection=target['rebuild']
         raise ValueError('Rebuild selected target with publicbuild.py: --sma-row {sma_row} --sma-col {sma_col} --captive-index {captive_index}'.format(**selection))
-    for name,record in parts['nodes'].items():
-        obj=bpy.data.objects.get(name)
-        if obj:
-            obj.matrix_local=Matrix(record['transform_parent'])
-            if obj.rigid_body:
-                obj.rigid_body.enabled=True
+    restore(parts)
     changed=[]
     if parts['asset_id']=='melfi_v6':
         if task_id not in MELFI_TASKS:raise ValueError('Task is not a MELFI task')
@@ -95,9 +161,11 @@ def reset(parts,task_id,target_id):
                     obj.location.x+=direction*.004
                     changed.append(name)
         changed.extend((moving.name,tool.name))
+        inactive=select_tool(parts,kind)
     bpy.context.view_layer.update()
     return {'asset_id':parts['asset_id'],'task_id':task_id,'target_id':target_id,'units':'m',
             'object_transforms_asset':{name:[[float(x) for x in row] for row in bpy.data.objects[name].matrix_world] for name in changed},
+            'inactive_tool_objects':inactive if parts['asset_id']=='rrm_tb1' else [],
             'observations':'Runtime must measure contacts, retention, containment and joint velocities after reset.'}
 
 
@@ -105,16 +173,24 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--asset',required=True,choices=('melfi_v6','rrm_tb1'))
     p.add_argument('--asset-root',type=Path,default=HERE)
-    p.add_argument('--task',required=True,choices=MELFI_TASKS+RRM_TASKS)
-    p.add_argument('--target',required=True)
+    p.add_argument('--task',choices=MELFI_TASKS+RRM_TASKS)
+    p.add_argument('--ready',action='store_true',help='RRM centered waiting pose and runtime joint preset')
+    p.add_argument('--placement',choices=('asset','world'),default='asset')
+    p.add_argument('--target')
     p.add_argument('--save',type=Path)
     p.add_argument('--receipt',type=Path)
     args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
-    report=reset(load(args.asset,args.asset_root),args.task,args.target)
+    if args.ready and (args.task or args.target):p.error('--ready cannot be combined with --task/--target')
+    if not args.ready and (not args.task or not args.target):p.error('provide --task and --target, or --ready')
+    parts=load(args.asset,args.asset_root)
+    report=ready(parts) if args.ready else reset(parts,args.task,args.target)
+    report=place(parts,args.placement,report)
     if args.save:
         args.save.parent.mkdir(parents=True,exist_ok=True)
         bpy.ops.wm.save_as_mainfile(filepath=str(args.save.resolve()),compress=True)
-    if args.receipt:args.receipt.write_text(json.dumps(report,indent=2)+'\n')
+    if args.receipt:
+        args.receipt.parent.mkdir(parents=True,exist_ok=True)
+        args.receipt.write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report))
 
 

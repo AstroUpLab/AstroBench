@@ -13945,13 +13945,13 @@
           1.0,
           0.0,
           0.0,
-          0.05999999865889549
+          0.0
         ],
         [
           0.0,
           1.0,
           0.0,
-          -0.36000001430511475
+          0.0
         ],
         [
           0.0,
@@ -13972,13 +13972,13 @@
           1.0,
           0.0,
           0.0,
-          0.05999999865889549
+          0.0
         ],
         [
           0.0,
           1.0,
           0.0,
-          -0.36000001430511475
+          0.0
         ],
         [
           0.0,
@@ -19513,13 +19513,13 @@
           1.0,
           0.0,
           0.0,
-          0.05999999865889549
+          0.0
         ],
         [
           0.0,
           1.0,
           0.0,
-          -0.36000001430511475
+          0.0
         ],
         [
           0.0,
@@ -30922,13 +30922,13 @@
           1.0,
           0.0,
           0.0,
-          0.05999999865889549
+          0.0
         ],
         [
           0.0,
           1.0,
           0.0,
-          -0.36000001430511475
+          0.0
         ],
         [
           0.0,
@@ -31555,13 +31555,13 @@
           -0.5000000596046448,
           -0.8660253882408142,
           0.0,
-          0.05999999865889549
+          0.0
         ],
         [
           0.8660253882408142,
           -0.5000000596046448,
           0.0,
-          -0.36000001430511475
+          0.0
         ],
         [
           0.0,
@@ -32188,13 +32188,13 @@
           -0.49999991059303284,
           0.866025447845459,
           0.0,
-          0.05999999865889549
+          0.0
         ],
         [
           -0.866025447845459,
           -0.49999991059303284,
           0.0,
-          -0.36000001430511475
+          0.0
         ],
         [
           0.0,
@@ -51965,114 +51965,184 @@
       "triangle_count": 188
     },
     {
-      "name": "RRM tabletop foot",
+      "name": "RRM cabin collision floor",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0000.obj"
+      "obj_path": "collision_meshes/supports/0000.obj",
+      "collision_only": true
     },
     {
-      "name": "RRM tabletop foot.001",
+      "name": "RRM cabin collision wall",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0001.obj"
+      "obj_path": "collision_meshes/supports/0001.obj",
+      "collision_only": true
     },
     {
-      "name": "RRM tabletop foot.002",
+      "name": "RRM cabin floor foundation plate",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0002.obj"
+      "obj_path": "collision_meshes/supports/0002.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop foot.003",
+      "name": "RRM cabin floor supply loom",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0003.obj"
+      "obj_path": "collision_meshes/supports/0003.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop leg",
+      "name": "RRM cabin panel mount washer",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0004.obj"
+      "obj_path": "collision_meshes/supports/0004.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop leg.001",
+      "name": "RRM cabin panel mount washer.001",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0005.obj"
+      "obj_path": "collision_meshes/supports/0005.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop leg.002",
+      "name": "RRM cabin panel mount washer.002",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0006.obj"
+      "obj_path": "collision_meshes/supports/0006.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop leg.003",
+      "name": "RRM cabin panel mount washer.003",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0007.obj"
+      "obj_path": "collision_meshes/supports/0007.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop long apron",
+      "name": "RRM cabin panel standoff",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0008.obj"
+      "obj_path": "collision_meshes/supports/0008.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop long apron.001",
+      "name": "RRM cabin panel standoff.001",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0009.obj"
+      "obj_path": "collision_meshes/supports/0009.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop panel corner standoff",
+      "name": "RRM cabin panel standoff.002",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0010.obj"
+      "obj_path": "collision_meshes/supports/0010.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop panel corner standoff.001",
+      "name": "RRM cabin panel standoff.003",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0011.obj"
+      "obj_path": "collision_meshes/supports/0011.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop panel corner standoff.002",
+      "name": "RRM cabin recessed floor anchor",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0012.obj"
+      "obj_path": "collision_meshes/supports/0012.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop panel corner standoff.003",
+      "name": "RRM cabin recessed floor anchor.001",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0013.obj"
+      "obj_path": "collision_meshes/supports/0013.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop robot flange bolt",
+      "name": "RRM cabin recessed floor anchor.002",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0014.obj"
+      "obj_path": "collision_meshes/supports/0014.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop robot flange bolt.001",
+      "name": "RRM cabin recessed floor anchor.003",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0015.obj"
+      "obj_path": "collision_meshes/supports/0015.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop robot flange bolt.002",
+      "name": "RRM cabin stowage wall spacer",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0016.obj"
+      "obj_path": "collision_meshes/supports/0016.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop robot flange bolt.003",
+      "name": "RRM cabin stowage wall spacer.001",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0017.obj"
+      "obj_path": "collision_meshes/supports/0017.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop robot mounting flange",
+      "name": "RRM cabin wall anchor bolt",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0018.obj"
+      "obj_path": "collision_meshes/supports/0018.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop side apron",
+      "name": "RRM cabin wall anchor bolt.001",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0019.obj"
+      "obj_path": "collision_meshes/supports/0019.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop side apron.001",
+      "name": "RRM cabin wall anchor bolt.002",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0020.obj"
+      "obj_path": "collision_meshes/supports/0020.obj",
+      "collision_only": false
     },
     {
-      "name": "RRM tabletop work surface",
+      "name": "RRM cabin wall anchor bolt.003",
       "coordinate_frame": "asset",
-      "obj_path": "collision_meshes/supports/0021.obj"
+      "obj_path": "collision_meshes/supports/0021.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall anchor washer",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0022.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall anchor washer.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0023.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall anchor washer.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0024.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall anchor washer.003",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0025.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall cable clip",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0026.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall cable clip.001",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0027.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall cable clip.002",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0028.obj",
+      "collision_only": false
+    },
+    {
+      "name": "RRM cabin wall load-spreading backplate",
+      "coordinate_frame": "asset",
+      "obj_path": "collision_meshes/supports/0029.obj",
+      "collision_only": false
     }
   ],
   "excluded": [
@@ -52087,13 +52157,17 @@
   ],
   "summary": {
     "dynamic_body_count": 19,
-    "static_mesh_count": 480,
+    "static_mesh_count": 488,
     "convex_part_count": 2472,
     "original_dynamic_mesh_count": 83
   },
+  "environment_planes": [
+    "RRM cabin collision wall",
+    "RRM cabin collision floor"
+  ],
   "mesh_archive": {
     "path": "collision_meshes.zip",
-    "sha256": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
+    "sha256": "71c0a268f061816c6b8250cc45ab786c0c9d30e816af73fbd47ad9f35db591a6",
     "extract_directory": "collision_meshes"
   }
 }

@@ -7,6 +7,7 @@ from .inventory import object_inventory, scene_catalog, select_catalog
 from .workcells import (workcell_catalog, make_workcell_plan, validate_workcell_plan,
                         score_workcell_trace, aggregate_workcell_results)
 from .workcell_assets import check_workcell_assets
+from .prompts import export_task_prompts
 
 
 def read(path):
@@ -28,6 +29,9 @@ def main():
     objects = sub.add_parser('objects', help='Export an object inventory')
     objects.add_argument('--object-set', choices=('core20','objaverse8414'), default='core20')
     scenes = sub.add_parser('scenes', help='Export cabin scene configuration')
+    prompts = sub.add_parser('task-prompts', help='Export canonical language instructions for public tasks')
+    prompts.add_argument('--object-set', choices=('core20', 'objaverse8414', 'all'), default='core20')
+    prompts.add_argument('--scope', choices=('all', 'capture', 'workcells'), default='all')
     score = sub.add_parser('score'); score.add_argument('plan'); score.add_argument('episode_id'); score.add_argument('trace')
     report = sub.add_parser('report'); report.add_argument('plan'); report.add_argument('results')
     workcells = sub.add_parser('workcells', help='Export MELFI and RRM workcell tasks')
@@ -46,10 +50,11 @@ def main():
     workcell_report.add_argument('plan'); workcell_report.add_argument('results')
     workcell_assets = sub.add_parser('workcell-check-assets', help='Verify workcell files and asset identities')
     workcell_assets.add_argument('asset_root')
-    for command in (plan,score,report,objects,scenes,workcells,workcell_plan,workcell_score,workcell_report,workcell_assets):
+    for command in (plan,score,report,objects,scenes,prompts,workcells,workcell_plan,workcell_score,workcell_report,workcell_assets):
         command.add_argument('--output', required=True)
     args = parser.parse_args()
-    if args.command == 'workcells': result = workcell_catalog(asset_root=args.asset_root)
+    if args.command == 'task-prompts': result = export_task_prompts(args.object_set, scope=args.scope)
+    elif args.command == 'workcells': result = workcell_catalog(asset_root=args.asset_root)
     elif args.command == 'workcell-check-assets':
         workcell_catalog(asset_root=args.asset_root)
         result = check_workcell_assets(args.asset_root)

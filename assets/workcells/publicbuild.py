@@ -274,7 +274,10 @@ def build_rrm(out,args):
     parked={'fdv1':(.06,-.36,.12),'sma':(.23,-.36,.12),'captive':(-.30,-.36,.04)}
     for kind,tool in tooldata.items():tool['root'].location=parked[kind]
     sup=module(src/'supports.py','rrm_supports')
-    _,support_objs=supports_in_asset(sup,Matrix.Translation((0,0,-.830)),'RRM_Workcell_support',('make_supports',))
+    layout=json.loads((src/'layout_config.json').read_text())
+    world_from_asset=Matrix(layout['world_from_asset'])
+    tooldata['fdv1']['root'].matrix_world=Matrix(layout['ready_pose']['tool_transform_asset'])
+    _,support_objs=supports_in_asset(sup,world_from_asset.inverted(),'RRM_Workcell_support',('make_supports',))
     bpy.context.view_layer.update()
     # Collision body meshes are body-local; update poses to match the GLB.
     for body in collision['bodies'].values():
@@ -294,7 +297,11 @@ def build_rrm(out,args):
         rec=ex.geometry(obj,Matrix.Identity(4),graph)
         if rec:
             rec['obj_path']=ex.obj_file(out/'collision_meshes'/'supports'/f'{n:04d}.obj',rec)
-            rec['coordinate_frame']='asset';rec.pop('vertices');rec.pop('triangles');collision['static_meshes'].append(rec)
+            rec['coordinate_frame']='asset';rec['collision_only']=bool(obj.get('collision_only',False))
+            rec.pop('vertices');rec.pop('triangles');collision['static_meshes'].append(rec)
+    collision['environment_planes']=layout['runtime_assets']['collision_proxies']
+    for obj in list(support_objs):
+        if obj.get('collision_only',False):bpy.data.objects.remove(obj,do_unlink=True)
     collision['summary']['static_mesh_count']=len(collision['static_meshes'])
     collision['dynamic_rule']='Use body-local convex_parts; initial_transform places each body in the asset frame. Original visual surfaces are in the GLB.'
     targets={};joints=[]
@@ -321,13 +328,15 @@ def build_rrm(out,args):
     for kind,tool in tooldata.items():
         joints.append({'id':'tool/'+kind+'/spindle','type':'revolute_detachable','object':tool['spindle_root'].name,
                        'parent':tool['root'].name,'axis_local':[0,0,1],'limits_rad':None,'attachment':'runtime detachable drive coupling at local Z=.064 m'})
-    robot={'base':{'transform_asset':frame((-.43,-.35,-.052)),'role':'fixed robot mounting flange'},
-           'world_from_asset':frame((0,0,.830)),'robot_asset':'provided by runtime; no robot CAD is bundled'}
+    robot={'base':{'transform_asset':rows(world_from_asset.inverted() @ Matrix(layout['robot_base_world'])),
+                   'transform_world':layout['robot_base_world'],'role':'fixed flange on the 28 mm floor mounting plate'},
+           'world_from_asset':layout['world_from_asset'],'robot_asset':'provided by runtime; no robot CAD is bundled'}
     initial={'selected_sma_index':[args.sma_row,args.sma_col],'selected_captive_index':args.captive_index,
-             'fastener_angle_rad':0.,'fastener_axial_m':0.,'tool_parking_positions_asset':parked}
+             'fastener_angle_rad':0.,'fastener_axial_m':0.,'tool_parking_positions_asset':parked,
+             'default_display_tool':'fdv1','ready_tool_transform_asset':layout['ready_pose']['tool_transform_asset']}
     archive_collision(out,collision)
     output_models(out,'rrm_tb1',targets,joints,initial,robot,
-                  {'dimensions':{'plate_m':[.400,.530,.006]},'source_references':['https://www.nasa.gov/nexis/rrm-phase-1/',
+                  {'layout':layout,'ready_pose':layout['ready_pose'],'dimensions':{'plate_m':[.400,.530,.006]},'source_references':['https://www.nasa.gov/nexis/rrm-phase-1/',
                      'https://ntrs.nasa.gov/api/citations/20110013452/downloads/20110013452.pdf']})
 
 
@@ -349,7 +358,7 @@ def main():
             shutil.copytree(HERE/id_,args.output_root/id_,dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__','*.pyc','*.blend1'))
     for asset in (('melfi_v6','rrm_tb1') if args.asset=='all' else (args.asset,)):
         out=args.output_root.resolve()/asset;out.mkdir(parents=True,exist_ok=True)
-        source_files=[dict(path=p.relative_to(HERE).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted(HERE.rglob('*')) if p.is_file() and (p.suffix=='.py' or p.name=='reference_profile.json')]
+        source_files=[dict(path=p.relative_to(HERE).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted(HERE.rglob('*')) if p.is_file() and (p.suffix=='.py' or p.name in ('reference_profile.json','layout_config.json'))]
         BUILD_PROVENANCE={'source_files':source_files,'builder_sha256':{f['path']:f['sha256'] for f in source_files if '/' not in f['path']},'canonical_source_sha256':hashlib.sha256(json.dumps(source_files,sort_keys=True,separators=(',',':')).encode()).hexdigest(), 'build_args':{'sma_row':args.sma_row,'sma_col':args.sma_col,'captive_index':args.captive_index} if asset=='rrm_tb1' else {}}
         if args.output_root != HERE and (HERE/asset/'manifest.json').exists():
             BUILD_PROVENANCE['derived_from_manifest_sha256']=hashlib.sha256((HERE/asset/'manifest.json').read_bytes()).hexdigest()

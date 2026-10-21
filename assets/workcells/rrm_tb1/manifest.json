@@ -11,7 +11,7 @@
     },
     {
       "path": "load_asset.py",
-      "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e"
+      "sha256": "77a62b0141db0d8997082051625b30b6cfdffe8fbb4f4299a2df07f099b84ab6"
     },
     {
       "path": "melfi_v6/source/melfi.py",
@@ -27,11 +27,15 @@
     },
     {
       "path": "publicbuild.py",
-      "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0"
+      "sha256": "4f00eba5a5a9788b3a6debdcd5cdc5afb0a069f2aa175624575e4c3057647595"
     },
     {
       "path": "rrm_tb1/source/export_collision.py",
       "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68"
+    },
+    {
+      "path": "rrm_tb1/source/layout_config.json",
+      "sha256": "bb64659b6fa4d3eb53202249d7a54ceca92c9ba38bcd707af609d7af88e3d961"
     },
     {
       "path": "rrm_tb1/source/panel.py",
@@ -39,7 +43,7 @@
     },
     {
       "path": "rrm_tb1/source/supports.py",
-      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092"
+      "sha256": "5a52f7260fcae103c97cc0b4e5cdaacf135c26a9150ce91846469d184816c580"
     },
     {
       "path": "rrm_tb1/source/task_panel.py",
@@ -56,11 +60,11 @@
   ],
   "builder_sha256": {
     "geometry_supports.py": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a",
-    "load_asset.py": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e",
-    "publicbuild.py": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0",
+    "load_asset.py": "77a62b0141db0d8997082051625b30b6cfdffe8fbb4f4299a2df07f099b84ab6",
+    "publicbuild.py": "4f00eba5a5a9788b3a6debdcd5cdc5afb0a069f2aa175624575e4c3057647595",
     "unpack_collision.py": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f"
   },
-  "canonical_source_sha256": "9e390dd6831b2e04a6535200c80bcc14f52e242632685a66f5c4cd660596226a",
+  "canonical_source_sha256": "c9de6c13d2356e8f3021832d8cb19e5c7d33e64ad20868a5a0a3b5c0849440c6",
   "build_args": {
     "sma_row": 2,
     "sma_col": 2,
@@ -69,38 +73,44 @@
   "files": [
     {
       "path": "collision.json",
-      "sha256": "421b5713500bd9ef377f16eb58db1abd19271ba01157449a08c9655d21eef0af",
-      "bytes": 1730253,
+      "sha256": "d266ef418c816039e872b26dedac0467bb9a33796342d8df86d5cdaf04a3dea1",
+      "bytes": 1732351,
       "role": "collision"
     },
     {
       "path": "collision_meshes.zip",
-      "sha256": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
-      "bytes": 3813137,
+      "sha256": "71c0a268f061816c6b8250cc45ab786c0c9d30e816af73fbd47ad9f35db591a6",
+      "bytes": 3870300,
       "role": "collision"
     },
     {
       "path": "parts.json",
-      "sha256": "f4459ba6e7b63ad32cb5bd07a142044048440fd65ba0287af44500ba0f642c89",
-      "bytes": 627584,
+      "sha256": "5df32cfa4aeb165edce4504269c0a2a827dcfe65a8c9a1c135e6e7957f86e20a",
+      "bytes": 641983,
       "role": "semantics"
     },
     {
       "path": "rrm_tb1.blend",
-      "sha256": "c62960ff541b9f882cad482791df30006ec44be2d268518d598cba63235dd2c4",
-      "bytes": 573411,
+      "sha256": "3b8189dffbdb7333843935ccb916cc74ef43e30706a877821582e672e5e853a0",
+      "bytes": 581090,
       "role": "editable_model"
     },
     {
       "path": "rrm_tb1.glb",
-      "sha256": "0d1794a8889bf0d71c3d54d729fa8628af711f8bcb566270a08012da4bcf88c4",
-      "bytes": 12957504,
+      "sha256": "621f810cf31b6be0af5ddb4a8f4b030dbbdbd7f192b5061983b03440eae97a10",
+      "bytes": 13373632,
       "role": "neutral_model"
     },
     {
       "path": "source/export_collision.py",
       "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68",
       "bytes": 24206,
+      "role": "source"
+    },
+    {
+      "path": "source/layout_config.json",
+      "sha256": "bb64659b6fa4d3eb53202249d7a54ceca92c9ba38bcd707af609d7af88e3d961",
+      "bytes": 4105,
       "role": "source"
     },
     {
@@ -111,8 +121,8 @@
     },
     {
       "path": "source/supports.py",
-      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092",
-      "bytes": 3363,
+      "sha256": "5a52f7260fcae103c97cc0b4e5cdaacf135c26a9150ce91846469d184816c580",
+      "bytes": 6523,
       "role": "source"
     },
     {
@@ -129,14 +139,15 @@
     }
   ],
   "files_sha256": {
-    "collision.json": "421b5713500bd9ef377f16eb58db1abd19271ba01157449a08c9655d21eef0af",
-    "collision_meshes.zip": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
-    "parts.json": "f4459ba6e7b63ad32cb5bd07a142044048440fd65ba0287af44500ba0f642c89",
-    "rrm_tb1.blend": "c62960ff541b9f882cad482791df30006ec44be2d268518d598cba63235dd2c4",
-    "rrm_tb1.glb": "0d1794a8889bf0d71c3d54d729fa8628af711f8bcb566270a08012da4bcf88c4",
+    "collision.json": "d266ef418c816039e872b26dedac0467bb9a33796342d8df86d5cdaf04a3dea1",
+    "collision_meshes.zip": "71c0a268f061816c6b8250cc45ab786c0c9d30e816af73fbd47ad9f35db591a6",
+    "parts.json": "5df32cfa4aeb165edce4504269c0a2a827dcfe65a8c9a1c135e6e7957f86e20a",
+    "rrm_tb1.blend": "3b8189dffbdb7333843935ccb916cc74ef43e30706a877821582e672e5e853a0",
+    "rrm_tb1.glb": "621f810cf31b6be0af5ddb4a8f4b030dbbdbd7f192b5061983b03440eae97a10",
     "source/export_collision.py": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68",
+    "source/layout_config.json": "bb64659b6fa4d3eb53202249d7a54ceca92c9ba38bcd707af609d7af88e3d961",
     "source/panel.py": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3",
-    "source/supports.py": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092",
+    "source/supports.py": "5a52f7260fcae103c97cc0b4e5cdaacf135c26a9150ce91846469d184816c580",
     "source/task_panel.py": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb",
     "source/tools.py": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f"
   },
@@ -1453,28 +1464,55 @@
         -0.36,
         0.04
       ]
-    }
+    },
+    "default_display_tool": "fdv1",
+    "ready_tool_transform_asset": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0.12
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
   },
   "robot_attachment_frames": {
     "base": {
       "transform_asset": [
         [
-          1.0,
-          -0.0,
           0.0,
-          -0.4300000071525574
-        ],
-        [
+          -1.0,
           0.0,
-          1.0,
-          0.0,
-          -0.3499999940395355
+          0.0
         ],
         [
           0.0,
           0.0,
           1.0,
-          -0.052000001072883606
+          -0.9554500579833984
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.690000057220459
         ],
         [
           0.0,
@@ -1483,32 +1521,58 @@
           1.0
         ]
       ],
-      "role": "fixed robot mounting flange"
+      "transform_world": [
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          -0.85
+        ],
+        [
+          0,
+          0,
+          1,
+          0.14455
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "role": "fixed flange on the 28 mm floor mounting plate"
     },
     "world_from_asset": [
       [
-        1.0,
-        -0.0,
-        0.0,
-        0.0
+        1,
+        0,
+        0,
+        0
       ],
       [
-        0.0,
-        1.0,
-        0.0,
-        0.0
+        0,
+        0,
+        -1,
+        -0.16
       ],
       [
-        0.0,
-        0.0,
-        1.0,
-        0.8299999833106995
+        0,
+        1,
+        0,
+        1.1
       ],
       [
-        0.0,
-        0.0,
-        0.0,
-        1.0
+        0,
+        0,
+        0,
+        1
       ]
     ],
     "robot_asset": "provided by runtime; no robot CAD is bundled"
@@ -1545,6 +1609,381 @@
     "extract_directory": "collision_meshes"
   },
   "source_builder": "../publicbuild.py",
+  "layout": {
+    "schema": "astrobench.workcell.layout.v1",
+    "id": "rrm_cabin_front_r003",
+    "units": "m",
+    "up_axis": "Z",
+    "description": "Vertical wall-mounted panel with the floor-mounted arm centered in front of the panel.",
+    "world_from_asset": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        -0.16
+      ],
+      [
+        0,
+        1,
+        0,
+        1.1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "wall": {
+      "plane_y_m": -0.029108,
+      "workspace_side": "negative Y"
+    },
+    "floor": {
+      "plane_z_m": 0.11655,
+      "workspace_side": "positive Z"
+    },
+    "robot_base_world": [
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        -0.85
+      ],
+      [
+        0,
+        0,
+        1,
+        0.14455
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "floor_plate": {
+      "center_world_m": [
+        0,
+        -0.89,
+        0.13055
+      ],
+      "dimensions_m": [
+        0.28,
+        0.28,
+        0.028
+      ],
+      "robot_base_offset_xy_m": [
+        0,
+        0.04
+      ]
+    },
+    "ready_pose": {
+      "pose_kind": "centered_waiting_pose",
+      "task_outcome": false,
+      "robot_model_convention": "Franka Panda with Robotiq 2F-85",
+      "arm_joint_order": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7"
+      ],
+      "arm_joint_positions_rad": [
+        0.49942887217041826,
+        -0.6995988775595136,
+        -0.25235269046720654,
+        -1.7713277462436996,
+        -0.6364854959231356,
+        2.6201873379256164,
+        0.4008158649615629
+      ],
+      "gripper_joint_positions_rad": {
+        "finger_joint": 0.6252966194626539,
+        "right_outer_knuckle_joint": 0.6252966194626539,
+        "right_inner_finger_joint": 0.6252966194626539,
+        "right_inner_finger_knuckle_joint": -0.6252966194626539,
+        "left_inner_finger_knuckle_joint": -0.6252966194626539,
+        "left_inner_finger_joint": -0.6252966194626539
+      },
+      "tool_kind": "fdv1",
+      "tool_transform_asset": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0.12
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "tool_transform_world": [
+        [
+          1.0000000000000009,
+          -1.204425975290194e-08,
+          8.815221120172532e-09,
+          -3.734797317124445e-10
+        ],
+        [
+          8.815221386702381e-09,
+          3.634188366916738e-08,
+          -1.0000000000000002,
+          -0.2800000062659389
+        ],
+        [
+          1.2044259162604346e-08,
+          1.0000000000000004,
+          3.6341883990826605e-08,
+          1.099999996168289
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "tcp_transform_world": [
+        [
+          -8.815221120172532e-09,
+          -1.0000000000000009,
+          -1.204425975290194e-08,
+          6.843468027082593e-10
+        ],
+        [
+          1.0000000000000002,
+          -8.815221386702381e-09,
+          3.634188366916738e-08,
+          -0.4000000062659389
+        ],
+        [
+          -3.6341883990826605e-08,
+          -1.2044259162604346e-08,
+          1.0000000000000004,
+          1.100000000529315
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "tool_transform_in_tcp": [
+        [
+          0,
+          0,
+          -1,
+          0.12
+        ],
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "tool_tip_panel_local_m": [
+        0,
+        0,
+        0.12
+      ],
+      "source": "AstroBench static joint configuration; no trajectory is included."
+    },
+    "runtime_assets": {
+      "robot": "Attach a separately supplied robot at robot_base_world; use the documented joint and tool conventions.",
+      "cabin": "Supply a cabin with matching wall/floor datums, or use the collision-only planes.",
+      "collision_proxies": [
+        "RRM cabin collision wall",
+        "RRM cabin collision floor"
+      ]
+    }
+  },
+  "ready_pose": {
+    "pose_kind": "centered_waiting_pose",
+    "task_outcome": false,
+    "robot_model_convention": "Franka Panda with Robotiq 2F-85",
+    "arm_joint_order": [
+      "panda_joint1",
+      "panda_joint2",
+      "panda_joint3",
+      "panda_joint4",
+      "panda_joint5",
+      "panda_joint6",
+      "panda_joint7"
+    ],
+    "arm_joint_positions_rad": [
+      0.49942887217041826,
+      -0.6995988775595136,
+      -0.25235269046720654,
+      -1.7713277462436996,
+      -0.6364854959231356,
+      2.6201873379256164,
+      0.4008158649615629
+    ],
+    "gripper_joint_positions_rad": {
+      "finger_joint": 0.6252966194626539,
+      "right_outer_knuckle_joint": 0.6252966194626539,
+      "right_inner_finger_joint": 0.6252966194626539,
+      "right_inner_finger_knuckle_joint": -0.6252966194626539,
+      "left_inner_finger_knuckle_joint": -0.6252966194626539,
+      "left_inner_finger_joint": -0.6252966194626539
+    },
+    "tool_kind": "fdv1",
+    "tool_transform_asset": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0.12
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "tool_transform_world": [
+      [
+        1.0000000000000009,
+        -1.204425975290194e-08,
+        8.815221120172532e-09,
+        -3.734797317124445e-10
+      ],
+      [
+        8.815221386702381e-09,
+        3.634188366916738e-08,
+        -1.0000000000000002,
+        -0.2800000062659389
+      ],
+      [
+        1.2044259162604346e-08,
+        1.0000000000000004,
+        3.6341883990826605e-08,
+        1.099999996168289
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "tcp_transform_world": [
+      [
+        -8.815221120172532e-09,
+        -1.0000000000000009,
+        -1.204425975290194e-08,
+        6.843468027082593e-10
+      ],
+      [
+        1.0000000000000002,
+        -8.815221386702381e-09,
+        3.634188366916738e-08,
+        -0.4000000062659389
+      ],
+      [
+        -3.6341883990826605e-08,
+        -1.2044259162604346e-08,
+        1.0000000000000004,
+        1.100000000529315
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "tool_transform_in_tcp": [
+      [
+        0,
+        0,
+        -1,
+        0.12
+      ],
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "tool_tip_panel_local_m": [
+      0,
+      0,
+      0.12
+    ],
+    "source": "AstroBench static joint configuration; no trajectory is included."
+  },
   "dimensions": {
     "plate_m": [
       0.4,

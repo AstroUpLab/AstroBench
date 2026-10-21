@@ -2,7 +2,7 @@
 
 [English](workcells.md) · [简体中文](workcells.zh-CN.md) · [Back to README](../README.md)
 
-AstroBench includes two workcells with editable hardware, named moving parts and explicit completion goals. MELFI V6 covers sample storage in an ISS-style cabin. RRM TB1 covers cap and captive-screw servicing on a horizontal workbench. Both use a fixed robot base and zero gravity; fixtures secure the equipment independently of gravity.
+AstroBench includes two workcells with editable hardware, named moving parts and explicit completion goals. MELFI V6 covers sample storage in an ISS-style cabin. RRM TB1 covers cap and captive-screw servicing on a wall-mounted panel. Both use a fixed robot base and zero gravity; fixtures secure the equipment independently of gravity.
 
 | MELFI V6 | RRM TB1 |
 | :---: | :---: |
@@ -29,9 +29,11 @@ astrobench workcell-plan --workcell rrm_tb1 --task sma_remove_stow --target SMA_
 
 This example plans ten episodes for the default movable SMA cap, `SMA_2_2`. Repeat `--target` to select additional targets for the same task; omit it to include every target of that task. For other RRM target positions, build the selected variant and pass its asset directory when scoring, as described below.
 
-The plan binds the selected task, target, initial state, thresholds and asset identity to an episode specification hash. The same inputs reproduce the same plan. Execute each repeat independently using its recorded initial-state specification. Keep the plan beside the resulting traces. Output files are created exclusively, so an existing file is not silently replaced.
+The `astrobench.workcell-plan/v2` plan binds the selected task, target, initial state, thresholds, asset identity and language instruction to the episode `spec_hash`. Pass `episode["spec"]["language_prompt"]["text"]` to the policy; its binding also records the registry version, registry hash and text hash. The same inputs reproduce the same plan. Execute each repeat independently using its recorded initial state and keep the plan beside the traces. Output files are created exclusively, so an existing file is not silently replaced.
 
 ## Tasks and targets
+
+The [task and prompt catalog](tasks.md) lists the English instruction for every task and target. Use the instruction and `target_id` recorded in the episode plan.
 
 All terminal conditions must hold over the final **1 second** of a **30-second** episode. Positions are in meters, angles in radians, times in seconds and forces in newtons. The table gives readable values; the machine-readable definitions are in [workcells.json](../astrobench/data/workcells.json).
 
@@ -61,7 +63,13 @@ The tray runs parallel to the wall. A floor-mounted column supports the robot in
 
 ### RRM TB1
 
-The panel includes an FDV1 tertiary cap, a 3 × 3 SMA cap array and two captive-screw positions. The working layout places the panel flat on a supported table, the robot to its left and the cap receivers in front. Use the supplied task and tool frames to align each tool with the panel normal.
+The panel includes an FDV1 tertiary cap, a 3 × 3 SMA cap array and two captive-screw positions. In the r003 layout, the panel is vertical on the cabin wall and the arm sits directly in front of it on a thin floor mounting plate. The arm unfolds toward the center of the panel; the cap receivers sit below the interface area. Use the supplied task and tool frames to align each tool with the panel normal.
+
+| Front view | Side view |
+| :---: | :---: |
+| <img src="media/rrm-front.png" alt="Unfolded robot centered in front of the RRM panel" width="420"> | <img src="media/rrm-side.png" alt="Side view of the wall panel and floor-mounted robot" width="420"> |
+
+The panel-frame origin is **983.45 mm above the cabin floor**. The robot base is **690 mm in front of the panel**, with its mounting surface **28 mm above the floor**. At the ready pose, the tool tip is **120 mm in front of the panel center**. Use the manifest mounting transforms to reproduce these installation dimensions.
 
 | Interface | Tool pairing | Operation |
 | --- | --- | --- |
@@ -73,16 +81,21 @@ The task assets contain the workpieces, tools and supports. Attach your own robo
 
 Both assets provide collision descriptions and mesh archives: [MELFI collision geometry](../assets/workcells/melfi_v6/collision.json) and [RRM collision geometry](../assets/workcells/rrm_tb1/collision.json). Preserve holes, guide sleeves, tool recesses and retention geometry when creating collision shapes: replacing them with a single convex hull changes the task. See the [asset directory](../assets/workcells/) for file hashes, part mappings, references and rebuild sources. The authored models and sources use [Apache-2.0](../assets/workcells/LICENSE), with attribution in [NOTICE](../assets/workcells/NOTICE).
 
-The [Blender loader](../assets/workcells/load_asset.py) can save a scene at a task's starting geometry:
+Use the [Blender loader](../assets/workcells/load_asset.py) to open the r003 centered ready layout, then save a selected task's starting geometry:
+
+```bash
+blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
+  --ready --placement world --save outputs/rrm-ready.blend
+```
 
 ```bash
 blender -b -P assets/workcells/load_asset.py -- --asset melfi_v6 \
   --task card_extract --target Rear_half_box --save outputs/melfi-extract.blend
 blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
-  --task sma_remove_stow --target SMA_2_2 --save outputs/rrm-sma.blend
+  --task sma_remove_stow --target SMA_2_2 --placement world --save outputs/rrm-sma.blend
 ```
 
-This resets the moving parts and tool placement. MELFI uses the released strap shape for transfer / insertion and the retained-around-card shape for extraction. The environment adapter implements `runtime_elastic_strip` using the supplied endpoint constraints and elastic parameters, then measures retention force from actual contacts. The reset itself supplies geometry; the adapter establishes the dynamics and records the measurements used below.
+This resets the moving parts and tool placement. Each reset first restores the asset frame; applying `--placement world` afterward installs the reset RRM scene in the wall-and-floor layout. MELFI uses the released strap shape for transfer / insertion and the retained-around-card shape for extraction. The environment adapter implements `runtime_elastic_strip` using the supplied endpoint constraints and elastic parameters, then measures retention force from actual contacts. The reset itself supplies geometry; the adapter establishes the dynamics and records the measurements used below.
 
 ### Select another RRM cap or screw
 
@@ -92,7 +105,7 @@ The default RRM build has movable targets `FDV1`, `SMA_2_2` and `captive_1`. The
 blender -b -P assets/workcells/publicbuild.py -- --asset rrm_tb1 \
   --sma-row 1 --sma-col 3 --captive-index 2 --output-root outputs/rrm-variant
 blender -b -P assets/workcells/load_asset.py -- --asset-root outputs/rrm-variant \
-  --asset rrm_tb1 --task sma_remove_stow --target SMA_1_3 \
+  --asset rrm_tb1 --task sma_remove_stow --target SMA_1_3 --placement world \
   --save outputs/rrm-sma-1-3.blend
 astrobench workcell-score workcell-plan.json EPISODE_ID trace.json \
   --asset-root outputs/rrm-variant --output sma-1-3-result.json
@@ -152,7 +165,9 @@ Use the actual build directory for `--asset-root`; for a rebuilt RRM target, sub
 
 ## Reference fidelity and recorded checks
 
-NASA / ESA publications establish the visible hardware, dimensions and task sequence. AstroBench reconstructs the visible parts and supplies robot placement, internal tool mechanisms and scoring tolerances as engineering choices. The two-quarter / one-half MELFI configuration is documented in ESA's 2002 article; NASA's 2015 interface document notes the later phase-out of quarter boxes. MELFI V6 has a 26-pose card-transfer geometry check ending at the box opening. The three linked RRM scripted functional trials cover FDV1 removal/stowage, the central SMA cap removal/stowage and one captive-screw loosen–tighten cycle; their local tool/contact checks and arm geometry checks are separate from the 29-combination task catalog and the new scoring protocol.
+NASA / ESA publications establish the visible hardware, dimensions and task sequence. AstroBench reconstructs the visible parts and supplies robot placement, internal tool mechanisms and scoring tolerances as engineering choices. The two-quarter / one-half MELFI configuration is documented in ESA's 2002 article; NASA's 2015 interface document notes the later phase-out of quarter boxes. MELFI V6 has a 26-pose card-transfer geometry check ending at the box opening. The three linked videos record RRM scripted functional trials in the original tabletop layout, covering FDV1 removal/stowage, the central SMA cap removal/stowage and one captive-screw loosen–tighten cycle; their local tool/contact checks and arm geometry checks are separate from the 29-combination task catalog and the new scoring protocol.
+
+The r003 wall layout has a separate 335-pose CAD / inverse-kinematics review: one centered ready pose, 226 transformed mechanism-trajectory poses, and 108 approach / withdrawal poses across all 12 operation targets. No non-task floor, wall, self or tool–arm collision was found in the sampled poses. These are layout checks; the three videos retain their original mechanism-trial provenance.
 
 [▶ FDV1 trial](media/fdv1.mp4) · [▶ SMA trial](media/sma.mp4) · [▶ Captive-screw trial](media/captive.mp4)
 

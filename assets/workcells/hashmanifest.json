@@ -10,14 +10,14 @@
     },
     {
       "path": "NOTICE",
-      "sha256": "b3e876c03b67a6dc39c3e4027e999c9106916ffb164d8bd0be097d14c48f0201",
-      "bytes": 1736,
+      "sha256": "e106fbc449ca131e467b9d31a5de206ac3885714a3f83ccca35ab17a1a49a86d",
+      "bytes": 1761,
       "role": "asset_file"
     },
     {
       "path": "README.md",
-      "sha256": "d96b20e8702c48f21fd4a79e2a059e2f7bc131fb8f76934fb9f26b16863449ca",
-      "bytes": 4782,
+      "sha256": "19fd8adb4821373d96139e2a28f84298c8f3aa686669b4d9248cf52e3bbac705",
+      "bytes": 7064,
       "role": "asset_file"
     },
     {
@@ -28,8 +28,8 @@
     },
     {
       "path": "load_asset.py",
-      "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e",
-      "bytes": 6546,
+      "sha256": "77a62b0141db0d8997082051625b30b6cfdffe8fbb4f4299a2df07f099b84ab6",
+      "bytes": 10626,
       "role": "asset_file"
     },
     {
@@ -46,8 +46,8 @@
     },
     {
       "path": "melfi_v6/manifest.json",
-      "sha256": "fd831dae61022f129a3d1cc3af4d9dd1874e6092b5c207b4b34200f68db24f72",
-      "bytes": 28579,
+      "sha256": "4c28a2f47358aabb189a9ffda84f2d753049f39eba792bd59ce654ae5f87e78a",
+      "bytes": 28726,
       "role": "asset_file"
     },
     {
@@ -88,50 +88,56 @@
     },
     {
       "path": "publicbuild.py",
-      "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0",
-      "bytes": 22830,
+      "sha256": "4f00eba5a5a9788b3a6debdcd5cdc5afb0a069f2aa175624575e4c3057647595",
+      "bytes": 23647,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/collision.json",
-      "sha256": "421b5713500bd9ef377f16eb58db1abd19271ba01157449a08c9655d21eef0af",
-      "bytes": 1730253,
+      "sha256": "d266ef418c816039e872b26dedac0467bb9a33796342d8df86d5cdaf04a3dea1",
+      "bytes": 1732351,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/collision_meshes.zip",
-      "sha256": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
-      "bytes": 3813137,
+      "sha256": "71c0a268f061816c6b8250cc45ab786c0c9d30e816af73fbd47ad9f35db591a6",
+      "bytes": 3870300,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/manifest.json",
-      "sha256": "ca3ca098c0d6cf317ace7625da212b049b108660f0bcc82cc9ff31dbd4b9370b",
-      "bytes": 30509,
+      "sha256": "9a50851db6c8dd2134f46a3b349cdb7ac90ce569c080dd90a714d42e022eb05b",
+      "bytes": 38845,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/parts.json",
-      "sha256": "f4459ba6e7b63ad32cb5bd07a142044048440fd65ba0287af44500ba0f642c89",
-      "bytes": 627584,
+      "sha256": "5df32cfa4aeb165edce4504269c0a2a827dcfe65a8c9a1c135e6e7957f86e20a",
+      "bytes": 641983,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/rrm_tb1.blend",
-      "sha256": "c62960ff541b9f882cad482791df30006ec44be2d268518d598cba63235dd2c4",
-      "bytes": 573411,
+      "sha256": "3b8189dffbdb7333843935ccb916cc74ef43e30706a877821582e672e5e853a0",
+      "bytes": 581090,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/rrm_tb1.glb",
-      "sha256": "0d1794a8889bf0d71c3d54d729fa8628af711f8bcb566270a08012da4bcf88c4",
-      "bytes": 12957504,
+      "sha256": "621f810cf31b6be0af5ddb4a8f4b030dbbdbd7f192b5061983b03440eae97a10",
+      "bytes": 13373632,
       "role": "asset_file"
     },
     {
       "path": "rrm_tb1/source/export_collision.py",
       "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68",
       "bytes": 24206,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/source/layout_config.json",
+      "sha256": "bb64659b6fa4d3eb53202249d7a54ceca92c9ba38bcd707af609d7af88e3d961",
+      "bytes": 4105,
       "role": "asset_file"
     },
     {
@@ -142,8 +148,8 @@
     },
     {
       "path": "rrm_tb1/source/supports.py",
-      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092",
-      "bytes": 3363,
+      "sha256": "5a52f7260fcae103c97cc0b4e5cdaacf135c26a9150ce91846469d184816c580",
+      "bytes": 6523,
       "role": "asset_file"
     },
     {

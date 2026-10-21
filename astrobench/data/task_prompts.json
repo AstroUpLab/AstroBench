@@ -1,0 +1,162 @@
+{
+  "schema": "astrobench.prompt-registry/v1",
+  "version": "astrobench.language/1",
+  "language": "en",
+  "capture": {
+    "task_id": "capture_retain",
+    "template": "Capture the {object_name} and hold it securely.",
+    "tracks": [
+      "static",
+      "drift",
+      "tumble",
+      "fast_tumble"
+    ],
+    "core20_names": {
+      "candidate_standard_cube": "standard cube",
+      "candidate_rectangular_block": "rectangular block",
+      "candidate_cylindrical_part": "cylindrical part",
+      "candidate_spherical_part": "spherical part",
+      "candidate_sample_tube": "sample tube",
+      "candidate_sealed_bottle": "sealed bottle",
+      "candidate_round_can": "round can",
+      "candidate_lidded_box": "lidded box",
+      "candidate_screwdriver": "screwdriver",
+      "candidate_wrench": "wrench",
+      "candidate_pliers": "pliers",
+      "candidate_small_hammer": "small hammer",
+      "candidate_flashlight": "flashlight",
+      "candidate_battery_pack": "battery pack",
+      "candidate_handheld_terminal": "handheld terminal",
+      "candidate_small_camera": "small camera",
+      "candidate_ring_part": "ring part",
+      "candidate_spool": "spool",
+      "candidate_l_bracket": "l bracket",
+      "candidate_t_fitting": "t fitting"
+    },
+    "objaverse_name_rule": "Whitespace-normalized name from the packaged inventory; preserve source language and punctuation.",
+    "custom_name_rule": "Use explicit object_name when supplied; otherwise replace underscores in object_id with spaces."
+  },
+  "workcells": {
+    "card_transfer_to_mouth": {
+      "workcell_id": "melfi_v6",
+      "template": "Move the card to the opening of the {target_name} and hold it aligned.",
+      "targets": {
+        "Front_quarter_box": "front quarter box",
+        "Middle_quarter_box": "middle quarter box",
+        "Rear_half_box": "rear half box"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "card_insert": {
+      "workcell_id": "melfi_v6",
+      "template": "Insert the card fully into the {target_name}, release it, and leave it retained inside.",
+      "targets": {
+        "Front_quarter_box": "front quarter box",
+        "Middle_quarter_box": "middle quarter box",
+        "Rear_half_box": "rear half box"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "card_extract": {
+      "workcell_id": "melfi_v6",
+      "template": "Remove the card from the {target_name} and hold it clear of the opening.",
+      "targets": {
+        "Front_quarter_box": "front quarter box",
+        "Middle_quarter_box": "middle quarter box",
+        "Rear_half_box": "rear half box"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "lid_open": {
+      "workcell_id": "melfi_v6",
+      "template": "Open the lid of the {target_name} and leave it open.",
+      "targets": {
+        "Front_quarter_box": "front quarter box",
+        "Middle_quarter_box": "middle quarter box",
+        "Rear_half_box": "rear half box"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "lid_close": {
+      "workcell_id": "melfi_v6",
+      "template": "Close and latch the lid of the {target_name}, then withdraw the gripper.",
+      "targets": {
+        "Front_quarter_box": "front quarter box",
+        "Middle_quarter_box": "middle quarter box",
+        "Rear_half_box": "rear half box"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "fdv1_remove_stow": {
+      "workcell_id": "rrm_tb1",
+      "template": "Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver.",
+      "targets": {
+        "FDV1": "FDV1 cap"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "sma_remove_stow": {
+      "workcell_id": "rrm_tb1",
+      "template": "Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver.",
+      "targets": {
+        "SMA_1_1": "SMA cap at row 1, column 1",
+        "SMA_1_2": "SMA cap at row 1, column 2",
+        "SMA_1_3": "SMA cap at row 1, column 3",
+        "SMA_2_1": "SMA cap at row 2, column 1",
+        "SMA_2_2": "SMA cap at row 2, column 2",
+        "SMA_2_3": "SMA cap at row 2, column 3",
+        "SMA_3_1": "SMA cap at row 3, column 1",
+        "SMA_3_2": "SMA cap at row 3, column 2",
+        "SMA_3_3": "SMA cap at row 3, column 3"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "captive_loosen": {
+      "workcell_id": "rrm_tb1",
+      "template": "Loosen the {target_name} without releasing it from the panel and hold it in the loosened position.",
+      "targets": {
+        "captive_1": "captive screw 1",
+        "captive_2": "captive screw 2"
+      },
+      "wording_origin": "release_canonical"
+    },
+    "captive_tighten": {
+      "workcell_id": "rrm_tb1",
+      "template": "Tighten the {target_name} until it is seated, keep it captive, and withdraw the driver.",
+      "targets": {
+        "captive_1": "captive screw 1",
+        "captive_2": "captive screw 2"
+      },
+      "wording_origin": "release_canonical"
+    }
+  },
+  "target_coordinates": {
+    "melfi_v6": {
+      "frame": "asset",
+      "front_to_rear_axis": "+Y",
+      "box_center_y_m": {
+        "Front_quarter_box": 0.07,
+        "Middle_quarter_box": 0.21,
+        "Rear_half_box": 0.42
+      },
+      "identity_rule": "Use target IDs and asset coordinates; names do not change with camera viewpoint."
+    },
+    "rrm_tb1": {
+      "frame": "panel-local",
+      "sma_row_axis": "+Y",
+      "sma_column_axis": "+X",
+      "sma_pitch_m": 0.022,
+      "sma_center_m": [
+        -0.012,
+        -0.2014,
+        0.01
+      ],
+      "sma_index_origin": [
+        2,
+        2
+      ],
+      "captive_index_rule": "Use captive_1 or captive_2 from semantic_targets; indices are not image-order labels.",
+      "identity_rule": "SMA_r_c uses row r and column c in the panel-local frame, independent of camera viewpoint."
+    }
+  }
+}
