@@ -252,13 +252,14 @@ class WorkcellTests(unittest.TestCase):
         e=plan['episodes'][0]
         self.assertEqual(e['spec']['asset_manifest_sha256'],'c'*64)
         self.assertTrue(w.score_workcell_trace(e,trace(e))['strict_success'])
-        for key in ('source','frame','unit','args','root'):
+        for key in ('source','frame','unit','args','root','layout','ready_pose','robot_attachment_frames'):
             broken=copy.deepcopy(plan)
             a=broken['asset_bindings']['rrm_tb1']
             if key=='source':a['canonical_source_sha256']='d'*64
             elif key=='unit':a['units']='cm'
             elif key=='args':a['build_args']['sma_row']=True
             elif key=='root':a['semantic_targets']['SMA_1_3']['root_object']='unrelated'
+            elif key in ('layout','ready_pose','robot_attachment_frames'):a[key]={'changed':True}
             else:a['semantic_targets']['SMA_1_3']['goal_frame_asset']['target'][0][3]+=1.
             with self.assertRaises(ValueError):w.validate_workcell_plan(broken)
 
