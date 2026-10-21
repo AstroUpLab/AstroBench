@@ -55,6 +55,6 @@ astrobench scenes --output scenes.json
 
 The default is `iss_jpm`. Additional configurations are `iss_us_lab`, `iss_eu_lab`, `iss_node2` and `iss_cupola`. The Cupola worksite places the workspace in the adjoining Node 3 interior. Cabin backgrounds use NASA Astrobee ISS assets; the robot base stays fixed and task body definitions and initial states are reused across cabins.
 
-The task layout combines the 20 core objects with static and dynamic initial conditions, plus ten operation families: cabinet door, drawer, panel button, knob/valve, lever, peg insertion, plug, module seating, reorientation, and stow/close. Reversible operations use separate directions, giving fifteen operation subitems per cabin configuration.
+The `capture_retain` task has static, drift, tumble and fast-tumble tracks. MELFI V6 adds card transfer, insertion, extraction and lid opening / closing; RRM TB1 adds FDV1 / SMA cap removal and stowage, and captive-screw loosening / tightening. These workcells provide 9 task definitions and 29 task–target combinations. See the [task and prompt catalog](tasks.md) for every instruction, target name and selection command.
 
 Sources: [Objaverse documentation](https://objaverse.allenai.org/docs/objaverse-1.0/), [pinned metadata](https://huggingface.co/datasets/allenai/objaverse/tree/556637099bf4fa79ea7b239d0d9c328b8a2e9ac8), [NASA ISS assets](https://github.com/nasa/astrobee_media/tree/master/astrobee_iss).

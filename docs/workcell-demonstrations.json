@@ -1,6 +1,6 @@
 {
-  "schema": "astrobench.workcell-demonstrations/v1",
-  "method": "Scripted mechanism trials with robot CAD pose and collision checks",
+  "schema": "astrobench.workcell-demonstrations/v2",
+  "method": "Archived tabletop scripted mechanism trials with robot CAD pose and collision checks",
   "cases": [
     {
       "task": "fdv1",
@@ -8,7 +8,9 @@
       "completed": true,
       "completion_phase": "hold_stowed",
       "video": "media/fdv1.mp4",
-      "record_sha256": "e60026cb42499e7d6d71dfcbaa4b075ace3bdbdb07aa9d753569ed9ff19d5d24"
+      "record_sha256": "e60026cb42499e7d6d71dfcbaa4b075ace3bdbdb07aa9d753569ed9ff19d5d24",
+      "layout": "tabletop",
+      "evidence_type": "scripted_mechanism_trial"
     },
     {
       "task": "sma",
@@ -16,7 +18,9 @@
       "completed": true,
       "completion_phase": "hold_stowed",
       "video": "media/sma.mp4",
-      "record_sha256": "5420875f431713f20cbe140e7114a11ff036e42187d88eeecf6d3c0ea2b5b783"
+      "record_sha256": "5420875f431713f20cbe140e7114a11ff036e42187d88eeecf6d3c0ea2b5b783",
+      "layout": "tabletop",
+      "evidence_type": "scripted_mechanism_trial"
     },
     {
       "task": "captive",
@@ -24,12 +28,58 @@
       "completed": true,
       "completion_phase": "free_hold",
       "video": "media/captive.mp4",
-      "record_sha256": "7b210d1775b1ecf9d2ccde31c4dbff4edb65f93c54d60de6c39e8852408e1c64"
+      "record_sha256": "7b210d1775b1ecf9d2ccde31c4dbff4edb65f93c54d60de6c39e8852408e1c64",
+      "layout": "tabletop",
+      "evidence_type": "scripted_mechanism_trial"
     }
   ],
   "validation_summary": {
     "checks_passed": 8,
     "normal_completed": 3,
     "negative_controls": 5
+  },
+  "layout_review": {
+    "revision": "rrm_front_centered_r003",
+    "layout": {
+      "mount": "direct_floor_on_thin_plate",
+      "panel_origin_m": [
+        0,
+        -0.16,
+        1.1
+      ],
+      "arm_base_origin_m": [
+        0,
+        -0.85,
+        0.14455
+      ],
+      "cabin_floor_z_m": 0.11655,
+      "panel_center_above_floor_m": 0.98345,
+      "arm_mount_above_floor_m": 0.028,
+      "robot_forward_distance_from_panel_m": 0.69,
+      "ready_tip_panel_local_m": [
+        0,
+        0,
+        0.12
+      ]
+    },
+    "method": "Independent new centered ready pose CAD/IK check, and archived measured local task trajectories transformed into new cabin frame with newly solved robot inverse kinematics and sampled CAD clearance checks.",
+    "evidence_type": "sampled_CAD_IK_layout_checks",
+    "ready_poses": 1,
+    "transformed_mechanism_trajectory_poses": 226,
+    "approach_and_withdrawal_poses": 108,
+    "total_checked_poses": 335,
+    "operation_target_count": 12,
+    "noncontact_obstacle_count": 0,
+    "robot_self_collision_count": 0,
+    "tool_robot_collision_count": 0,
+    "all_pass": true,
+    "new_policy_rollout": false,
+    "new_physics_rollout": false,
+    "review_receipt_sha256": "0f0adf7ac4ede72d5916fbafb3d0c7190696c1dc7a95287f65d01231e0c9d618",
+    "images": {
+      "overview": "media/rrm.png",
+      "front": "media/rrm-front.png",
+      "side": "media/rrm-side.png"
+    }
   }
 }

@@ -48,6 +48,6 @@ astrobench scenes --output scenes.json
 
 默认 `iss_jpm`，另外提供 `iss_us_lab`、`iss_eu_lab`、`iss_node2`、`iss_cupola`。Cupola 场景的操作区位于相邻 Node 3 舱内。场景背景采用 NASA Astrobee ISS 资产，机械臂固定安装，各舱内场景复用任务物体和初始状态。
 
-任务布局包括 20 类物体的静态、动态抓取，以及舱门、抽屉、面板按钮、旋钮/阀门、拨杆、插销、插头、模块安装、重定向、收纳关盖十类操作。可逆操作分方向配置，共十五个操作子项。
+抓取任务使用 `capture_retain`，包含静止、漂移、翻滚和快速翻滚四个轨道。MELFI V6 提供卡片转移、插入、取出和盒盖开合；RRM TB1 提供 FDV1 / SMA 拆帽归存与防脱螺钉松紧，共 9 项操作任务、29 个任务与目标组合。完整英文指令、目标命名与选择方式见[任务与 Prompt 目录](tasks.zh-CN.md)。
 
 来源：[Objaverse](https://objaverse.allenai.org/docs/objaverse-1.0/)、[固定版本元数据](https://huggingface.co/datasets/allenai/objaverse/tree/556637099bf4fa79ea7b239d0d9c328b8a2e9ac8)、[NASA ISS 资产](https://github.com/nasa/astrobee_media/tree/master/astrobee_iss)。

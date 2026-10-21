@@ -2,7 +2,7 @@
 
 [English](workcells.md) · [简体中文](workcells.zh-CN.md) · [返回 README](../README.zh-CN.md)
 
-AstroBench 提供两组包含可编辑硬件、独立运动部件和明确完成目标的操作工作位。MELFI V6 面向空间站舱内样本收纳；RRM TB1 面向水平工作台上的接口帽与防脱螺钉维护。两组均采用固定机械臂基座和零重力，设备由安装支架固定。
+AstroBench 提供两组包含可编辑硬件、独立运动部件和明确完成目标的操作工作位。MELFI V6 面向空间站舱内样本收纳；RRM TB1 面向壁挂维修面板上的接口帽与防脱螺钉维护。两组均采用固定机械臂基座和零重力，设备由安装支架固定。
 
 | MELFI V6 | RRM TB1 |
 | :---: | :---: |
@@ -29,9 +29,11 @@ astrobench workcell-plan --workcell rrm_tb1 --task sma_remove_stow --target SMA_
 
 该示例为默认可动的 `SMA_2_2` 接口帽生成 10 个回合。重复传入 `--target` 可选择同一任务下的多个目标；省略时包含该任务的所有目标。其它 RRM 目标位置应先构建相应变体，评分时按下文传入对应资产目录。
 
-计划将任务、目标、初态、判据和资产标识绑定到每个回合的哈希值。相同输入会生成相同计划。每次重复都应按该回合记录的初态规范独立执行。请将计划与轨迹一起保存。输出文件采用新建方式，已有同名文件不会被静默覆盖。
+`astrobench.workcell-plan/v2` 计划将任务、目标、初始状态、阈值、资产身份和语言指令绑定到回合 `spec_hash`。策略接收 `episode["spec"]["language_prompt"]["text"]`；该绑定同时保存语言注册表版本、注册表哈希与文本哈希。相同输入生成相同计划。每次重复都按记录的初态独立执行，计划与轨迹一同保留；输出文件采用独占创建，避免覆盖已有结果。
 
 ## 任务与目标
+
+每项任务的英文指令与目标展开见[任务与 Prompt 目录](tasks.zh-CN.md)。按计划中的指令和 `target_id` 选择目标。
 
 所有末态条件都要求在 **30 秒**回合的最后 **1 秒**持续成立。位置单位为米，角度为弧度，时间为秒，力为牛顿。下表用便于阅读的单位列出判据；完整参数见 [workcells.json](../astrobench/data/workcells.json)。
 
@@ -61,7 +63,13 @@ MELFI 目标 ID 为 `Front_quarter_box`、`Middle_quarter_box`、`Rear_half_box`
 
 ### RRM TB1
 
-面板包括 FDV1 第三级保护帽、3 × 3 SMA 帽阵列和两个防脱螺钉位置。当前工作位将面板水平放在支撑桌上，机械臂位于左侧，归存座位于前方。可依据任务与工具坐标系，将工具轴线对准面板法向。
+面板包括 FDV1 第三级保护帽、3 × 3 SMA 帽阵列和两个防脱螺钉位置。r003 布局将面板竖直固定在舱壁上，机械臂安装在正前方地面的薄底板上，自然展开后面向面板中央；归存座位于接口区下方。使用任务与工具坐标系，将工具轴线对准面板法向。
+
+| 正面 | 侧面 |
+| :---: | :---: |
+| <img src="media/rrm-front.png" alt="RRM 面板正前方的自然展开机械臂" width="420"> | <img src="media/rrm-side.png" alt="RRM 壁挂面板与地面机械臂侧面间距" width="420"> |
+
+面板坐标原点高出舱内地面 **983.45 mm**；机械臂基座位于面板前方 **690 mm**，安装面高出地面 **28 mm**。待操作位姿的工具尖端位于面板中央前方 **120 mm**。这些尺寸定义工作位安装关系，接入时使用 manifest 中的安装变换。
 
 | 接口 | 工具组合 | 操作方式 |
 | --- | --- | --- |
@@ -73,7 +81,12 @@ MELFI 目标 ID 为 `Front_quarter_box`、`Middle_quarter_box`、`Rear_half_box`
 
 两组资产均附碰撞描述和网格压缩包：[MELFI 碰撞几何](../assets/workcells/melfi_v6/collision.json)、[RRM 碰撞几何](../assets/workcells/rrm_tb1/collision.json)。接入碰撞模型时，应保留通孔、导套、工具凹槽和保持机构的结构，整体凸包会改变这些配合关系。[资产目录](../assets/workcells/)中还包含文件哈希、部件映射、资料来源和重建源文件。原创模型及源文件采用 [Apache-2.0](../assets/workcells/LICENSE) 许可，来源说明见 [NOTICE](../assets/workcells/NOTICE)。
 
-可用 [Blender 加载器](../assets/workcells/load_asset.py)将场景保存为对应任务的初始几何状态：
+可先用 [Blender 加载器](../assets/workcells/load_asset.py)打开 r003 居中待操作布局，再保存具体任务初态：
+
+```bash
+blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
+  --ready --placement world --save outputs/rrm-ready.blend
+```
 
 ```bash
 blender -b -P assets/workcells/load_asset.py -- --asset melfi_v6 \
@@ -152,7 +165,9 @@ astrobench workcell-report workcell-plan.json results.json \
 
 ## 真实参考与已有检查
 
-NASA / ESA 资料用于确定可见外形、尺寸和操作流程；机器人布置、工具内部机构及评分容差由 AstroBench 设计。“两窄一宽”MELFI 组合见 ESA 2002 年资料，NASA 2015 年接口文件记录了此后逐步取消四分之一盒的变化。MELFI V6 已完成 26 个卡片转移动作位姿的几何检查，终点为盒口。下列三条 RRM 脚本功能试跑分别覆盖 FDV1 拆帽归存、中央 SMA 帽拆帽归存，以及一个防脱螺钉的松紧循环；其中工具局部接触检查和机械臂几何检查，与 29 个任务目标组合及本版评分协议分别记录。
+NASA / ESA 资料用于确定可见外形、尺寸和操作流程；机器人布置、工具内部机构及评分容差由 AstroBench 设计。“两窄一宽”MELFI 组合见 ESA 2002 年资料，NASA 2015 年接口文件记录了此后逐步取消四分之一盒的变化。MELFI V6 已完成 26 个卡片转移动作位姿的几何检查，终点为盒口。下列三条视频记录原水平工作台布局的 RRM 脚本功能试跑，分别覆盖 FDV1 拆帽归存、中央 SMA 帽拆帽归存，以及一个防脱螺钉的松紧循环；其中工具局部接触检查和机械臂几何检查，与 29 个任务目标组合及本版评分协议分别记录。
+
+r003 壁挂布局另完成 335 个 CAD / 逆运动学姿态检查：1 个居中待操作姿态、226 个转换后的机构轨迹姿态，以及全部 12 个操作目标的 108 个接近 / 退出姿态。采样姿态中未发现地面、舱壁、自身或工具与臂之间的非任务碰撞；这组记录属于布局检查，三条视频保留其原机构试跑含义。
 
 [▶ FDV1 试跑](media/fdv1.mp4) · [▶ SMA 试跑](media/sma.mp4) · [▶ 防脱螺钉试跑](media/captive.mp4)
 
