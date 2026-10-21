@@ -1,0 +1,31 @@
+AstroBench Workcells
+Copyright 2026 AstroUpLab
+
+Original source code, reconstructed geometry, original materials, task tools,
+work tables, mounting brackets and floor pedestal in this directory are
+licensed under Apache License 2.0. See LICENSE.
+
+The geometry was authored for AstroBench using public technical documents
+and photographs as references. NASA/ESA photographs, original CAD, robot CAD,
+space-station cabin models, logos and executable motion policies are not
+included in this asset package. NASA, ESA, MELFI, RRM and TORQ-SET names identify
+reference hardware and do not imply endorsement.
+
+Reference documents:
+- NASA SSP 57000 Rev. R, MELFI sample-container dimensions, H-30 to H-32:
+  https://ntrs.nasa.gov/api/citations/20190001390/downloads/20190001390.pdf
+- ESA Bulletin 109, MELFI sample cards, boxes and trays, pp. 40-41:
+  https://www.esa.int/esapub/bulletin/bullet109/chapter5_bul109.pdf
+- NASA Robotic Refueling Mission Phase 1:
+  https://www.nasa.gov/nexis/rrm-phase-1/
+- NASA RRM thermal design, task-board and tool photographs:
+  https://ntrs.nasa.gov/api/citations/20110013452/downloads/20110013452.pdf
+- NASA NExIS hardware-development presentation, SCT adapter suite:
+  https://ntrs.nasa.gov/api/citations/20220013776/downloads/ASTC%202022%20-%20NExIS%20Hyperwall%20Presentation_FINAL_Resubmit.pdf
+- Phillips Screw Company, TORQ-SET drive family:
+  https://www.phillips-screw.com/drive_systems/torq-set/
+
+Published container envelopes and photographed features inform the models.
+Undimensioned details, thread pitches, hidden latches, attachment frames,
+support hardware and tooling interfaces are AstroBench engineering choices;
+source annotations distinguish these in the editable builders and metadata.

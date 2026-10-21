@@ -1,0 +1,168 @@
+{
+  "schema": "astrobench.asset-package.hashes.v1",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "role": "asset_file"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "b3e876c03b67a6dc39c3e4027e999c9106916ffb164d8bd0be097d14c48f0201",
+      "bytes": 1736,
+      "role": "asset_file"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d96b20e8702c48f21fd4a79e2a059e2f7bc131fb8f76934fb9f26b16863449ca",
+      "bytes": 4782,
+      "role": "asset_file"
+    },
+    {
+      "path": "geometry_supports.py",
+      "sha256": "f7c1af49f79ded000cc5a653b79c637e2a218e3cadbef1d24ac384fe557ba93a",
+      "bytes": 3099,
+      "role": "asset_file"
+    },
+    {
+      "path": "load_asset.py",
+      "sha256": "bec6d8e7bea511a25cb0c82bc83ebd2b34b44ad7d63e171b3a01a498c688595e",
+      "bytes": 6546,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/collision.json",
+      "sha256": "6424ddafe0e7482cc491eef601b8cca3b46f955de8ccf9975dd3d05115e165c8",
+      "bytes": 83761,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/collision_meshes.zip",
+      "sha256": "e2e7fccf6b27f01a98d58e3bc8cda9f4ca44a9340b6a7628e109fdcb13afa62e",
+      "bytes": 1977341,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/manifest.json",
+      "sha256": "fd831dae61022f129a3d1cc3af4d9dd1874e6092b5c207b4b34200f68db24f72",
+      "bytes": 28579,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/melfi_v6.blend",
+      "sha256": "9b7a4a05b70c07fa925ed2193aac85683357d577ede7a9f008d8871c258ae7db",
+      "bytes": 1678541,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/melfi_v6.glb",
+      "sha256": "abc921c5c65a6630ae50fa2cb693b37bba2c67917274298217813c3371a2cd51",
+      "bytes": 9785692,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/parts.json",
+      "sha256": "9a4a670ad6e049c1bddda97d98af25cf4df37887d976b638e71d52a3581dce58",
+      "bytes": 563872,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/source/melfi.py",
+      "sha256": "1242026a69d460cfd94d398c8beed0cdb177318e69ac84ab2a6a070ec550bc93",
+      "bytes": 44482,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/source/reference_profile.json",
+      "sha256": "dd1f5a61b214191b3e43ad86f9d22ca8b5ff356c3f0ee991a2b7062148d76487",
+      "bytes": 10825,
+      "role": "asset_file"
+    },
+    {
+      "path": "melfi_v6/source/supports.py",
+      "sha256": "cd8292a8f07b3dce42985faf1a109c97296506aad53d7e903d40995fa2edc73b",
+      "bytes": 2822,
+      "role": "asset_file"
+    },
+    {
+      "path": "publicbuild.py",
+      "sha256": "43f04b73af21fe9778e5cf8490efa63477bba057508efc363d948ba042d6ffc0",
+      "bytes": 22830,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/collision.json",
+      "sha256": "421b5713500bd9ef377f16eb58db1abd19271ba01157449a08c9655d21eef0af",
+      "bytes": 1730253,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/collision_meshes.zip",
+      "sha256": "0450993692698f68aecc059d605c434f8aee83d43f0889af0eaecbb3411d5de9",
+      "bytes": 3813137,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/manifest.json",
+      "sha256": "ca3ca098c0d6cf317ace7625da212b049b108660f0bcc82cc9ff31dbd4b9370b",
+      "bytes": 30509,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/parts.json",
+      "sha256": "f4459ba6e7b63ad32cb5bd07a142044048440fd65ba0287af44500ba0f642c89",
+      "bytes": 627584,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/rrm_tb1.blend",
+      "sha256": "c62960ff541b9f882cad482791df30006ec44be2d268518d598cba63235dd2c4",
+      "bytes": 573411,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/rrm_tb1.glb",
+      "sha256": "0d1794a8889bf0d71c3d54d729fa8628af711f8bcb566270a08012da4bcf88c4",
+      "bytes": 12957504,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/source/export_collision.py",
+      "sha256": "cd1ca8f92228227cee405425b74c20d706596509f5247cd378e16d4114cbeb68",
+      "bytes": 24206,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/source/panel.py",
+      "sha256": "b229426f5042f001349bfa37518c9b867aa6ad408b26edaf480173ba62fdb2f3",
+      "bytes": 24643,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/source/supports.py",
+      "sha256": "4180ed2098974c6ab8d94bd1e541f8d8e271d5210e8838d89a56034ef51b2092",
+      "bytes": 3363,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/source/task_panel.py",
+      "sha256": "24b78dd03ef646b532da993bae844b66616d64ec045ef066bdb4122957cb74cb",
+      "bytes": 21082,
+      "role": "asset_file"
+    },
+    {
+      "path": "rrm_tb1/source/tools.py",
+      "sha256": "eb00ca3d1793ea5e8e51852e1b51e76f3da6d16bb9a23880cac99e9b9657872f",
+      "bytes": 13601,
+      "role": "asset_file"
+    },
+    {
+      "path": "unpack_collision.py",
+      "sha256": "600df60f29fa5cd3e510ed1eb4736a36f004e84b1316bab6263ea5bd6e8f470f",
+      "bytes": 2081,
+      "role": "asset_file"
+    }
+  ]
+}
