@@ -38,10 +38,35 @@ python -m unittest discover -s tests -v
 
 [📖 Guide et tâches](docs/workcells.md) · [🧊 Modèles MELFI](assets/workcells/melfi_v6/) · [🛰️ Modèles RRM](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 Vis](docs/media/captive.mp4)
 
+Les vidéos RRM montrent les mécanismes des bouchons et des vis dans la configuration initiale sur table.
+
 ```bash
 astrobench workcells --output workcells.json
 astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
 ```
+
+## 💬 Tâches et instructions
+
+La préhension utilise `Capture the {object_name} and hold it securely.` selon quatre conditions : `static`, `drift`, `tumble` et `fast_tumble`. Les postes ajoutent 9 tâches et 29 combinaisons de tâche et de cible. `{target_name}` est remplacé par le nom de la cible. Le panneau RRM est fixé au mur et le bras est placé directement devant, sur une plaque au sol.
+
+| ID de tâche | Modèle d’instruction en anglais |
+| --- | --- |
+| `card_transfer_to_mouth` | Move the card to the opening of the {target_name} and hold it aligned. |
+| `card_insert` | Insert the card fully into the {target_name}, release it, and leave it retained inside. |
+| `card_extract` | Remove the card from the {target_name} and hold it clear of the opening. |
+| `lid_open` | Open the lid of the {target_name} and leave it open. |
+| `lid_close` | Close and latch the lid of the {target_name}, then withdraw the gripper. |
+| `fdv1_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| `sma_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| `captive_loosen` | Loosen the {target_name} without releasing it from the panel and hold it in the loosened position. |
+| `captive_tighten` | Tighten the {target_name} until it is seated, keep it captive, and withdraw the driver. |
+
+```bash
+astrobench task-prompts --output task-prompts.json
+astrobench task-prompts --object-set objaverse8414 --scope capture --output objaverse-prompts.json
+```
+
+[📋 Toutes les tâches, cibles et instructions](docs/tasks.md) · [📋 中文任务目录](docs/tasks.zh-CN.md)
 
 ## 🧰 Collections d’objets
 

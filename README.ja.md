@@ -38,10 +38,35 @@ python -m unittest discover -s tests -v
 
 [📖 作業セルガイド・タスク一覧](docs/workcells.md) · [🧊 MELFI モデル](assets/workcells/melfi_v6/) · [🛰️ RRM モデル](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 ねじ](docs/media/captive.mp4)
 
+RRM の動画は、元の卓上配置でのキャップとねじの機構動作を示しています。
+
 ```bash
 astrobench workcells --output workcells.json
 astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
 ```
+
+## 💬 タスクとプロンプト
+
+把持には `Capture the {object_name} and hold it securely.` を使い、`static`、`drift`、`tumble`、`fast_tumble` の4条件を比較します。作業セルは9タスク・29のタスクと対象の組み合わせです。下表の `{target_name}` は各対象の名前に置き換えます。RRM パネルは壁面に固定し、ロボットはその正面の床板に設置します。
+
+| タスク ID | 英語のプロンプトテンプレート |
+| --- | --- |
+| `card_transfer_to_mouth` | Move the card to the opening of the {target_name} and hold it aligned. |
+| `card_insert` | Insert the card fully into the {target_name}, release it, and leave it retained inside. |
+| `card_extract` | Remove the card from the {target_name} and hold it clear of the opening. |
+| `lid_open` | Open the lid of the {target_name} and leave it open. |
+| `lid_close` | Close and latch the lid of the {target_name}, then withdraw the gripper. |
+| `fdv1_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| `sma_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| `captive_loosen` | Loosen the {target_name} without releasing it from the panel and hold it in the loosened position. |
+| `captive_tighten` | Tighten the {target_name} until it is seated, keep it captive, and withdraw the driver. |
+
+```bash
+astrobench task-prompts --output task-prompts.json
+astrobench task-prompts --object-set objaverse8414 --scope capture --output objaverse-prompts.json
+```
+
+[📋 全タスク・対象・英語指示](docs/tasks.md) · [📋 中文任务目录](docs/tasks.zh-CN.md)
 
 ## 🧰 物体セット
 

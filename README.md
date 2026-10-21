@@ -41,17 +41,19 @@ Two workcells connect space hardware to specific manipulation goals: **MELFI V6*
 | <img src="docs/media/melfi.png" alt="MELFI V6: two narrow boxes and one wide box mounted along the wall" width="420"> | <img src="docs/media/rrm.png" alt="RRM TB1 servicing panel with caps, captive screws and tools" width="420"> |
 | [GLB](assets/workcells/melfi_v6/melfi_v6.glb) · [Blender](assets/workcells/melfi_v6/melfi_v6.blend) · [Parts](assets/workcells/melfi_v6/parts.json) | [GLB](assets/workcells/rrm_tb1/rrm_tb1.glb) · [Blender](assets/workcells/rrm_tb1/rrm_tb1.blend) · [Parts](assets/workcells/rrm_tb1/parts.json) |
 
-| Workcell | Task | Completion goal |
+| Workcell | Task ID | English prompt template |
 | --- | --- | --- |
-| MELFI V6 | Transfer sample card | Hold the card at the selected box opening. |
-| MELFI V6 | Insert sample card | Seat and retain the card in the selected box, then release it. |
-| MELFI V6 | Extract sample card | Clear the selected box opening while retaining the card. |
-| MELFI V6 | Open lid | Open the selected lid to its target angle. |
-| MELFI V6 | Close lid | Close and latch the selected lid. |
-| RRM TB1 | Remove and stow FDV1 cap | Unscrew, withdraw and secure the cap in its receiver. |
-| RRM TB1 | Remove and stow selected SMA cap | Select the requested cap, unscrew it and secure it in its receiver. |
-| RRM TB1 | Loosen captive screw | Reach the loosened position while the screw remains captive. |
-| RRM TB1 | Tighten captive screw | Seat the screw and withdraw the tool. |
+| MELFI V6 | `card_transfer_to_mouth` | Move the card to the opening of the {target_name} and hold it aligned. |
+| MELFI V6 | `card_insert` | Insert the card fully into the {target_name}, release it, and leave it retained inside. |
+| MELFI V6 | `card_extract` | Remove the card from the {target_name} and hold it clear of the opening. |
+| MELFI V6 | `lid_open` | Open the lid of the {target_name} and leave it open. |
+| MELFI V6 | `lid_close` | Close and latch the lid of the {target_name}, then withdraw the gripper. |
+| RRM TB1 | `fdv1_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| RRM TB1 | `sma_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| RRM TB1 | `captive_loosen` | Loosen the {target_name} without releasing it from the panel and hold it in the loosened position. |
+| RRM TB1 | `captive_tighten` | Tighten the {target_name} until it is seated, keep it captive, and withdraw the driver. |
+
+The RRM panel is wall-mounted, with the arm centered directly in front on a floor plate. The workcells contain 9 tasks and 29 task–target combinations. `{target_name}` resolves to a specific box, cap or captive screw; [all 29 instructions and the grasping prompts](docs/tasks.md) are listed in the task catalog.
 
 ```bash
 astrobench workcells --output workcells.json
@@ -61,7 +63,20 @@ astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell
 
 [📖 Tasks, setup and scoring](docs/workcells.md) · [📖 中文指南](docs/workcells.zh-CN.md) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 Captive screw](docs/media/captive.mp4)
 
+The linked RRM videos show the cap and screw mechanisms in the original tabletop layout.
+
 The hardware follows NASA / ESA references, with source links and modeling notes in the [workcell guide](docs/workcells.md).
+
+## 💬 Tasks and prompts
+
+Grasping uses `Capture the {object_name} and hold it securely.` under four tracks: `static`, `drift`, `tumble` and `fast_tumble`. The same instruction applies across motion conditions. Export the complete language interface:
+
+```bash
+astrobench task-prompts --output task-prompts.json
+astrobench task-prompts --object-set objaverse8414 --scope capture --output objaverse-prompts.json
+```
+
+[📋 Every task, target and English prompt](docs/tasks.md) · [📋 中文任务目录](docs/tasks.zh-CN.md)
 
 ## 🧰 Object collections
 

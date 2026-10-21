@@ -41,17 +41,19 @@ python -m unittest discover -s tests -v
 | <img src="docs/media/melfi.png" alt="MELFI V6：两窄一宽置物盒沿墙安装" width="420"> | <img src="docs/media/rrm.png" alt="RRM TB1：接口帽、防脱螺钉与工具" width="420"> |
 | [GLB](assets/workcells/melfi_v6/melfi_v6.glb) · [Blender](assets/workcells/melfi_v6/melfi_v6.blend) · [部件清单](assets/workcells/melfi_v6/parts.json) | [GLB](assets/workcells/rrm_tb1/rrm_tb1.glb) · [Blender](assets/workcells/rrm_tb1/rrm_tb1.blend) · [部件清单](assets/workcells/rrm_tb1/parts.json) |
 
-| 工作位 | 任务 | 完成目标 |
+| 工作位 | 任务 ID | 英文 Prompt 模板 |
 | --- | --- | --- |
-| MELFI V6 | 样本卡转移到盒口 | 将卡片移至指定盒口并稳定持有。 |
-| MELFI V6 | 样本卡插入 | 将卡片放入指定盒内并固定，随后释放。 |
-| MELFI V6 | 样本卡取出 | 将卡片完全移出指定盒口并稳定持有。 |
-| MELFI V6 | 开盖 | 将指定盒盖打开至目标角度。 |
-| MELFI V6 | 关盖 | 将指定盒盖关闭并锁定。 |
-| RRM TB1 | FDV1 拆帽归存 | 旋松、退出接口帽并固定到归存座。 |
-| RRM TB1 | 指定 SMA 拆帽归存 | 选择指定接口帽，拆卸后固定到归存座。 |
-| RRM TB1 | 防脱螺钉旋松 | 达到旋松位置，同时保持螺钉防脱。 |
-| RRM TB1 | 防脱螺钉旋紧 | 将螺钉旋紧到位并退出工具。 |
+| MELFI V6 | `card_transfer_to_mouth` | Move the card to the opening of the {target_name} and hold it aligned. |
+| MELFI V6 | `card_insert` | Insert the card fully into the {target_name}, release it, and leave it retained inside. |
+| MELFI V6 | `card_extract` | Remove the card from the {target_name} and hold it clear of the opening. |
+| MELFI V6 | `lid_open` | Open the lid of the {target_name} and leave it open. |
+| MELFI V6 | `lid_close` | Close and latch the lid of the {target_name}, then withdraw the gripper. |
+| RRM TB1 | `fdv1_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| RRM TB1 | `sma_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| RRM TB1 | `captive_loosen` | Loosen the {target_name} without releasing it from the panel and hold it in the loosened position. |
+| RRM TB1 | `captive_tighten` | Tighten the {target_name} until it is seated, keep it captive, and withdraw the driver. |
+
+RRM 面板竖直安装在舱壁上，机械臂位于正前方地面底板上。两组工作位共 9 项任务、29 个任务与目标组合；`{target_name}` 对应具体盒子、接口帽或防脱螺钉。[完整任务目录](docs/tasks.zh-CN.md)列出全部 29 条指令及各物体的抓取指令。
 
 ```bash
 astrobench workcells --output workcells.json
@@ -61,7 +63,20 @@ astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell
 
 [📖 任务、场景接入与评分](docs/workcells.zh-CN.md) · [📖 English guide](docs/workcells.md) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 防脱螺钉](docs/media/captive.mp4)
 
+RRM 视频展示原桌面布局中的拆帽与螺钉机构动作。
+
 硬件外形与流程参考 NASA / ESA 资料，资料链接与建模说明见[工作位指南](docs/workcells.zh-CN.md)。
+
+## 💬 全部任务与 Prompt
+
+抓取指令为 `Capture the {object_name} and hold it securely.`，对应 `static`、`drift`、`tumble`、`fast_tumble` 四个轨道。同一物体在不同运动条件下使用相同指令。可直接导出完整语言接口：
+
+```bash
+astrobench task-prompts --output task-prompts.json
+astrobench task-prompts --object-set objaverse8414 --scope capture --output objaverse-prompts.json
+```
+
+[📋 中文任务目录与全部英文指令](docs/tasks.zh-CN.md) · [📋 English task catalog](docs/tasks.md)
 
 ## 🧰 物体集合
 

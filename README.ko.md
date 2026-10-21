@@ -38,10 +38,35 @@ python -m unittest discover -s tests -v
 
 [📖 작업 공간 가이드 및 작업 목록](docs/workcells.md) · [🧊 MELFI 모델](assets/workcells/melfi_v6/) · [🛰️ RRM 모델](assets/workcells/rrm_tb1/) · [🎬 FDV1](docs/media/fdv1.mp4) · [🎬 SMA](docs/media/sma.mp4) · [🎬 나사](docs/media/captive.mp4)
 
+RRM 영상은 기존 탁상 배치에서 캡과 나사 기구의 동작을 보여 줍니다.
+
 ```bash
 astrobench workcells --output workcells.json
 astrobench workcell-plan --workcell all --repeats 10 --seed 42 --output workcell-plan.json
 ```
+
+## 💬 작업과 프롬프트
+
+파지에는 `Capture the {object_name} and hold it securely.`를 사용하며 `static`, `drift`, `tumble`, `fast_tumble`의 네 조건을 비교합니다. 작업 공간은 9개 작업과 29개 작업·대상 조합을 제공합니다. 아래의 `{target_name}`은 실제 대상 이름으로 치환됩니다. RRM 패널은 벽에 고정하고 로봇은 패널 정면의 바닥판에 설치합니다.
+
+| 작업 ID | 영어 프롬프트 템플릿 |
+| --- | --- |
+| `card_transfer_to_mouth` | Move the card to the opening of the {target_name} and hold it aligned. |
+| `card_insert` | Insert the card fully into the {target_name}, release it, and leave it retained inside. |
+| `card_extract` | Remove the card from the {target_name} and hold it clear of the opening. |
+| `lid_open` | Open the lid of the {target_name} and leave it open. |
+| `lid_close` | Close and latch the lid of the {target_name}, then withdraw the gripper. |
+| `fdv1_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| `sma_remove_stow` | Unscrew and remove the {target_name}, retain it in its adapter, dock the adapter in its stowage holder, and withdraw the driver. |
+| `captive_loosen` | Loosen the {target_name} without releasing it from the panel and hold it in the loosened position. |
+| `captive_tighten` | Tighten the {target_name} until it is seated, keep it captive, and withdraw the driver. |
+
+```bash
+astrobench task-prompts --output task-prompts.json
+astrobench task-prompts --object-set objaverse8414 --scope capture --output objaverse-prompts.json
+```
+
+[📋 전체 작업·대상·영어 지시문](docs/tasks.md) · [📋 中文任务目录](docs/tasks.zh-CN.md)
 
 ## 🧰 물체 모음
 
