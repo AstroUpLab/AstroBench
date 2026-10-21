@@ -2,6 +2,7 @@
 
 This package contains the editable MELFI V6 mixed tray and RRM Task Board 1,
 with named task parts, tool geometry, mounting hardware and SI-unit metadata.
+RRM uses a vertical wall mount and a floor plate centered in front of the panel.
 The `.blend` files retain procedural surface finishes. The `.glb` files embed
 geometry and portable metallic/roughness materials and have no external files.
 
@@ -15,8 +16,10 @@ blender -b -P assets/workcells/load_asset.py -- \
   --save /tmp/melfi_extract.blend --receipt /tmp/melfi_reset.json
 ```
 
-`load_asset.load()` and `load_asset.reset()` are also callable from a Blender
-adapter. Reset positions the named geometry; the environment adapter measures
+`load_asset.load()`, `load_asset.reset()` and `load_asset.place()` are also
+callable from a Blender adapter. Apply `place(parts, 'world', report)` after
+resetting to use the configured wall/floor layout; repeated placement is
+idempotent, and reset restores the intrinsic asset frame. Reset positions the named geometry; the environment adapter measures
 contacts, retention, velocities and task completion after resetting its robot
 and physics state. No trajectory or motion policy is embedded.
 
@@ -43,6 +46,40 @@ hashes and `derived_from_manifest_sha256`. Keep the original manifest and
 record the derived manifest identity with the run. The output root includes
 both workcells and the self-contained source package.
 
+## RRM wall mount and centered ready pose
+
+```bash
+blender -b -P assets/workcells/load_asset.py -- \
+  --asset rrm_tb1 --ready --placement world \
+  --save /tmp/rrm_ready.blend --receipt /tmp/rrm_ready.json
+blender -b -P assets/workcells/load_asset.py -- \
+  --asset rrm_tb1 --task fdv1_remove_stow --target FDV1 --placement world \
+  --save /tmp/rrm_fdv1.blend
+```
+
+The panel centre is `(0, -0.16, 1.10)` m in world coordinates. The arm mounting
+frame is `(0, -0.85, 0.14455)` m with +90° yaw: the arm stands directly in front
+of the panel on a 28 mm floor plate. Four stand-offs connect the panel to its
+wall backplate; the two tool docks have their own wall spacers. The support
+geometry includes floor anchors and the supply cable routed along the floor
+and wall. The wall is at Y = −0.029108 m and the floor at Z = 0.11655 m.
+
+`rrm_tb1/source/layout_config.json` contains the complete world transform,
+mounting frame and centered waiting configuration. The tool tip sits 120 mm
+in front of the panel centre. `ready_pose` records seven Panda joint angles,
+Robotiq 2F-85 joint values, and TCP/tool transforms for a runtime-supplied
+robot. It is a static waiting configuration, separate from task initial poses.
+The source builder reconstructs the support hardware without cabin or robot
+mesh dependencies. Task parts and contact frames remain in the panel-local
+asset frame so target variants share the same task geometry.
+
+The loader makes the selected tool visible and deactivates the other tool
+variants; the reset receipt lists their object names. Runtime collision
+adapters should apply the same selection to `tool/<kind>` body families.
+The collision archive includes named wall/floor proxies; these two proxy
+meshes are not part of the visible model. They match the layout datums and
+can be replaced by corresponding cabin collision surfaces.
+
 ## Coordinate and joint conventions
 
 `parts.json` uses metres, radians and Z-up asset coordinates. Its matrices are
@@ -65,8 +102,10 @@ retention force after settling; a visible pose alone supplies no force.
 RRM's panel lies in XY with +Z pointing away from its front surface. Cap and
 captive-screw axes are +Z. `joints` records the screw pitches, travel limits
 and tool spindle axes. The FDV1/SMA adapters, jaws, retaining leaves and dock
-latches are individually named. `robot_attachment_frames` gives the original
-fixed-base flange and scene placement; attach a runtime-supplied robot there.
+latches are individually named. `robot_attachment_frames` gives the floor mounting flange and
+`world_from_asset` transform; attach a runtime-supplied robot there.
+`load_asset.ready()` supplies the centered static configuration, while task
+reset selects the appropriate tool and initial fastener state.
 
 ## Collision geometry
 
