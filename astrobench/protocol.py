@@ -8,6 +8,8 @@ import json
 import math
 from copy import deepcopy
 
+from .prompts import capture_prompt
+
 PROTOCOL = {
     "version": "astrobench.capture-retain/0.1-draft",
     "gravity_m_s2": 0.0, "robot_base": "fixed",
@@ -52,11 +54,13 @@ def make_plan(catalog, seed=0):
         raise ValueError("nonempty catalog required")
     ids, hashes, groups = set(), {}, {}
     for obj in catalog:
-        if set(obj) != {"object_id", "asset_sha256", "split", "geometry_group"}:
+        required = {"object_id", "asset_sha256", "split", "geometry_group"}
+        if set(obj) not in (required, required | {'object_name'}):
             raise ValueError("exact catalog fields required")
         if any(type(v) is not str or not v or v.strip() != v for v in obj.values()):
             raise ValueError("nonempty catalog labels required")
         ident, sha, split, group = (obj[k] for k in ('object_id','asset_sha256','split','geometry_group'))
+        capture_prompt(ident, object_name=obj.get('object_name'))
         if ident in ids or split not in ('train', 'validation', 'test'):
             raise ValueError("duplicate object or invalid split")
         if len(sha) != 64 or any(c not in '0123456789abcdef' for c in sha):
@@ -74,19 +78,20 @@ def make_plan(catalog, seed=0):
             spec = {"object": deepcopy(obj), "track": track,
                     "linear_velocity_world_m_s": [speed * (-1 if bits & 1 else 1), 0, 0],
                     "angular_velocity_world_rad_s": [0, 0, spin * (-1 if bits & 2 else 1)],
-                    "initial_motion_mode": "reset_once", "protocol": deepcopy(PROTOCOL)}
+                    "initial_motion_mode": "reset_once", "protocol": deepcopy(PROTOCOL),
+                    "language_prompt": capture_prompt(obj['object_id'], object_name=obj.get('object_name'))}
             token = digest([obj['object_id'], seed])[:16]
             episodes.append(dict(episode_id=f"{token}/{track}", task_id="capture_retain",
                 suite=f"{obj['split']}/{track}", condition="S", pair_id=token,
                 seed=seed, spec_hash=digest(spec), spec=spec, protocol=deepcopy(PROTOCOL)))
     catalog = sorted(deepcopy(catalog), key=lambda o:o['object_id'])
-    return {"schema": "astrobench.plan/v1", "status": "draft_uncalibrated", "seed": seed,
+    return {"schema": "astrobench.plan/v2", "status": "draft_uncalibrated", "seed": seed,
             "catalog": catalog, "catalog_sha256": digest(catalog), "episodes": episodes}
 
 
 def validate_plan(plan):
-    if plan.get('schema') != 'astrobench.plan/v1' or not plan.get('episodes'):
-        raise ValueError("nonempty astrobench plan required")
+    if plan.get('schema') != 'astrobench.plan/v2' or not plan.get('episodes'):
+        raise ValueError("nonempty astrobench.plan/v2 required; regenerate legacy plans to bind language prompts")
     seen = set()
     for ep in plan['episodes']:
         if ep['episode_id'] in seen:

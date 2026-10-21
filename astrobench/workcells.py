@@ -15,6 +15,7 @@ import math
 from pathlib import Path
 
 from .metrics import wilson95
+from .prompts import workcell_prompt
 
 
 class WorkcellValidationError(ValueError):
@@ -122,9 +123,10 @@ def _validate_asset_binding(asset, canonical, workcell):
         if _digest(asset) != _digest(canonical):
             raise WorkcellValidationError('canonical asset metadata changed')
         return
-    for key in ('manifest_path','units','up_axis','source_files','canonical_source_sha256'):
-        if asset[key] != canonical[key]:
-            raise WorkcellValidationError(f'derived asset changes canonical source/units: {key}')
+    for key in ('manifest_path','units','up_axis','source_files','canonical_source_sha256',
+                'layout','ready_pose','robot_attachment_frames'):
+        if asset.get(key) != canonical.get(key):
+            raise WorkcellValidationError(f'derived asset changes canonical source/placement: {key}')
     if asset['derived_from_manifest_sha256'] != canonical['manifest_sha256']:
         raise WorkcellValidationError('derived asset must identify canonical manifest')
     if _digest(asset['semantic_targets']) != _digest(_variant_targets(canonical,workcell,asset['build_args'])):
@@ -171,6 +173,8 @@ def workcell_catalog(asset_root=None):
                          'units':manifest.get('units'),'up_axis':manifest.get('up_axis'),
                          'source_files':manifest.get('source_files'),
                          'canonical_source_sha256':manifest.get('canonical_source_sha256'),
+                         'layout':manifest.get('layout'), 'ready_pose':manifest.get('ready_pose'),
+                         'robot_attachment_frames':manifest.get('robot_attachment_frames'),
                          'build_args':manifest.get('build_args'),
                          'derived_from_manifest_sha256':manifest.get('derived_from_manifest_sha256')}
             _validate_asset_binding(candidate, asset, workcell)
@@ -229,6 +233,7 @@ def _episode(catalog, task_id, target_id, repeat, seed):
             'semantic_bindings': deepcopy(asset['semantic_targets'][target_id]),
             'asset_manifest_sha256': asset['manifest_sha256'],
             'asset_provenance': {key:deepcopy(asset[key]) for key in ('canonical_source_sha256','build_args','derived_from_manifest_sha256')},
+            'language_prompt': workcell_prompt(task_id, target_id),
             'protocol': deepcopy(catalog['protocol'])}
     return {'episode_id': f'{task_id}/{target_id}/{repeat:04d}/{seed}',
             'task_id': task_id, 'target_id': target_id, 'workcell_id': task['workcell_id'],
@@ -254,7 +259,7 @@ def _plan_from_catalog(catalog, task_ids, repeats, seed, targets, workcell=None)
     selected = _selection(catalog, task_ids, targets, workcell)
     episodes = [_episode(catalog, task_id, target, repeat, seed)
                 for task_id, ids in selected.items() for target in ids for repeat in range(repeats)]
-    return {'schema': 'astrobench.workcell-plan/v1', 'seed': seed, 'repeats': repeats,
+    return {'schema': 'astrobench.workcell-plan/v2', 'seed': seed, 'repeats': repeats,
             'selection': selected, 'catalog_sha256': _digest(catalog),
             'asset_bindings': deepcopy(catalog['assets']), 'episodes': episodes}
 
@@ -262,8 +267,8 @@ def _plan_from_catalog(catalog, task_ids, repeats, seed, targets, workcell=None)
 def validate_workcell_plan(plan, *, asset_root=None):
     """Reject altered thresholds/initial states, dropped variants and bad hashes."""
     _finite_json(plan, 'plan')
-    if type(plan) is not dict or plan.get('schema') != 'astrobench.workcell-plan/v1':
-        raise WorkcellValidationError('workcell plan envelope required')
+    if type(plan) is not dict or plan.get('schema') != 'astrobench.workcell-plan/v2':
+        raise WorkcellValidationError('astrobench.workcell-plan/v2 required; regenerate legacy plans to bind language prompts')
     try:
         if type(plan['repeats']) is not int or not 1 <= plan['repeats'] <= 100000:
             raise WorkcellValidationError('invalid repeat count')
