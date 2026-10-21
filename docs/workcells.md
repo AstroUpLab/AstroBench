@@ -92,10 +92,10 @@ blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
 blender -b -P assets/workcells/load_asset.py -- --asset melfi_v6 \
   --task card_extract --target Rear_half_box --save outputs/melfi-extract.blend
 blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
-  --task sma_remove_stow --target SMA_2_2 --save outputs/rrm-sma.blend
+  --task sma_remove_stow --target SMA_2_2 --placement world --save outputs/rrm-sma.blend
 ```
 
-This resets the moving parts and tool placement. MELFI uses the released strap shape for transfer / insertion and the retained-around-card shape for extraction. The environment adapter implements `runtime_elastic_strip` using the supplied endpoint constraints and elastic parameters, then measures retention force from actual contacts. The reset itself supplies geometry; the adapter establishes the dynamics and records the measurements used below.
+This resets the moving parts and tool placement. Each reset first restores the asset frame; applying `--placement world` afterward installs the reset RRM scene in the wall-and-floor layout. MELFI uses the released strap shape for transfer / insertion and the retained-around-card shape for extraction. The environment adapter implements `runtime_elastic_strip` using the supplied endpoint constraints and elastic parameters, then measures retention force from actual contacts. The reset itself supplies geometry; the adapter establishes the dynamics and records the measurements used below.
 
 ### Select another RRM cap or screw
 
@@ -105,7 +105,7 @@ The default RRM build has movable targets `FDV1`, `SMA_2_2` and `captive_1`. The
 blender -b -P assets/workcells/publicbuild.py -- --asset rrm_tb1 \
   --sma-row 1 --sma-col 3 --captive-index 2 --output-root outputs/rrm-variant
 blender -b -P assets/workcells/load_asset.py -- --asset-root outputs/rrm-variant \
-  --asset rrm_tb1 --task sma_remove_stow --target SMA_1_3 \
+  --asset rrm_tb1 --task sma_remove_stow --target SMA_1_3 --placement world \
   --save outputs/rrm-sma-1-3.blend
 astrobench workcell-score workcell-plan.json EPISODE_ID trace.json \
   --asset-root outputs/rrm-variant --output sma-1-3-result.json

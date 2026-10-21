@@ -92,10 +92,10 @@ blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
 blender -b -P assets/workcells/load_asset.py -- --asset melfi_v6 \
   --task card_extract --target Rear_half_box --save outputs/melfi-extract.blend
 blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
-  --task sma_remove_stow --target SMA_2_2 --save outputs/rrm-sma.blend
+  --task sma_remove_stow --target SMA_2_2 --placement world --save outputs/rrm-sma.blend
 ```
 
-该入口重置运动部件与工具位置。MELFI 转移、插入任务采用释放带形，取出任务采用绕卡保持带形。环境适配器根据随附端点约束及弹性参数实现 `runtime_elastic_strip`，再从实际接触测量保持力。重置入口提供几何初态，后续动力学与评分测量由适配器执行。
+该入口重置运动部件与工具位置。 每次任务重置先恢复资产坐标，再应用 `--placement world`，将重置后的 RRM 场景安装到壁挂与地面布局中。MELFI 转移、插入任务采用释放带形，取出任务采用绕卡保持带形。环境适配器根据随附端点约束及弹性参数实现 `runtime_elastic_strip`，再从实际接触测量保持力。重置入口提供几何初态，后续动力学与评分测量由适配器执行。
 
 ### 选择其它 RRM 接口帽或螺钉
 
@@ -105,7 +105,7 @@ blender -b -P assets/workcells/load_asset.py -- --asset rrm_tb1 \
 blender -b -P assets/workcells/publicbuild.py -- --asset rrm_tb1 \
   --sma-row 1 --sma-col 3 --captive-index 2 --output-root outputs/rrm-variant
 blender -b -P assets/workcells/load_asset.py -- --asset-root outputs/rrm-variant \
-  --asset rrm_tb1 --task sma_remove_stow --target SMA_1_3 \
+  --asset rrm_tb1 --task sma_remove_stow --target SMA_1_3 --placement world \
   --save outputs/rrm-sma-1-3.blend
 astrobench workcell-score workcell-plan.json EPISODE_ID trace.json \
   --asset-root outputs/rrm-variant --output sma-1-3-result.json
