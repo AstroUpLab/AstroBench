@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use AstroBench in your research, please cite the paper below."
+type: software
+title: AstroBench
+authors:
+  - name: AstroUpLab
+repository-code: "https://github.com/AstroUpLab/AstroBench"
+url: "https://astroup.com/astrobench/"
+preferred-citation:
+  type: article
+  title: "AstroBench: Benchmarking Free-Floating Capture and Space Robotic Manipulation"
+  authors:
+    - family-names: Wang
+      given-names: Zizhe
+    - family-names: Deng
+      given-names: Jia
+    - family-names: Lu
+      given-names: Xin
+    - family-names: Jia
+      given-names: Zehao
+    - family-names: Huang
+      given-names: Yi
+    - family-names: Zhu
+      given-names: Yao
+  year: 2026
+  month: 10
+  journal: arXiv
+  identifiers:
+    - type: other
+      value: "arXiv:2610.31064"
+  doi: "10.48550/arXiv.2610.31064"
+  url: "https://arxiv.org/abs/2610.31064"
+

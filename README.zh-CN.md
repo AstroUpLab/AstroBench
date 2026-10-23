@@ -4,7 +4,7 @@
 
 ### 太空自由漂浮操作基准
 
-[🌐 Website](https://astroup.com/astrobench/) · [📖 Docs](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/AstroUpLab/AstroBench/issues)
+[📄 论文](https://arxiv.org/abs/2610.31064) · [🌐 Website](https://astroup.com/astrobench/) · [📖 Docs](https://astroup.com/astrobench/docs/current/index.html) · [🎬 Videos](https://astroup.com/astrobench/#videos) · [🐛 Issues](https://github.com/AstroUpLab/AstroBench/issues)
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
@@ -134,16 +134,22 @@ astrobench report plan.json results.json --output report.json
 
 ## 📚 引用
 
-如果您在研究中使用 AstroBench，可使用以下 BibTeX 引用：
+如果您在研究中使用 AstroBench，请引用我们的论文：
+
+[arXiv](https://arxiv.org/abs/2610.31064) · [PDF](https://arxiv.org/pdf/2610.31064) · [BibTeX](CITATION.bib)
 
 ```bibtex
-@misc{astrouplab2026astrobench,
-  author       = {{AstroUpLab}},
-  title        = {{AstroBench}: Free-floating Manipulation Benchmark},
-  year         = {2026},
-  howpublished = {GitHub repository},
-  url          = {https://github.com/AstroUpLab/AstroBench}
+@misc{wang2026astrobench,
+  title         = {{AstroBench}: Benchmarking Free-Floating Capture and Space Robotic Manipulation},
+  author        = {Zizhe Wang and Jia Deng and Xin Lu and Zehao Jia and Yi Huang and Yao Zhu},
+  year          = {2026},
+  eprint        = {2610.31064},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  doi           = {10.48550/arXiv.2610.31064},
+  url           = {https://arxiv.org/abs/2610.31064}
 }
 ```
 
 引用本版本时请记录仓库地址和提交编号。
+
